@@ -1,0 +1,274 @@
+{
+ "model": "haiku",
+ "synthetic_training_tickets": 383,
+ "synthetic_held_out_tickets": 96,
+ "abcd_openings": 300,
+ "mean_13_shared": {
+  "synthetic_heads_on_abcd": 0.585181,
+  "synthetic_heads_on_held_out_synthetic": 0.904939,
+  "synthetic_system_on_abcd": 0.603176,
+  "abcd_heads_383_on_abcd": 0.847669,
+  "abcd_heads_8034_on_abcd": 0.92087,
+  "claude_on_abcd": 0.83027
+ },
+ "covered_questions": [
+  "primary_team",
+  "cannot_log_in",
+  "security_related",
+  "mentions_account_issue",
+  "mentions_billing_issue",
+  "mentions_bug",
+  "refund_requested",
+  "refund_implied",
+  "needs_staff_action",
+  "identity_details_given",
+  "charge_amount_given"
+ ],
+ "mean_covered": {
+  "synthetic_heads_on_abcd": 0.64251,
+  "synthetic_heads_on_held_out_synthetic": 0.893337,
+  "synthetic_system_on_abcd": 0.679824,
+  "abcd_heads_383_on_abcd": 0.841415,
+  "abcd_heads_8034_on_abcd": 0.923597,
+  "claude_on_abcd": 0.854154
+ },
+ "questions": {
+  "primary_team": {
+   "synthetic_heads_on_abcd": 0.47191,
+   "synthetic_heads_on_held_out_synthetic": 0.604167,
+   "synthetic_system_on_abcd": 0.662921,
+   "abcd_heads_383_on_abcd": 0.87266,
+   "abcd_heads_8034_on_abcd": 0.883895,
+   "claude_on_abcd": 0.831461,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "journey_stage": {
+   "synthetic_heads_on_abcd": 0.234483,
+   "synthetic_heads_on_held_out_synthetic": 0.947917,
+   "synthetic_system_on_abcd": 0.096552,
+   "abcd_heads_383_on_abcd": 0.92136,
+   "abcd_heads_8034_on_abcd": 0.931034,
+   "claude_on_abcd": 0.724138,
+   "answers_in_abcd_truth_never_in_synthetic_training": [
+    "browsing",
+    "checkout"
+   ]
+  },
+  "message_type": {
+   "synthetic_heads_on_abcd": 0.305263,
+   "synthetic_heads_on_held_out_synthetic": 0.989583,
+   "synthetic_system_on_abcd": 0.266667,
+   "abcd_heads_383_on_abcd": 0.84278,
+   "abcd_heads_8034_on_abcd": 0.880702,
+   "claude_on_abcd": 0.673684,
+   "answers_in_abcd_truth_never_in_synthetic_training": [
+    "question"
+   ]
+  },
+  "cannot_log_in": {
+   "synthetic_heads_on_abcd": 0.657143,
+   "synthetic_heads_on_held_out_synthetic": 1,
+   "synthetic_system_on_abcd": 0.685714,
+   "abcd_heads_383_on_abcd": 0.92698,
+   "abcd_heads_8034_on_abcd": 0.923461,
+   "claude_on_abcd": 0.885714,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "security_related": {
+   "synthetic_heads_on_abcd": 0.714286,
+   "synthetic_heads_on_held_out_synthetic": 0.932958,
+   "synthetic_system_on_abcd": 0.685714,
+   "abcd_heads_383_on_abcd": 0.92698,
+   "abcd_heads_8034_on_abcd": 0.923461,
+   "claude_on_abcd": 0.917796,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "mentions_account_issue": {
+   "synthetic_heads_on_abcd": 0.798583,
+   "synthetic_heads_on_held_out_synthetic": 0.90625,
+   "synthetic_system_on_abcd": 0.772942,
+   "abcd_heads_383_on_abcd": 0.9181,
+   "abcd_heads_8034_on_abcd": 0.913968,
+   "claude_on_abcd": 0.901484,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "mentions_billing_issue": {
+   "synthetic_heads_on_abcd": 0.683786,
+   "synthetic_heads_on_held_out_synthetic": 0.970588,
+   "synthetic_system_on_abcd": 0.654974,
+   "abcd_heads_383_on_abcd": 0.88158,
+   "abcd_heads_8034_on_abcd": 0.933527,
+   "claude_on_abcd": 0.852649,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "mentions_bug": {
+   "synthetic_heads_on_abcd": 0.788822,
+   "synthetic_heads_on_held_out_synthetic": 0.979167,
+   "synthetic_system_on_abcd": 0.531459,
+   "abcd_heads_383_on_abcd": 0.9562,
+   "abcd_heads_8034_on_abcd": 0.97992,
+   "claude_on_abcd": 0.970214,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "refund_requested": {
+   "synthetic_heads_on_abcd": 0.663889,
+   "synthetic_heads_on_held_out_synthetic": 0.917053,
+   "synthetic_system_on_abcd": 0.666667,
+   "abcd_heads_383_on_abcd": 0.81168,
+   "abcd_heads_8034_on_abcd": 0.988889,
+   "claude_on_abcd": 1,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "refund_implied": {
+   "synthetic_heads_on_abcd": 0.540447,
+   "synthetic_heads_on_held_out_synthetic": 1,
+   "synthetic_system_on_abcd": 0.533808,
+   "abcd_heads_383_on_abcd": 0.83866,
+   "abcd_heads_8034_on_abcd": 0.901829,
+   "claude_on_abcd": 0.77771,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "needs_staff_action": {
+   "synthetic_heads_on_abcd": 0.506667,
+   "synthetic_heads_on_held_out_synthetic": 0.943182,
+   "synthetic_system_on_abcd": 0.523333,
+   "abcd_heads_383_on_abcd": 0.68802,
+   "abcd_heads_8034_on_abcd": 0.733333,
+   "claude_on_abcd": 0.58,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "identity_details_given": {
+   "synthetic_heads_on_abcd": 0.513889,
+   "synthetic_heads_on_held_out_synthetic": 0.827625,
+   "synthetic_system_on_abcd": 0.763889,
+   "abcd_heads_383_on_abcd": 0.83738,
+   "abcd_heads_8034_on_abcd": 0.982323,
+   "claude_on_abcd": 0.928662,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  },
+  "charge_amount_given": {
+   "synthetic_heads_on_abcd": 0.728188,
+   "synthetic_heads_on_held_out_synthetic": 0.745719,
+   "synthetic_system_on_abcd": 0.996644,
+   "abcd_heads_383_on_abcd": 0.59732,
+   "abcd_heads_8034_on_abcd": 0.994966,
+   "claude_on_abcd": 0.75,
+   "answers_in_abcd_truth_never_in_synthetic_training": []
+  }
+ },
+ "synthetic_training_classes": {
+  "primary_team": {
+   "other": 81,
+   "billing_and_payments": 93,
+   "engineering": 74,
+   "product_management": 64,
+   "account_support": 71
+  },
+  "journey_stage": {
+   "post_purchase": 207,
+   "unclear": 176
+  },
+  "message_type": {
+   "problem_report": 309,
+   "request": 74
+  },
+  "cannot_log_in": {
+   "no": 310,
+   "yes": 73
+  },
+  "security_related": {
+   "no": 297,
+   "yes": 86
+  },
+  "mentions_account_issue": {
+   "no": 242,
+   "yes": 141
+  },
+  "mentions_billing_issue": {
+   "yes": 181,
+   "no": 202
+  },
+  "mentions_bug": {
+   "no": 161,
+   "yes": 222
+  },
+  "refund_requested": {
+   "yes": 68,
+   "no": 315
+  },
+  "refund_implied": {
+   "yes": 129,
+   "no": 254
+  },
+  "needs_staff_action": {
+   "yes": 183,
+   "no": 200
+  },
+  "identity_details_given": {
+   "no": 284,
+   "yes": 99
+  },
+  "charge_amount_given": {
+   "yes": 79,
+   "no": 304
+  }
+ },
+ "abcd_truth_classes": {
+  "primary_team": {
+   "billing_and_payments": 71,
+   "other": 139,
+   "account_support": 39,
+   "engineering": 18
+  },
+  "journey_stage": {
+   "post_purchase": 100,
+   "browsing": 36,
+   "checkout": 9
+  },
+  "message_type": {
+   "question": 110,
+   "request": 116,
+   "problem_report": 59
+  },
+  "cannot_log_in": {
+   "no": 232,
+   "yes": 35
+  },
+  "security_related": {
+   "no": 232,
+   "yes": 35
+  },
+  "mentions_account_issue": {
+   "no": 228,
+   "yes": 39
+  },
+  "mentions_billing_issue": {
+   "yes": 43,
+   "no": 180
+  },
+  "mentions_bug": {
+   "no": 249,
+   "yes": 18
+  },
+  "refund_requested": {
+   "no": 180,
+   "yes": 6
+  },
+  "refund_implied": {
+   "no": 180,
+   "yes": 41
+  },
+  "needs_staff_action": {
+   "no": 150,
+   "yes": 150
+  },
+  "identity_details_given": {
+   "no": 264,
+   "yes": 36
+  },
+  "charge_amount_given": {
+   "no": 298,
+   "yes": 2
+  }
+ }
+}

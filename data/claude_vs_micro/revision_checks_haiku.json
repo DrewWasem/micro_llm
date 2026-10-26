@@ -1,0 +1,1258 @@
+{
+ "model": "haiku",
+ "chats": 300,
+ "reps": 10000,
+ "seeds": 5,
+ "routing": {
+  "questions": [
+   "primary_team",
+   "journey_stage",
+   "message_type",
+   "cannot_log_in",
+   "security_related",
+   "mentions_account_issue",
+   "mentions_billing_issue",
+   "mentions_bug",
+   "refund_requested",
+   "refund_implied"
+  ],
+  "systems": {
+   "micro_abcd": {
+    "intent_known_to_mapping": 300,
+    "intent_a_sampled_truth_holds": 293,
+    "graded_pairs_falling_back": {
+     "unknown_intent": 0,
+     "known_intent_routes_nowhere": 66
+    },
+    "pairs_by_question": {
+     "primary_team": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 4
+     },
+     "journey_stage": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 12
+     },
+     "message_type": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 1
+     },
+     "cannot_log_in": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 4
+     },
+     "security_related": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 4
+     },
+     "mentions_account_issue": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 9
+     },
+     "mentions_billing_issue": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 13
+     },
+     "mentions_bug": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 4
+     },
+     "refund_requested": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 9
+     },
+     "refund_implied": {
+      "unknown_intent": 0,
+      "known_intent_routes_nowhere": 6
+     }
+    },
+    "per_question": {
+     "primary_team": {
+      "direct": 0.883895,
+      "routed_fallback": 0.910112,
+      "routed_strict": 0.898876
+     },
+     "journey_stage": {
+      "direct": 0.931034,
+      "routed_fallback": 0.937931,
+      "routed_strict": 0.889655
+     },
+     "message_type": {
+      "direct": 0.880702,
+      "routed_fallback": 0.894737,
+      "routed_strict": 0.894737
+     },
+     "cannot_log_in": {
+      "direct": 0.923461,
+      "routed_fallback": 0.928571,
+      "routed_strict": 0.919951
+     },
+     "security_related": {
+      "direct": 0.923461,
+      "routed_fallback": 0.928571,
+      "routed_strict": 0.919951
+     },
+     "mentions_account_issue": {
+      "direct": 0.913968,
+      "routed_fallback": 0.92274,
+      "routed_strict": 0.913968
+     },
+     "mentions_billing_issue": {
+      "direct": 0.933527,
+      "routed_fallback": 0.939599,
+      "routed_strict": 0.900194
+     },
+     "mentions_bug": {
+      "direct": 0.97992,
+      "routed_fallback": 0.985944,
+      "routed_strict": 0.977912
+     },
+     "refund_requested": {
+      "direct": 0.988889,
+      "routed_fallback": 0.997222,
+      "routed_strict": 0.975
+     },
+     "refund_implied": {
+      "direct": 0.901829,
+      "routed_fallback": 0.91294,
+      "routed_strict": 0.901829
+     }
+    },
+    "mean_10": {
+     "direct": 0.926069,
+     "routed_fallback": 0.935837,
+     "routed_strict": 0.919207
+    }
+   },
+   "claude": {
+    "intent_known_to_mapping": 270,
+    "intent_a_sampled_truth_holds": 258,
+    "graded_pairs_falling_back": {
+     "unknown_intent": 260,
+     "known_intent_routes_nowhere": 62
+    },
+    "pairs_by_question": {
+     "primary_team": {
+      "unknown_intent": 29,
+      "known_intent_routes_nowhere": 4
+     },
+     "journey_stage": {
+      "unknown_intent": 17,
+      "known_intent_routes_nowhere": 11
+     },
+     "message_type": {
+      "unknown_intent": 29,
+      "known_intent_routes_nowhere": 2
+     },
+     "cannot_log_in": {
+      "unknown_intent": 29,
+      "known_intent_routes_nowhere": 4
+     },
+     "security_related": {
+      "unknown_intent": 29,
+      "known_intent_routes_nowhere": 4
+     },
+     "mentions_account_issue": {
+      "unknown_intent": 29,
+      "known_intent_routes_nowhere": 4
+     },
+     "mentions_billing_issue": {
+      "unknown_intent": 23,
+      "known_intent_routes_nowhere": 9
+     },
+     "mentions_bug": {
+      "unknown_intent": 29,
+      "known_intent_routes_nowhere": 4
+     },
+     "refund_requested": {
+      "unknown_intent": 20,
+      "known_intent_routes_nowhere": 10
+     },
+     "refund_implied": {
+      "unknown_intent": 26,
+      "known_intent_routes_nowhere": 10
+     }
+    },
+    "per_question": {
+     "primary_team": {
+      "direct": 0.831461,
+      "routed_fallback": 0.872659,
+      "routed_strict": 0.868914
+     },
+     "journey_stage": {
+      "direct": 0.724138,
+      "routed_fallback": 0.862069,
+      "routed_strict": 0.82069
+     },
+     "message_type": {
+      "direct": 0.673684,
+      "routed_fallback": 0.807018,
+      "routed_strict": 0.803509
+     },
+     "cannot_log_in": {
+      "direct": 0.885714,
+      "routed_fallback": 0.926416,
+      "routed_strict": 0.917796
+     },
+     "security_related": {
+      "direct": 0.917796,
+      "routed_fallback": 0.926416,
+      "routed_strict": 0.917796
+     },
+     "mentions_account_issue": {
+      "direct": 0.901484,
+      "routed_fallback": 0.907726,
+      "routed_strict": 0.898954
+     },
+     "mentions_billing_issue": {
+      "direct": 0.852649,
+      "routed_fallback": 0.916344,
+      "routed_strict": 0.902455
+     },
+     "mentions_bug": {
+      "direct": 0.970214,
+      "routed_fallback": 0.972222,
+      "routed_strict": 0.96419
+     },
+     "refund_requested": {
+      "direct": 1.0,
+      "routed_fallback": 1.0,
+      "routed_strict": 0.891667
+     },
+     "refund_implied": {
+      "direct": 0.77771,
+      "routed_fallback": 0.909079,
+      "routed_strict": 0.865244
+     }
+    },
+    "mean_10": {
+     "direct": 0.853485,
+     "routed_fallback": 0.909995,
+     "routed_strict": 0.885122
+    }
+   }
+  },
+  "gaps_points": {
+   "direct": 7.2584,
+   "claude_routed_vs_heads_direct": {
+    "fallback": 1.6074,
+    "strict": 4.0947
+   },
+   "both_routed": {
+    "fallback": 2.5842,
+    "strict": 3.4085
+   },
+   "share_of_direct_gap_closed_both_routed": {
+    "fallback": 0.643971,
+    "strict": 0.530406
+   }
+  }
+ },
+ "training_seconds": 37.4,
+ "unweighted_heads": {
+  "class_weight": null,
+  "lead": {
+   "as_reported": {
+    "heads": 0.905658,
+    "claude": 0.814534,
+    "lead_points": 9.11234,
+    "lead_ci95_points": [
+     6.111745,
+     12.051398
+    ]
+   },
+   "plain_throughout": {
+    "heads": 0.932391,
+    "claude": 0.861766,
+    "lead_points": 7.062542,
+    "lead_ci95_points": [
+     5.91882,
+     8.243894
+    ]
+   },
+   "balanced_throughout": {
+    "heads": 0.903129,
+    "claude": 0.805269,
+    "lead_points": 9.785919,
+    "lead_ci95_points": [
+     6.734653,
+     12.730584
+    ]
+   }
+  },
+  "weighted_lead": {
+   "as_reported": {
+    "heads": 0.906599,
+    "claude": 0.814534,
+    "lead_points": 9.206482,
+    "lead_ci95_points": [
+     6.317081,
+     12.05914
+    ]
+   },
+   "plain_throughout": {
+    "heads": 0.91418,
+    "claude": 0.861766,
+    "lead_points": 5.241418,
+    "lead_ci95_points": [
+     3.866477,
+     6.637456
+    ]
+   },
+   "balanced_throughout": {
+    "heads": 0.909691,
+    "claude": 0.805269,
+    "lead_points": 10.442131,
+    "lead_ci95_points": [
+     7.506474,
+     13.275786
+    ]
+   }
+  },
+  "questions_as_reported": {
+   "flow": {
+    "unweighted": 0.87482,
+    "weighted": 0.859047,
+    "claude": 0.757771
+   },
+   "intent": {
+    "unweighted": 0.751651,
+    "weighted": 0.768632,
+    "claude": 0.666732
+   },
+   "primary_team": {
+    "unweighted": 0.925094,
+    "weighted": 0.883895,
+    "claude": 0.831461
+   },
+   "journey_stage": {
+    "unweighted": 0.951724,
+    "weighted": 0.931034,
+    "claude": 0.724138
+   },
+   "message_type": {
+    "unweighted": 0.894737,
+    "weighted": 0.880702,
+    "claude": 0.673684
+   },
+   "cannot_log_in": {
+    "unweighted": 0.928571,
+    "weighted": 0.923461,
+    "claude": 0.885714
+   },
+   "security_related": {
+    "unweighted": 0.928571,
+    "weighted": 0.923461,
+    "claude": 0.917796
+   },
+   "mentions_account_issue": {
+    "unweighted": 0.933704,
+    "weighted": 0.913968,
+    "claude": 0.901484
+   },
+   "mentions_billing_issue": {
+    "unweighted": 0.927455,
+    "weighted": 0.933527,
+    "claude": 0.852649
+   },
+   "mentions_bug": {
+    "unweighted": 0.972222,
+    "weighted": 0.97992,
+    "claude": 0.970214
+   },
+   "refund_requested": {
+    "unweighted": 0.916667,
+    "weighted": 0.988889,
+    "claude": 1.0
+   },
+   "refund_implied": {
+    "unweighted": 0.896883,
+    "weighted": 0.901829,
+    "claude": 0.77771
+   },
+   "needs_staff_action": {
+    "unweighted": 0.74,
+    "weighted": 0.733333,
+    "claude": 0.58
+   },
+   "identity_details_given": {
+    "unweighted": 0.944444,
+    "weighted": 0.982323,
+    "claude": 0.928662
+   },
+   "charge_amount_given": {
+    "unweighted": 0.998322,
+    "weighted": 0.994966,
+    "claude": 0.75
+   }
+  },
+  "yes_no_plain_accuracy": {
+   "cannot_log_in": {
+    "unweighted": 0.981273,
+    "weighted": 0.951311,
+    "claude": 0.970037
+   },
+   "security_related": {
+    "unweighted": 0.981273,
+    "weighted": 0.951311,
+    "claude": 0.962547
+   },
+   "mentions_account_issue": {
+    "unweighted": 0.977528,
+    "weighted": 0.94382,
+    "claude": 0.958801
+   },
+   "mentions_billing_issue": {
+    "unweighted": 0.96861,
+    "weighted": 0.964126,
+    "claude": 0.919283
+   },
+   "mentions_bug": {
+    "unweighted": 0.996255,
+    "weighted": 0.962547,
+    "claude": 0.992509
+   },
+   "refund_requested": {
+    "unweighted": 0.994624,
+    "weighted": 0.978495,
+    "claude": 1.0
+   },
+   "refund_implied": {
+    "unweighted": 0.954751,
+    "weighted": 0.932127,
+    "claude": 0.914027
+   },
+   "needs_staff_action": {
+    "unweighted": 0.74,
+    "weighted": 0.733333,
+    "claude": 0.58
+   },
+   "identity_details_given": {
+    "unweighted": 0.986667,
+    "weighted": 0.99,
+    "claude": 0.98
+   },
+   "charge_amount_given": {
+    "unweighted": 0.996667,
+    "weighted": 0.99,
+    "claude": 0.996667
+   }
+  },
+  "yes_no_where_claude_plain_is_higher": {
+   "unweighted": 1,
+   "weighted": 6
+  }
+ },
+ "learning_curve_leads": {
+  "full_size": {
+   "as_reported": {
+    "heads": 0.906599,
+    "claude": 0.814534,
+    "lead_points": 9.206482,
+    "lead_ci95_points": [
+     6.317081,
+     12.05914
+    ]
+   },
+   "plain_throughout": {
+    "heads": 0.91418,
+    "claude": 0.861766,
+    "lead_points": 5.241418,
+    "lead_ci95_points": [
+     3.866477,
+     6.637456
+    ]
+   },
+   "balanced_throughout": {
+    "heads": 0.909691,
+    "claude": 0.805269,
+    "lead_points": 10.442131,
+    "lead_ci95_points": [
+     7.506474,
+     13.275786
+    ]
+   }
+  },
+  "curve": [
+   {
+    "size": 50,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      -18.687649,
+      -21.489946,
+      -20.328555,
+      -19.147125,
+      -17.394579
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -22.344093,
+       -14.498127
+      ],
+      [
+       -24.847529,
+       -17.832357
+      ],
+      [
+       -23.909473,
+       -16.131983
+      ],
+      [
+       -22.48101,
+       -15.274246
+      ],
+      [
+       -20.909778,
+       -13.222781
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 5
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      -7.612844,
+      -7.75188,
+      -7.710262,
+      -7.042625,
+      -6.070743
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -9.634262,
+       -5.587597
+      ],
+      [
+       -9.591375,
+       -5.927461
+      ],
+      [
+       -9.427091,
+       -5.956647
+      ],
+      [
+       -8.951273,
+       -5.161907
+      ],
+      [
+       -7.826518,
+       -4.342428
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 5
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      -18.590004,
+      -23.924844,
+      -22.224424,
+      -19.558675,
+      -18.084703
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -22.368899,
+       -14.384337
+      ],
+      [
+       -27.338442,
+       -20.243976
+      ],
+      [
+       -25.936596,
+       -17.931919
+      ],
+      [
+       -23.267981,
+       -15.300728
+      ],
+      [
+       -21.928664,
+       -13.655101
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 5
+    }
+   },
+   {
+    "size": 100,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      -13.459234,
+      -9.699354,
+      -9.378357,
+      -13.544881,
+      -11.949744
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -16.720644,
+       -9.603419
+      ],
+      [
+       -13.097057,
+       -5.851573
+      ],
+      [
+       -12.903763,
+       -5.120774
+      ],
+      [
+       -16.926704,
+       -9.844843
+      ],
+      [
+       -15.460337,
+       -7.835422
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 5
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      -5.307505,
+      -2.075924,
+      -1.681796,
+      -4.372137,
+      -2.454861
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -7.218429,
+       -3.367329
+      ],
+      [
+       -3.605303,
+       -0.523979
+      ],
+      [
+       -3.316346,
+       -0.006357
+      ],
+      [
+       -6.084316,
+       -2.639618
+      ],
+      [
+       -4.047847,
+       -0.853223
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 5
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      -13.528894,
+      -11.191957,
+      -9.397152,
+      -14.085195,
+      -12.590251
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -16.901618,
+       -9.661811
+      ],
+      [
+       -14.863903,
+       -7.151783
+      ],
+      [
+       -13.248983,
+       -4.920408
+      ],
+      [
+       -17.751853,
+       -10.07785
+      ],
+      [
+       -16.390093,
+       -8.216056
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 5
+    }
+   },
+   {
+    "size": 200,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      -4.259199,
+      -2.10199,
+      -1.072163,
+      -4.636772,
+      -5.147583
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -6.620804,
+       -1.656348
+      ],
+      [
+       -5.291069,
+       1.350073
+      ],
+      [
+       -4.363759,
+       2.74625
+      ],
+      [
+       -7.969018,
+       -0.721057
+      ],
+      [
+       -8.371381,
+       -1.29232
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 3
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      -0.846815,
+      1.5894,
+      2.197093,
+      0.987849,
+      0.813557
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -2.570561,
+       0.848938
+      ],
+      [
+       0.241489,
+       2.938119
+      ],
+      [
+       0.678643,
+       3.722199
+      ],
+      [
+       -0.573704,
+       2.601385
+      ],
+      [
+       -0.622627,
+       2.284454
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 2,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      -3.814723,
+      -1.78279,
+      -0.336358,
+      -4.474759,
+      -4.521559
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       -6.090514,
+       -1.293994
+      ],
+      [
+       -5.190621,
+       1.828575
+      ],
+      [
+       -3.652893,
+       3.497205
+      ],
+      [
+       -8.165811,
+       -0.28453
+      ],
+      [
+       -8.061087,
+       -0.419895
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 0,
+     "runs_whose_interval_is_below_zero": 3
+    }
+   },
+   {
+    "size": 383,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      2.399374,
+      2.023653,
+      1.939427,
+      -0.144585,
+      2.007194
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       0.148143,
+       4.771627
+      ],
+      [
+       -1.023608,
+       5.181537
+      ],
+      [
+       -1.248342,
+       5.417912
+      ],
+      [
+       -3.373761,
+       3.835761
+      ],
+      [
+       -2.778383,
+       6.85397
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 1,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      3.09958,
+      3.82648,
+      3.173942,
+      3.341779,
+      3.754372
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       1.714823,
+       4.485061
+      ],
+      [
+       2.577328,
+       5.063558
+      ],
+      [
+       1.745834,
+       4.588319
+      ],
+      [
+       1.8411,
+       4.872188
+      ],
+      [
+       2.520358,
+       5.015732
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      3.059287,
+      2.814614,
+      3.000874,
+      0.624125,
+      2.999546
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       0.821342,
+       5.349925
+      ],
+      [
+       -0.26682,
+       6.003228
+      ],
+      [
+       -0.270157,
+       6.545816
+      ],
+      [
+       -2.652286,
+       4.656773
+      ],
+      [
+       -1.811407,
+       7.882365
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 1,
+     "runs_whose_interval_is_below_zero": 0
+    }
+   },
+   {
+    "size": 1000,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      7.756384,
+      6.342959,
+      5.992773,
+      6.891205,
+      6.258781
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       4.474439,
+       10.827099
+      ],
+      [
+       4.254806,
+       8.449117
+      ],
+      [
+       1.279305,
+       10.787348
+      ],
+      [
+       3.597986,
+       10.149643
+      ],
+      [
+       2.850673,
+       9.413119
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      4.903969,
+      5.218949,
+      4.856826,
+      4.993339,
+      4.522966
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       3.517348,
+       6.304271
+      ],
+      [
+       3.867286,
+       6.590557
+      ],
+      [
+       3.467228,
+       6.268496
+      ],
+      [
+       3.640394,
+       6.343863
+      ],
+      [
+       3.276862,
+       5.782537
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      8.921988,
+      7.212163,
+      7.182296,
+      7.78632,
+      7.255368
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       5.632794,
+       11.9871
+      ],
+      [
+       5.016678,
+       9.370935
+      ],
+      [
+       2.466231,
+       11.995177
+      ],
+      [
+       4.448037,
+       11.04128
+      ],
+      [
+       3.859194,
+       10.407347
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    }
+   },
+   {
+    "size": 2000,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      8.855458,
+      8.519935,
+      8.354576,
+      8.490052,
+      7.328326
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       6.036283,
+       11.615226
+      ],
+      [
+       5.207624,
+       11.574208
+      ],
+      [
+       5.184321,
+       11.378352
+      ],
+      [
+       5.154488,
+       11.672302
+      ],
+      [
+       3.851132,
+       10.508525
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      5.192536,
+      5.609196,
+      4.925791,
+      5.962734,
+      3.889091
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       3.908598,
+       6.495136
+      ],
+      [
+       4.251062,
+       6.951118
+      ],
+      [
+       3.470282,
+       6.34027
+      ],
+      [
+       4.727583,
+       7.234719
+      ],
+      [
+       2.212578,
+       5.532848
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      9.80232,
+      9.665386,
+      9.574202,
+      9.393835,
+      8.559537
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       7.009744,
+       12.539318
+      ],
+      [
+       6.354062,
+       12.743061
+      ],
+      [
+       6.392406,
+       12.607095
+      ],
+      [
+       6.018879,
+       12.589997
+      ],
+      [
+       5.085936,
+       11.764464
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    }
+   },
+   {
+    "size": 4000,
+    "runs": 5,
+    "as_reported": {
+     "lead_points_by_seed": [
+      9.404886,
+      8.728637,
+      8.856398,
+      9.472945,
+      7.850919
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       6.64341,
+       12.155748
+      ],
+      [
+       5.644045,
+       11.762611
+      ],
+      [
+       5.975785,
+       11.754802
+      ],
+      [
+       6.37702,
+       12.451094
+      ],
+      [
+       4.458903,
+       10.98502
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "plain_throughout": {
+     "lead_points_by_seed": [
+      6.055349,
+      6.115152,
+      4.925015,
+      6.501074,
+      4.823121
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       4.802229,
+       7.303932
+      ],
+      [
+       4.926752,
+       7.304416
+      ],
+      [
+       3.40963,
+       6.435819
+      ],
+      [
+       5.31422,
+       7.737151
+      ],
+      [
+       3.36975,
+       6.267911
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    },
+    "balanced_throughout": {
+     "lead_points_by_seed": [
+      10.615514,
+      9.901709,
+      10.091866,
+      10.596402,
+      9.097032
+     ],
+     "lead_ci95_points_by_seed": [
+      [
+       7.799228,
+       13.397011
+      ],
+      [
+       6.819236,
+       12.913929
+      ],
+      [
+       7.172059,
+       12.984575
+      ],
+      [
+       7.473546,
+       13.564677
+      ],
+      [
+       5.698866,
+       12.264867
+      ]
+     ],
+     "runs_whose_interval_is_above_zero": 5,
+     "runs_whose_interval_is_below_zero": 0
+    }
+   }
+  ]
+ },
+ "synthetic_system_minus_synthetic_heads": {
+  "questions": 13,
+  "regex_questions": [
+   "identity_details_given",
+   "charge_amount_given"
+  ],
+  "total_points": 1.799446,
+  "regex_part_points": 3.988123,
+  "learned_part_points": -2.188677,
+  "per_question_points": {
+   "primary_team": 19.1011,
+   "journey_stage": -13.7931,
+   "message_type": -3.8596,
+   "cannot_log_in": 2.8571,
+   "security_related": -2.8572,
+   "mentions_account_issue": -2.5641,
+   "mentions_billing_issue": -2.8812,
+   "mentions_bug": -25.7363,
+   "refund_requested": 0.2778,
+   "refund_implied": -0.6639,
+   "needs_staff_action": 1.6666,
+   "identity_details_given": 25.0,
+   "charge_amount_given": 26.8456
+  }
+ },
+ "rare_yes_errors": {
+  "questions": [
+   "cannot_log_in",
+   "security_related",
+   "mentions_account_issue",
+   "mentions_billing_issue",
+   "mentions_bug",
+   "refund_requested",
+   "refund_implied",
+   "identity_details_given",
+   "charge_amount_given"
+  ],
+  "systems": {
+   "micro_abcd": {
+    "yes": 255,
+    "yes_found": 230,
+    "no": 2043,
+    "no_kept": 1984,
+    "missed_yes": 25,
+    "false_flags": 59,
+    "errors": 84
+   },
+   "claude": {
+    "yes": 255,
+    "yes_found": 199,
+    "no": 2043,
+    "no_kept": 2024,
+    "missed_yes": 56,
+    "false_flags": 19,
+    "errors": 75
+   }
+  }
+ }
+}

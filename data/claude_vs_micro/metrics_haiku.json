@@ -1,0 +1,566 @@
+{
+ "reps": 10000,
+ "means": {
+  "as_reported": {
+   "micro_abcd": 0.9066,
+   "claude": 0.8145,
+   "ci95": {
+    "micro_abcd": [
+     0.8833,
+     0.9279
+    ],
+    "claude": [
+     0.782,
+     0.8472
+    ]
+   },
+   "diff_points": 9.2,
+   "diff_ci95_points": [
+    6.3,
+    12.1
+   ]
+  },
+  "plain_throughout": {
+   "micro_abcd": 0.9142,
+   "claude": 0.8618,
+   "ci95": {
+    "micro_abcd": [
+     0.8956,
+     0.9322
+    ],
+    "claude": [
+     0.8457,
+     0.8777
+    ]
+   },
+   "diff_points": 5.2,
+   "diff_ci95_points": [
+    3.9,
+    6.6
+   ]
+  },
+  "balanced_throughout": {
+   "micro_abcd": 0.9097,
+   "claude": 0.8053,
+   "ci95": {
+    "micro_abcd": [
+     0.8867,
+     0.9303
+    ],
+    "claude": [
+     0.7721,
+     0.8386
+    ]
+   },
+   "diff_points": 10.4,
+   "diff_ci95_points": [
+    7.5,
+    13.3
+   ]
+  }
+ },
+ "questions": {
+  "flow": {
+   "n": 300,
+   "correct": {
+    "micro_abcd": 258,
+    "claude": 230
+   },
+   "accuracy": {
+    "micro_abcd": 0.86,
+    "claude": 0.766667
+   },
+   "only_micro_right": 33,
+   "only_claude_right": 5,
+   "mcnemar_p": 4e-06,
+   "mcnemar_p_holm": 0.0001
+  },
+  "intent": {
+   "n": 300,
+   "correct": {
+    "micro_abcd": 228,
+    "claude": 197
+   },
+   "accuracy": {
+    "micro_abcd": 0.76,
+    "claude": 0.656667
+   },
+   "only_micro_right": 43,
+   "only_claude_right": 12,
+   "mcnemar_p": 3.3e-05,
+   "mcnemar_p_holm": 0.0004
+  },
+  "primary_team": {
+   "n": 267,
+   "correct": {
+    "micro_abcd": 236,
+    "claude": 222
+   },
+   "accuracy": {
+    "micro_abcd": 0.883895,
+    "claude": 0.831461
+   },
+   "only_micro_right": 29,
+   "only_claude_right": 15,
+   "mcnemar_p": 0.048767,
+   "mcnemar_p_holm": 0.3901
+  },
+  "journey_stage": {
+   "n": 145,
+   "correct": {
+    "micro_abcd": 135,
+    "claude": 105
+   },
+   "accuracy": {
+    "micro_abcd": 0.931034,
+    "claude": 0.724138
+   },
+   "only_micro_right": 31,
+   "only_claude_right": 1,
+   "mcnemar_p": 0.0,
+   "mcnemar_p_holm": 0.0
+  },
+  "message_type": {
+   "n": 285,
+   "correct": {
+    "micro_abcd": 251,
+    "claude": 192
+   },
+   "accuracy": {
+    "micro_abcd": 0.880702,
+    "claude": 0.673684
+   },
+   "only_micro_right": 64,
+   "only_claude_right": 5,
+   "mcnemar_p": 0.0,
+   "mcnemar_p_holm": 0.0
+  },
+  "cannot_log_in": {
+   "n": 267,
+   "correct": {
+    "micro_abcd": 254,
+    "claude": 259
+   },
+   "accuracy": {
+    "micro_abcd": 0.951311,
+    "claude": 0.970037
+   },
+   "only_micro_right": 4,
+   "only_claude_right": 9,
+   "mcnemar_p": 0.266846,
+   "recall_yes": {
+    "micro_abcd": [
+     31,
+     35
+    ],
+    "claude": [
+     27,
+     35
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     223,
+     232
+    ],
+    "claude": [
+     232,
+     232
+    ]
+   },
+   "mcnemar_p_holm": 1.0
+  },
+  "security_related": {
+   "n": 267,
+   "correct": {
+    "micro_abcd": 254,
+    "claude": 257
+   },
+   "accuracy": {
+    "micro_abcd": 0.951311,
+    "claude": 0.962547
+   },
+   "only_micro_right": 6,
+   "only_claude_right": 9,
+   "mcnemar_p": 0.607239,
+   "recall_yes": {
+    "micro_abcd": [
+     31,
+     35
+    ],
+    "claude": [
+     30,
+     35
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     223,
+     232
+    ],
+    "claude": [
+     227,
+     232
+    ]
+   },
+   "mcnemar_p_holm": 1.0
+  },
+  "mentions_account_issue": {
+   "n": 267,
+   "correct": {
+    "micro_abcd": 252,
+    "claude": 256
+   },
+   "accuracy": {
+    "micro_abcd": 0.94382,
+    "claude": 0.958801
+   },
+   "only_micro_right": 6,
+   "only_claude_right": 10,
+   "mcnemar_p": 0.454498,
+   "recall_yes": {
+    "micro_abcd": [
+     34,
+     39
+    ],
+    "claude": [
+     32,
+     39
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     218,
+     228
+    ],
+    "claude": [
+     224,
+     228
+    ]
+   },
+   "mcnemar_p_holm": 1.0
+  },
+  "mentions_billing_issue": {
+   "n": 223,
+   "correct": {
+    "micro_abcd": 215,
+    "claude": 205
+   },
+   "accuracy": {
+    "micro_abcd": 0.964126,
+    "claude": 0.919283
+   },
+   "only_micro_right": 13,
+   "only_claude_right": 3,
+   "mcnemar_p": 0.021271,
+   "recall_yes": {
+    "micro_abcd": [
+     38,
+     43
+    ],
+    "claude": [
+     32,
+     43
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     177,
+     180
+    ],
+    "claude": [
+     173,
+     180
+    ]
+   },
+   "mcnemar_p_holm": 0.2127
+  },
+  "mentions_bug": {
+   "n": 267,
+   "correct": {
+    "micro_abcd": 257,
+    "claude": 265
+   },
+   "accuracy": {
+    "micro_abcd": 0.962547,
+    "claude": 0.992509
+   },
+   "only_micro_right": 2,
+   "only_claude_right": 10,
+   "mcnemar_p": 0.038574,
+   "recall_yes": {
+    "micro_abcd": [
+     18,
+     18
+    ],
+    "claude": [
+     17,
+     18
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     239,
+     249
+    ],
+    "claude": [
+     248,
+     249
+    ]
+   },
+   "mcnemar_p_holm": 0.3472
+  },
+  "refund_requested": {
+   "n": 186,
+   "correct": {
+    "micro_abcd": 182,
+    "claude": 186
+   },
+   "accuracy": {
+    "micro_abcd": 0.978495,
+    "claude": 1.0
+   },
+   "only_micro_right": 0,
+   "only_claude_right": 4,
+   "mcnemar_p": 0.125,
+   "recall_yes": {
+    "micro_abcd": [
+     6,
+     6
+    ],
+    "claude": [
+     6,
+     6
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     176,
+     180
+    ],
+    "claude": [
+     180,
+     180
+    ]
+   },
+   "mcnemar_p_holm": 0.875
+  },
+  "refund_implied": {
+   "n": 221,
+   "correct": {
+    "micro_abcd": 206,
+    "claude": 202
+   },
+   "accuracy": {
+    "micro_abcd": 0.932127,
+    "claude": 0.914027
+   },
+   "only_micro_right": 12,
+   "only_claude_right": 8,
+   "mcnemar_p": 0.503445,
+   "recall_yes": {
+    "micro_abcd": [
+     35,
+     41
+    ],
+    "claude": [
+     23,
+     41
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     171,
+     180
+    ],
+    "claude": [
+     179,
+     180
+    ]
+   },
+   "mcnemar_p_holm": 1.0
+  },
+  "needs_staff_action": {
+   "n": 300,
+   "correct": {
+    "micro_abcd": 220,
+    "claude": 174
+   },
+   "accuracy": {
+    "micro_abcd": 0.733333,
+    "claude": 0.58
+   },
+   "only_micro_right": 86,
+   "only_claude_right": 40,
+   "mcnemar_p": 5.1e-05,
+   "recall_yes": {
+    "micro_abcd": [
+     122,
+     150
+    ],
+    "claude": [
+     82,
+     150
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     98,
+     150
+    ],
+    "claude": [
+     92,
+     150
+    ]
+   },
+   "mcnemar_p_holm": 0.0006
+  },
+  "identity_details_given": {
+   "n": 300,
+   "correct": {
+    "micro_abcd": 297,
+    "claude": 294
+   },
+   "accuracy": {
+    "micro_abcd": 0.99,
+    "claude": 0.98
+   },
+   "only_micro_right": 6,
+   "only_claude_right": 3,
+   "mcnemar_p": 0.507812,
+   "recall_yes": {
+    "micro_abcd": [
+     35,
+     36
+    ],
+    "claude": [
+     31,
+     36
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     262,
+     264
+    ],
+    "claude": [
+     263,
+     264
+    ]
+   },
+   "mcnemar_p_holm": 1.0
+  },
+  "charge_amount_given": {
+   "n": 300,
+   "correct": {
+    "micro_abcd": 297,
+    "claude": 299
+   },
+   "accuracy": {
+    "micro_abcd": 0.99,
+    "claude": 0.996667
+   },
+   "only_micro_right": 1,
+   "only_claude_right": 3,
+   "mcnemar_p": 0.625,
+   "recall_yes": {
+    "micro_abcd": [
+     2,
+     2
+    ],
+    "claude": [
+     1,
+     2
+    ]
+   },
+   "recall_no": {
+    "micro_abcd": [
+     295,
+     298
+    ],
+    "claude": [
+     298,
+     298
+    ]
+   },
+   "mcnemar_p_holm": 1.0
+  }
+ },
+ "yes_no_pooled_recall": {
+  "yes": {
+   "micro_abcd": [
+    352,
+    405
+   ],
+   "claude": [
+    281,
+    405
+   ]
+  },
+  "no": {
+   "micro_abcd": [
+    2082,
+    2193
+   ],
+   "claude": [
+    2116,
+    2193
+   ]
+  }
+ },
+ "yes_no_claude_ahead_on_plain_accuracy": [
+  "cannot_log_in",
+  "security_related",
+  "mentions_account_issue",
+  "mentions_bug",
+  "refund_requested",
+  "charge_amount_given"
+ ],
+ "mcnemar_holm_005": {
+  "micro_ahead": [
+   "flow",
+   "intent",
+   "journey_stage",
+   "message_type",
+   "needs_staff_action"
+  ],
+  "claude_ahead": []
+ },
+ "committed": {
+  "flow": {
+   "graded": 300,
+   "committed": 275,
+   "micro_correct": 256,
+   "claude_correct": 230,
+   "diff_points": 9.5
+  },
+  "intent": {
+   "graded": 300,
+   "committed": 258,
+   "micro_correct": 221,
+   "claude_correct": 197,
+   "diff_points": 9.3
+  },
+  "primary_team": {
+   "graded": 267,
+   "committed": 267,
+   "micro_correct": 236,
+   "claude_correct": 222,
+   "diff_points": 5.2
+  },
+  "journey_stage": {
+   "graded": 145,
+   "committed": 118,
+   "micro_correct": 116,
+   "claude_correct": 105,
+   "diff_points": 9.3
+  },
+  "message_type": {
+   "graded": 285,
+   "committed": 259,
+   "micro_correct": 240,
+   "claude_correct": 192,
+   "diff_points": 18.5
+  }
+ }
+}

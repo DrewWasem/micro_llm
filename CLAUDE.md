@@ -18,7 +18,7 @@ The repo is public: https://github.com/DrewWasem/micro_llm
 | Step                       | Command                                                              | Note                                                |
 |----------------------------|----------------------------------------------------------------------|-----------------------------------------------------|
 | Write training tickets     | `python3 -m micro_llm.generate --tickets 480 --batch 2 --workers 12` | Haiku, ~$0.013 per ticket; batches cache in `data/` |
-| Train the 7 models         | `python3 -m micro_llm.train`                                         | Saves to `models/`, which is gitignored             |
+| Train the 7 models         | `python3 -m micro_llm.train`                                         | Saves weights to `models/`, which git ignores       |
 | Score held-out tickets     | `python3 -m micro_llm.evaluate`                                      | Writes `models/eval.json`                           |
 | Answer one ticket          | `python3 -m micro_llm.run "ticket text"`                             | With no text it runs the sample ticket              |
 | Decide and act (steps 2–3) | `python3 -m micro_llm.resolve "ticket text"`                         | Unknown account: only verification runs             |

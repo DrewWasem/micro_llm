@@ -1,0 +1,102 @@
+{
+ "flow": {
+  "graded": 300,
+  "claude_committed": 275,
+  "claude_abstained_or_unused_label": 25,
+  "claude_answers_dropped": {
+   "None": 25
+  },
+  "accuracy_on_committed": {
+   "micro_abcd": 0.9309,
+   "claude": 0.8364,
+   "mcnemar_p": 0.0,
+   "only_micro_right": 31,
+   "only_claude_right": 5
+  },
+  "micro_accuracy_on_dropped": 0.08,
+  "opening_words_median": {
+   "committed": 16,
+   "dropped": 2
+  }
+ },
+ "intent": {
+  "graded": 300,
+  "claude_committed": 258,
+  "claude_abstained_or_unused_label": 42,
+  "claude_answers_dropped": {
+   "None": 30,
+   "status_questions": 12
+  },
+  "accuracy_on_committed": {
+   "micro_abcd": 0.8566,
+   "claude": 0.7636,
+   "mcnemar_p": 0.0007,
+   "only_micro_right": 36,
+   "only_claude_right": 12
+  },
+  "micro_accuracy_on_dropped": 0.1667,
+  "opening_words_median": {
+   "committed": 16.5,
+   "dropped": 4.0
+  }
+ },
+ "primary_team": {
+  "graded": 267,
+  "claude_committed": 267,
+  "claude_abstained_or_unused_label": 0,
+  "claude_answers_dropped": {},
+  "accuracy_on_committed": {
+   "micro_abcd": 0.8839,
+   "claude": 0.8315,
+   "mcnemar_p": 0.0488,
+   "only_micro_right": 29,
+   "only_claude_right": 15
+  },
+  "micro_accuracy_on_dropped": null,
+  "opening_words_median": {
+   "committed": 16,
+   "dropped": null
+  }
+ },
+ "journey_stage": {
+  "graded": 145,
+  "claude_committed": 118,
+  "claude_abstained_or_unused_label": 27,
+  "claude_answers_dropped": {
+   "unclear": 27
+  },
+  "accuracy_on_committed": {
+   "micro_abcd": 0.9831,
+   "claude": 0.8898,
+   "mcnemar_p": 0.0034,
+   "only_micro_right": 12,
+   "only_claude_right": 1
+  },
+  "micro_accuracy_on_dropped": 0.7037,
+  "opening_words_median": {
+   "committed": 18.0,
+   "dropped": 9
+  }
+ },
+ "message_type": {
+  "graded": 285,
+  "claude_committed": 259,
+  "claude_abstained_or_unused_label": 26,
+  "claude_answers_dropped": {
+   "feedback": 1,
+   "other": 25
+  },
+  "accuracy_on_committed": {
+   "micro_abcd": 0.9266,
+   "claude": 0.7413,
+   "mcnemar_p": 0.0,
+   "only_micro_right": 53,
+   "only_claude_right": 5
+  },
+  "micro_accuracy_on_dropped": 0.4231,
+  "opening_words_median": {
+   "committed": 16,
+   "dropped": 2.0
+  }
+ }
+}

@@ -1,0 +1,1551 @@
+{
+ "model": "haiku",
+ "seeds": 5,
+ "train_chats": 8034,
+ "test_openings": 300,
+ "synthetic_training_tickets": 383,
+ "full_size_mismatches_with_compare_py": 0,
+ "reference": {
+  "claude_15": {
+   "as_reported": 0.8145,
+   "plain_throughout": 0.8618,
+   "balanced_throughout": 0.8053
+  },
+  "claude_13_shared": {
+   "as_reported": 0.8303,
+   "plain_throughout": 0.8849,
+   "balanced_throughout": 0.8196
+  },
+  "micro_syn_13_shared": {
+   "as_reported": 0.6032,
+   "plain_throughout": 0.7511,
+   "balanced_throughout": 0.5968
+  }
+ },
+ "smallest_size_whose_seed_mean_beats_claude": {
+  "as_reported": 383,
+  "plain_throughout": 200,
+  "balanced_throughout": 383
+ },
+ "curve": [
+  {
+   "size": 50,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.6204,
+     "sd": 0.0157,
+     "min": 0.5996,
+     "max": 0.6406
+    },
+    "plain_throughout": {
+     "mean": 0.7894,
+     "sd": 0.0071,
+     "min": 0.7842,
+     "max": 0.8011
+    },
+    "balanced_throughout": {
+     "mean": 0.6005,
+     "sd": 0.025,
+     "min": 0.566,
+     "max": 0.6244
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.655,
+     "sd": 0.0187,
+     "min": 0.6324,
+     "max": 0.6767
+    },
+    "plain_throughout": {
+     "mean": 0.8473,
+     "sd": 0.0076,
+     "min": 0.8385,
+     "max": 0.8592
+    },
+    "balanced_throughout": {
+     "mean": 0.632,
+     "sd": 0.03,
+     "min": 0.5937,
+     "max": 0.6587
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 1.8,
+    "sd": 0.4472,
+    "min": 1,
+    "max": 2
+   }
+  },
+  {
+   "size": 100,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.6985,
+     "sd": 0.0199,
+     "min": 0.6791,
+     "max": 0.7208
+    },
+    "plain_throughout": {
+     "mean": 0.83,
+     "sd": 0.0158,
+     "min": 0.8087,
+     "max": 0.8449
+    },
+    "balanced_throughout": {
+     "mean": 0.6837,
+     "sd": 0.0189,
+     "min": 0.6644,
+     "max": 0.7113
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.7267,
+     "sd": 0.0178,
+     "min": 0.7101,
+     "max": 0.7487
+    },
+    "plain_throughout": {
+     "mean": 0.876,
+     "sd": 0.0124,
+     "min": 0.8577,
+     "max": 0.8875
+    },
+    "balanced_throughout": {
+     "mean": 0.7097,
+     "sd": 0.0175,
+     "min": 0.6931,
+     "max": 0.7378
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 2.8,
+    "sd": 0.4472,
+    "min": 2,
+    "max": 3
+   }
+  },
+  {
+   "size": 200,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.7801,
+     "sd": 0.0176,
+     "min": 0.7631,
+     "max": 0.8038
+    },
+    "plain_throughout": {
+     "mean": 0.8712,
+     "sd": 0.0114,
+     "min": 0.8533,
+     "max": 0.8837
+    },
+    "balanced_throughout": {
+     "mean": 0.7754,
+     "sd": 0.0185,
+     "min": 0.7601,
+     "max": 0.8019
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.8015,
+     "sd": 0.0185,
+     "min": 0.7816,
+     "max": 0.8258
+    },
+    "plain_throughout": {
+     "mean": 0.9052,
+     "sd": 0.01,
+     "min": 0.89,
+     "max": 0.9153
+    },
+    "balanced_throughout": {
+     "mean": 0.7961,
+     "sd": 0.0195,
+     "min": 0.7782,
+     "max": 0.8236
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 7,
+    "sd": 1.0,
+    "min": 6,
+    "max": 8
+   }
+  },
+  {
+   "size": 383,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.831,
+     "sd": 0.0102,
+     "min": 0.8131,
+     "max": 0.8385
+    },
+    "plain_throughout": {
+     "mean": 0.8962,
+     "sd": 0.0033,
+     "min": 0.8928,
+     "max": 0.9
+    },
+    "balanced_throughout": {
+     "mean": 0.8303,
+     "sd": 0.0105,
+     "min": 0.8115,
+     "max": 0.8359
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.8477,
+     "sd": 0.0124,
+     "min": 0.8262,
+     "max": 0.8582
+    },
+    "plain_throughout": {
+     "mean": 0.9219,
+     "sd": 0.0045,
+     "min": 0.9185,
+     "max": 0.9288
+    },
+    "balanced_throughout": {
+     "mean": 0.8468,
+     "sd": 0.0127,
+     "min": 0.8244,
+     "max": 0.8551
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 10.2,
+    "sd": 0.8367,
+    "min": 9,
+    "max": 11
+   }
+  },
+  {
+   "size": 1000,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.881,
+     "sd": 0.007,
+     "min": 0.8745,
+     "max": 0.8921
+    },
+    "plain_throughout": {
+     "mean": 0.9108,
+     "sd": 0.0025,
+     "min": 0.907,
+     "max": 0.914
+    },
+    "balanced_throughout": {
+     "mean": 0.882,
+     "sd": 0.0074,
+     "min": 0.8771,
+     "max": 0.8945
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.8956,
+     "sd": 0.0081,
+     "min": 0.8869,
+     "max": 0.9054
+    },
+    "plain_throughout": {
+     "mean": 0.9293,
+     "sd": 0.0026,
+     "min": 0.9266,
+     "max": 0.9327
+    },
+    "balanced_throughout": {
+     "mean": 0.8968,
+     "sd": 0.0083,
+     "min": 0.8887,
+     "max": 0.9081
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 12.4,
+    "sd": 0.8944,
+    "min": 11,
+    "max": 13
+   }
+  },
+  {
+   "size": 2000,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.8976,
+     "sd": 0.0058,
+     "min": 0.8878,
+     "max": 0.9031
+    },
+    "plain_throughout": {
+     "mean": 0.9129,
+     "sd": 0.0079,
+     "min": 0.9007,
+     "max": 0.9214
+    },
+    "balanced_throughout": {
+     "mean": 0.8993,
+     "sd": 0.0049,
+     "min": 0.8909,
+     "max": 0.9033
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.9137,
+     "sd": 0.006,
+     "min": 0.9036,
+     "max": 0.9193
+    },
+    "plain_throughout": {
+     "mean": 0.9308,
+     "sd": 0.0086,
+     "min": 0.9182,
+     "max": 0.9406
+    },
+    "balanced_throughout": {
+     "mean": 0.9156,
+     "sd": 0.0049,
+     "min": 0.9071,
+     "max": 0.9196
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 13.6,
+    "sd": 0.5477,
+    "min": 13,
+    "max": 14
+   }
+  },
+  {
+   "size": 4000,
+   "runs": 5,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.9032,
+     "sd": 0.0065,
+     "min": 0.893,
+     "max": 0.9093
+    },
+    "plain_throughout": {
+     "mean": 0.9186,
+     "sd": 0.0076,
+     "min": 0.91,
+     "max": 0.9268
+    },
+    "balanced_throughout": {
+     "mean": 0.9059,
+     "sd": 0.0062,
+     "min": 0.8962,
+     "max": 0.9114
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.9181,
+     "sd": 0.0075,
+     "min": 0.9059,
+     "max": 0.9252
+    },
+    "plain_throughout": {
+     "mean": 0.9355,
+     "sd": 0.0081,
+     "min": 0.9267,
+     "max": 0.9435
+    },
+    "balanced_throughout": {
+     "mean": 0.9213,
+     "sd": 0.0072,
+     "min": 0.9096,
+     "max": 0.9285
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 13.6,
+    "sd": 0.5477,
+    "min": 13,
+    "max": 14
+   }
+  },
+  {
+   "size": 8034,
+   "runs": 1,
+   "mean_15": {
+    "as_reported": {
+     "mean": 0.9066,
+     "sd": 0.0,
+     "min": 0.9066,
+     "max": 0.9066
+    },
+    "plain_throughout": {
+     "mean": 0.9142,
+     "sd": 0.0,
+     "min": 0.9142,
+     "max": 0.9142
+    },
+    "balanced_throughout": {
+     "mean": 0.9097,
+     "sd": 0.0,
+     "min": 0.9097,
+     "max": 0.9097
+    }
+   },
+   "mean_13_shared": {
+    "as_reported": {
+     "mean": 0.9209,
+     "sd": 0.0,
+     "min": 0.9209,
+     "max": 0.9209
+    },
+    "plain_throughout": {
+     "mean": 0.9302,
+     "sd": 0.0,
+     "min": 0.9302,
+     "max": 0.9302
+    },
+    "balanced_throughout": {
+     "mean": 0.9244,
+     "sd": 0.0,
+     "min": 0.9244,
+     "max": 0.9244
+    }
+   },
+   "questions_ahead_of_claude_as_reported": {
+    "mean": 14,
+    "sd": 0.0,
+    "min": 14,
+    "max": 14
+   }
+  }
+ ],
+ "runs": [
+  {
+   "size": 8034,
+   "seed": null,
+   "mean_15": {
+    "as_reported": 0.9065991433806978,
+    "plain_throughout": 0.914180023109041,
+    "balanced_throughout": 0.909690783942091
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9208698567785948,
+    "plain_throughout": 0.9302077189719704,
+    "balanced_throughout": 0.9244371343494332
+   },
+   "questions_as_reported": {
+    "flow": 0.859,
+    "intent": 0.7686,
+    "primary_team": 0.8839,
+    "journey_stage": 0.931,
+    "message_type": 0.8807,
+    "cannot_log_in": 0.9235,
+    "security_related": 0.9235,
+    "mentions_account_issue": 0.914,
+    "mentions_billing_issue": 0.9335,
+    "mentions_bug": 0.9799,
+    "refund_requested": 0.9889,
+    "refund_implied": 0.9018,
+    "needs_staff_action": 0.7333,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.995
+   }
+  },
+  {
+   "size": 50,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.6276578349022065,
+    "plain_throughout": 0.785637398502186,
+    "balanced_throughout": 0.6193694248918752
+   },
+   "mean_13_shared": {
+    "as_reported": 0.6682580862946175,
+    "plain_throughout": 0.8477867418614966,
+    "balanced_throughout": 0.6586945362826967
+   },
+   "questions_as_reported": {
+    "flow": 0.518,
+    "intent": 0.2095,
+    "primary_team": 0.7228,
+    "journey_stage": 0.8069,
+    "message_type": 0.6386,
+    "cannot_log_in": 0.7857,
+    "security_related": 0.7857,
+    "mentions_account_issue": 0.7564,
+    "mentions_billing_issue": 0.6034,
+    "mentions_bug": 0.8471,
+    "refund_requested": 0.5,
+    "refund_implied": 0.6624,
+    "needs_staff_action": 0.5833,
+    "identity_details_given": 0.5,
+    "charge_amount_given": 0.495
+   }
+  },
+  {
+   "size": 100,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.679941983420557,
+    "plain_throughout": 0.8086907897146358,
+    "balanced_throughout": 0.6699805319132961
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7121792304390513,
+    "plain_throughout": 0.8577201419784259,
+    "balanced_throughout": 0.7006852479306733
+   },
+   "questions_as_reported": {
+    "flow": 0.5929,
+    "intent": 0.3479,
+    "primary_team": 0.7566,
+    "journey_stage": 0.7655,
+    "message_type": 0.6702,
+    "cannot_log_in": 0.8857,
+    "security_related": 0.8857,
+    "mentions_account_issue": 0.8696,
+    "mentions_billing_issue": 0.6765,
+    "mentions_bug": 0.9026,
+    "refund_requested": 0.4861,
+    "refund_implied": 0.6851,
+    "needs_staff_action": 0.5967,
+    "identity_details_given": 0.5814,
+    "charge_amount_given": 0.4966
+   }
+  },
+  {
+   "size": 200,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.7719423351454716,
+    "plain_throughout": 0.8532976929505522,
+    "balanced_throughout": 0.767122241846459
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7969882583247978,
+    "plain_throughout": 0.8899588764814064,
+    "balanced_throughout": 0.7914266122105524
+   },
+   "questions_as_reported": {
+    "flow": 0.7215,
+    "intent": 0.4968,
+    "primary_team": 0.839,
+    "journey_stage": 0.8207,
+    "message_type": 0.7719,
+    "cannot_log_in": 0.9,
+    "security_related": 0.9,
+    "mentions_account_issue": 0.8608,
+    "mentions_billing_issue": 0.8299,
+    "mentions_bug": 0.9562,
+    "refund_requested": 0.5694,
+    "refund_implied": 0.7976,
+    "needs_staff_action": 0.6067,
+    "identity_details_given": 0.762,
+    "charge_amount_given": 0.7466
+   }
+  },
+  {
+   "size": 383,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.8385280689660287,
+    "plain_throughout": 0.8927616398592266,
+    "balanced_throughout": 0.8358623423474267
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8581685281767248,
+    "plain_throughout": 0.9188275331709025,
+    "balanced_throughout": 0.8550926897706456
+   },
+   "questions_as_reported": {
+    "flow": 0.7856,
+    "intent": 0.6361,
+    "primary_team": 0.8764,
+    "journey_stage": 0.8759,
+    "message_type": 0.8386,
+    "cannot_log_in": 0.9264,
+    "security_related": 0.9264,
+    "mentions_account_issue": 0.9209,
+    "mentions_billing_issue": 0.8815,
+    "mentions_bug": 0.9859,
+    "refund_requested": 0.825,
+    "refund_implied": 0.8331,
+    "needs_staff_action": 0.66,
+    "identity_details_given": 0.8611,
+    "charge_amount_given": 0.745
+   }
+  },
+  {
+   "size": 1000,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.8920981630070269,
+    "plain_throughout": 0.9108055256600938,
+    "balanced_throughout": 0.8944893462898486
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9053875262073577,
+    "plain_throughout": 0.9265704783257492,
+    "balanced_throughout": 0.9081465838413827
+   },
+   "questions_as_reported": {
+    "flow": 0.8498,
+    "intent": 0.7617,
+    "primary_team": 0.8914,
+    "journey_stage": 0.931,
+    "message_type": 0.8667,
+    "cannot_log_in": 0.9299,
+    "security_related": 0.9299,
+    "mentions_account_issue": 0.918,
+    "mentions_billing_issue": 0.9163,
+    "mentions_bug": 0.9859,
+    "refund_requested": 0.9083,
+    "refund_implied": 0.8913,
+    "needs_staff_action": 0.7,
+    "identity_details_given": 0.9129,
+    "charge_amount_given": 0.9883
+   }
+  },
+  {
+   "size": 2000,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.9030889079123036,
+    "plain_throughout": 0.9136912039143951,
+    "balanced_throughout": 0.9032926685758234
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9193465882027807,
+    "plain_throughout": 0.9316949788755841,
+    "balanced_throughout": 0.9195816966606881
+   },
+   "questions_as_reported": {
+    "flow": 0.8531,
+    "intent": 0.7417,
+    "primary_team": 0.8989,
+    "journey_stage": 0.931,
+    "message_type": 0.8772,
+    "cannot_log_in": 0.9243,
+    "security_related": 0.9243,
+    "mentions_account_issue": 0.914,
+    "mentions_billing_issue": 0.9252,
+    "mentions_bug": 0.9859,
+    "refund_requested": 0.9917,
+    "refund_implied": 0.8935,
+    "needs_staff_action": 0.71,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.9933
+   }
+  },
+  {
+   "size": 4000,
+   "seed": 0,
+   "mean_15": {
+    "as_reported": 0.9085831859937973,
+    "plain_throughout": 0.9223193267303418,
+    "balanced_throughout": 0.9114246080444922
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9252039988407276,
+    "plain_throughout": 0.9393428128939841,
+    "balanced_throughout": 0.9284825627453754
+   },
+   "questions_as_reported": {
+    "flow": 0.8607,
+    "intent": 0.7404,
+    "primary_team": 0.8914,
+    "journey_stage": 0.9448,
+    "message_type": 0.8912,
+    "cannot_log_in": 0.9221,
+    "security_related": 0.9221,
+    "mentions_account_issue": 0.9227,
+    "mentions_billing_issue": 0.9396,
+    "mentions_bug": 0.9839,
+    "refund_requested": 1,
+    "refund_implied": 0.8924,
+    "needs_staff_action": 0.7367,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.9983
+   }
+  },
+  {
+   "size": 50,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.599634869365244,
+    "plain_throughout": 0.7842470379851247,
+    "balanced_throughout": 0.5660210259753317
+   },
+   "mean_13_shared": {
+    "as_reported": 0.6324424982101183,
+    "plain_throughout": 0.8443876079315542,
+    "balanced_throughout": 0.5936572942986811
+   },
+   "questions_as_reported": {
+    "flow": 0.4984,
+    "intent": 0.2744,
+    "primary_team": 0.7004,
+    "journey_stage": 0.8414,
+    "message_type": 0.6246,
+    "cannot_log_in": 0.7857,
+    "security_related": 0.7857,
+    "mentions_account_issue": 0.7564,
+    "mentions_billing_issue": 0.589,
+    "mentions_bug": 0.5,
+    "refund_requested": 0.5,
+    "refund_implied": 0.5338,
+    "needs_staff_action": 0.6067,
+    "identity_details_given": 0.4981,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 100,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.7175407875476829,
+    "plain_throughout": 0.841006600612048,
+    "balanced_throughout": 0.6933498962961423
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7424991435320111,
+    "plain_throughout": 0.8824435135267221,
+    "balanced_throughout": 0.7145865767033104
+   },
+   "questions_as_reported": {
+    "flow": 0.7172,
+    "intent": 0.3934,
+    "primary_team": 0.7491,
+    "journey_stage": 0.869,
+    "message_type": 0.7263,
+    "cannot_log_in": 0.8857,
+    "security_related": 0.8857,
+    "mentions_account_issue": 0.8462,
+    "mentions_billing_issue": 0.7286,
+    "mentions_bug": 0.6667,
+    "refund_requested": 0.8333,
+    "refund_implied": 0.7411,
+    "needs_staff_action": 0.6533,
+    "identity_details_given": 0.5676,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 200,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.7935144223348517,
+    "plain_throughout": 0.8776598411547898,
+    "balanced_throughout": 0.7874415676876466
+   },
+   "mean_13_shared": {
+    "as_reported": 0.815099699906685,
+    "plain_throughout": 0.9129408423580908,
+    "balanced_throughout": 0.8080925599291406
+   },
+   "questions_as_reported": {
+    "flow": 0.7664,
+    "intent": 0.5401,
+    "primary_team": 0.8427,
+    "journey_stage": 0.9241,
+    "message_type": 0.7895,
+    "cannot_log_in": 0.9121,
+    "security_related": 0.9121,
+    "mentions_account_issue": 0.9015,
+    "mentions_billing_issue": 0.8178,
+    "mentions_bug": 0.9147,
+    "refund_requested": 0.8333,
+    "refund_implied": 0.8265,
+    "needs_staff_action": 0.66,
+    "identity_details_given": 0.762,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 383,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.8347708596907032,
+    "plain_throughout": 0.9000306376812859,
+    "balanced_throughout": 0.833415607096559
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8521878918609497,
+    "plain_throughout": 0.9287532998886633,
+    "balanced_throughout": 0.8506241388677064
+   },
+   "questions_as_reported": {
+    "flow": 0.8134,
+    "intent": 0.6297,
+    "primary_team": 0.8652,
+    "journey_stage": 0.9586,
+    "message_type": 0.814,
+    "cannot_log_in": 0.9243,
+    "security_related": 0.9243,
+    "mentions_account_issue": 0.9249,
+    "mentions_billing_issue": 0.8931,
+    "mentions_bug": 0.9404,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.8509,
+    "needs_staff_action": 0.7067,
+    "identity_details_given": 0.8611,
+    "charge_amount_given": 0.4983
+   }
+  },
+  {
+   "size": 1000,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.8779639205494137,
+    "plain_throughout": 0.9139553317800847,
+    "balanced_throughout": 0.8773910991663507
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8893331212123351,
+    "plain_throughout": 0.9312305110283029,
+    "balanced_throughout": 0.888672173462647
+   },
+   "questions_as_reported": {
+    "flow": 0.8663,
+    "intent": 0.7418,
+    "primary_team": 0.8839,
+    "journey_stage": 0.9448,
+    "message_type": 0.8561,
+    "cannot_log_in": 0.917,
+    "security_related": 0.917,
+    "mentions_account_issue": 0.9136,
+    "mentions_billing_issue": 0.8986,
+    "mentions_bug": 0.9702,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.8969,
+    "needs_staff_action": 0.74,
+    "identity_details_given": 0.9564,
+    "charge_amount_given": 0.75
+   }
+  },
+  {
+   "size": 2000,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.8997336804830195,
+    "plain_throughout": 0.9178578004149588,
+    "balanced_throughout": 0.9019233313498058
+   },
+   "mean_13_shared": {
+    "as_reported": 0.915493409342697,
+    "plain_throughout": 0.9359897697095678,
+    "balanced_throughout": 0.9180199295736043
+   },
+   "questions_as_reported": {
+    "flow": 0.8487,
+    "intent": 0.7459,
+    "primary_team": 0.8989,
+    "journey_stage": 0.931,
+    "message_type": 0.8772,
+    "cannot_log_in": 0.9278,
+    "security_related": 0.9278,
+    "mentions_account_issue": 0.9158,
+    "mentions_billing_issue": 0.9186,
+    "mentions_bug": 0.988,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.8847,
+    "needs_staff_action": 0.7567,
+    "identity_details_given": 0.9684,
+    "charge_amount_given": 0.9899
+   }
+  },
+  {
+   "size": 4000,
+   "seed": 1,
+   "mean_15": {
+    "as_reported": 0.9018206916018664,
+    "plain_throughout": 0.9229173574592283,
+    "balanced_throughout": 0.9042865573090398
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9172367020597164,
+    "plain_throughout": 0.9413148996324429,
+    "balanced_throughout": 0.9200819317218397
+   },
+   "questions_as_reported": {
+    "flow": 0.8626,
+    "intent": 0.7407,
+    "primary_team": 0.8989,
+    "journey_stage": 0.931,
+    "message_type": 0.8772,
+    "cannot_log_in": 0.9243,
+    "security_related": 0.9243,
+    "mentions_account_issue": 0.9249,
+    "mentions_billing_issue": 0.913,
+    "mentions_bug": 0.988,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.8969,
+    "needs_staff_action": 0.75,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.9966
+   }
+  },
+  {
+   "size": 50,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.6112487780628595,
+    "plain_throughout": 0.7846632212366712,
+    "balanced_throughout": 0.5830252322358672
+   },
+   "mean_13_shared": {
+    "as_reported": 0.6395473497566408,
+    "plain_throughout": 0.8384575629653898,
+    "balanced_throughout": 0.6069817199562652
+   },
+   "questions_as_reported": {
+    "flow": 0.5412,
+    "intent": 0.3134,
+    "primary_team": 0.6816,
+    "journey_stage": 0.8552,
+    "message_type": 0.6632,
+    "cannot_log_in": 0.6563,
+    "security_related": 0.6563,
+    "mentions_account_issue": 0.692,
+    "mentions_billing_issue": 0.6992,
+    "mentions_bug": 0.5278,
+    "refund_requested": 0.6667,
+    "refund_implied": 0.598,
+    "needs_staff_action": 0.59,
+    "identity_details_given": 0.5278,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 100,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.7207507513622813,
+    "plain_throughout": 0.8449478812615228,
+    "balanced_throughout": 0.7112979468100425
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7486748664506032,
+    "plain_throughout": 0.8875039655581672,
+    "balanced_throughout": 0.7377677842749432
+   },
+   "questions_as_reported": {
+    "flow": 0.6498,
+    "intent": 0.4287,
+    "primary_team": 0.824,
+    "journey_stage": 0.9103,
+    "message_type": 0.7825,
+    "cannot_log_in": 0.8377,
+    "security_related": 0.8377,
+    "mentions_account_issue": 0.8158,
+    "mentions_billing_issue": 0.7624,
+    "mentions_bug": 0.7222,
+    "refund_requested": 0.6667,
+    "refund_implied": 0.6795,
+    "needs_staff_action": 0.63,
+    "identity_details_given": 0.7639,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 200,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.8038126974701609,
+    "plain_throughout": 0.8837367748708641,
+    "balanced_throughout": 0.8019058925244226
+   },
+   "mean_13_shared": {
+    "as_reported": 0.82577263949386,
+    "plain_throughout": 0.9153373043381766,
+    "balanced_throughout": 0.8235724799410848
+   },
+   "questions_as_reported": {
+    "flow": 0.7418,
+    "intent": 0.5803,
+    "primary_team": 0.8727,
+    "journey_stage": 0.931,
+    "message_type": 0.8561,
+    "cannot_log_in": 0.897,
+    "security_related": 0.897,
+    "mentions_account_issue": 0.8799,
+    "mentions_billing_issue": 0.8731,
+    "mentions_bug": 0.9722,
+    "refund_requested": 0.75,
+    "refund_implied": 0.8259,
+    "needs_staff_action": 0.6467,
+    "identity_details_given": 0.8333,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 383,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.833928591021351,
+    "plain_throughout": 0.8935052625555371,
+    "balanced_throughout": 0.8352782056819417
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8508095728967037,
+    "plain_throughout": 0.9191727388461326,
+    "balanced_throughout": 0.8523668205820005
+   },
+   "questions_as_reported": {
+    "flow": 0.805,
+    "intent": 0.6434,
+    "primary_team": 0.8539,
+    "journey_stage": 0.9241,
+    "message_type": 0.8596,
+    "cannot_log_in": 0.9135,
+    "security_related": 0.9135,
+    "mentions_account_issue": 0.9033,
+    "mentions_billing_issue": 0.8815,
+    "mentions_bug": 0.9501,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.8625,
+    "needs_staff_action": 0.6967,
+    "identity_details_given": 0.8851,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 1000,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.8744620567702239,
+    "plain_throughout": 0.9103341006982131,
+    "balanced_throughout": 0.8770924298121828
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8868942504328375,
+    "plain_throughout": 0.9278213982415279,
+    "balanced_throughout": 0.8899292962504823
+   },
+   "questions_as_reported": {
+    "flow": 0.8543,
+    "intent": 0.733,
+    "primary_team": 0.8876,
+    "journey_stage": 0.9379,
+    "message_type": 0.8877,
+    "cannot_log_in": 0.9313,
+    "security_related": 0.9313,
+    "mentions_account_issue": 0.918,
+    "mentions_billing_issue": 0.9158,
+    "mentions_bug": 0.988,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.8652,
+    "needs_staff_action": 0.72,
+    "identity_details_given": 0.8851,
+    "charge_amount_given": 0.745
+   }
+  },
+  {
+   "size": 2000,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.8980800828688192,
+    "plain_throughout": 0.9110237513020454,
+    "balanced_throughout": 0.9010114884112195
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9135240138032324,
+    "plain_throughout": 0.9273350976562063,
+    "balanced_throughout": 0.9169064048136943
+   },
+   "questions_as_reported": {
+    "flow": 0.8492,
+    "intent": 0.7461,
+    "primary_team": 0.8801,
+    "journey_stage": 0.9448,
+    "message_type": 0.8807,
+    "cannot_log_in": 0.9334,
+    "security_related": 0.9334,
+    "mentions_account_issue": 0.9162,
+    "mentions_billing_issue": 0.9424,
+    "mentions_bug": 0.9859,
+    "refund_requested": 0.8917,
+    "refund_implied": 0.8879,
+    "needs_staff_action": 0.7433,
+    "identity_details_given": 0.9426,
+    "charge_amount_given": 0.9933
+   }
+  },
+  {
+   "size": 4000,
+   "seed": 2,
+   "mean_15": {
+    "as_reported": 0.9030983073600238,
+    "plain_throughout": 0.9110159863970104,
+    "balanced_throughout": 0.9061881340999629
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9190278396476372,
+    "plain_throughout": 0.9268133176375761,
+    "balanced_throughout": 0.9225930243475671
+   },
+   "questions_as_reported": {
+    "flow": 0.8644,
+    "intent": 0.7347,
+    "primary_team": 0.8801,
+    "journey_stage": 0.931,
+    "message_type": 0.9018,
+    "cannot_log_in": 0.9278,
+    "security_related": 0.9278,
+    "mentions_account_issue": 0.914,
+    "mentions_billing_issue": 0.9052,
+    "mentions_bug": 0.9739,
+    "refund_requested": 0.975,
+    "refund_implied": 0.8935,
+    "needs_staff_action": 0.74,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.995
+   }
+  },
+  {
+   "size": 50,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.6230630786555292,
+    "plain_throughout": 0.7913395894232419,
+    "balanced_throughout": 0.6096827221552609
+   },
+   "mean_13_shared": {
+    "as_reported": 0.658119529202759,
+    "plain_throughout": 0.8466738852319458,
+    "balanced_throughout": 0.6426806563178339
+   },
+   "questions_as_reported": {
+    "flow": 0.5487,
+    "intent": 0.2417,
+    "primary_team": 0.7154,
+    "journey_stage": 0.8138,
+    "message_type": 0.6421,
+    "cannot_log_in": 0.7992,
+    "security_related": 0.7992,
+    "mentions_account_issue": 0.7667,
+    "mentions_billing_issue": 0.5116,
+    "mentions_bug": 0.6904,
+    "refund_requested": 0.5,
+    "refund_implied": 0.6801,
+    "needs_staff_action": 0.5833,
+    "identity_details_given": 0.5537,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 100,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.6790855113871133,
+    "plain_throughout": 0.8180444719157315,
+    "balanced_throughout": 0.6644175211456433
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7100639880685692,
+    "plain_throughout": 0.8687692624668697,
+    "balanced_throughout": 0.6931393839437962
+   },
+   "questions_as_reported": {
+    "flow": 0.6004,
+    "intent": 0.3551,
+    "primary_team": 0.7715,
+    "journey_stage": 0.8345,
+    "message_type": 0.7123,
+    "cannot_log_in": 0.8156,
+    "security_related": 0.8156,
+    "mentions_account_issue": 0.7817,
+    "mentions_billing_issue": 0.6959,
+    "mentions_bug": 0.7758,
+    "refund_requested": 0.5,
+    "refund_implied": 0.7516,
+    "needs_staff_action": 0.6133,
+    "identity_details_given": 0.6629,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 200,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.7681666059310722,
+    "plain_throughout": 0.8716443353753665,
+    "balanced_throughout": 0.7605218771362211
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7881515934990624,
+    "plain_throughout": 0.9039485920997818,
+    "balanced_throughout": 0.7793307525819263
+   },
+   "questions_as_reported": {
+    "flow": 0.732,
+    "intent": 0.5446,
+    "primary_team": 0.8464,
+    "journey_stage": 0.869,
+    "message_type": 0.793,
+    "cannot_log_in": 0.9442,
+    "security_related": 0.9442,
+    "mentions_account_issue": 0.8843,
+    "mentions_billing_issue": 0.8261,
+    "mentions_bug": 0.8035,
+    "refund_requested": 0.6667,
+    "refund_implied": 0.7816,
+    "needs_staff_action": 0.6667,
+    "identity_details_given": 0.7203,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 383,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.8130884805347528,
+    "plain_throughout": 0.8951836281362692,
+    "balanced_throughout": 0.811510716562575
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8262034590405296,
+    "plain_throughout": 0.9185452119521055,
+    "balanced_throughout": 0.8243829621495552
+   },
+   "questions_as_reported": {
+    "flow": 0.8109,
+    "intent": 0.6447,
+    "primary_team": 0.8839,
+    "journey_stage": 0.9241,
+    "message_type": 0.8421,
+    "cannot_log_in": 0.9429,
+    "security_related": 0.9429,
+    "mentions_account_issue": 0.9293,
+    "mentions_billing_issue": 0.8648,
+    "mentions_bug": 0.9722,
+    "refund_requested": 0.65,
+    "refund_implied": 0.8109,
+    "needs_staff_action": 0.66,
+    "identity_details_given": 0.8176,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 1000,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.8834463795533677,
+    "plain_throughout": 0.9116992296299834,
+    "balanced_throughout": 0.8831326726530149
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9025648114949624,
+    "plain_throughout": 0.9327298803422887,
+    "balanced_throughout": 0.9022028419945551
+   },
+   "questions_as_reported": {
+    "flow": 0.8447,
+    "intent": 0.6736,
+    "primary_team": 0.9026,
+    "journey_stage": 0.931,
+    "message_type": 0.8807,
+    "cannot_log_in": 0.9264,
+    "security_related": 0.9264,
+    "mentions_account_issue": 0.9205,
+    "mentions_billing_issue": 0.8931,
+    "mentions_bug": 0.9722,
+    "refund_requested": 0.9,
+    "refund_implied": 0.8719,
+    "needs_staff_action": 0.7267,
+    "identity_details_given": 0.8851,
+    "charge_amount_given": 0.9966
+   }
+  },
+  {
+   "size": 2000,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.8994348504316352,
+    "plain_throughout": 0.9213931809389271,
+    "balanced_throughout": 0.899207817570398
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9164267850961452,
+    "plain_throughout": 0.9405818754423517,
+    "balanced_throughout": 0.91616482410241
+   },
+   "questions_as_reported": {
+    "flow": 0.8584,
+    "intent": 0.7196,
+    "primary_team": 0.8876,
+    "journey_stage": 0.9379,
+    "message_type": 0.8947,
+    "cannot_log_in": 0.9407,
+    "security_related": 0.9407,
+    "mentions_account_issue": 0.9421,
+    "mentions_billing_issue": 0.913,
+    "mentions_bug": 0.9702,
+    "refund_requested": 0.9,
+    "refund_implied": 0.868,
+    "needs_staff_action": 0.7533,
+    "identity_details_given": 0.9684,
+    "charge_amount_given": 0.9966
+   }
+  },
+  {
+   "size": 4000,
+   "seed": 3,
+   "mean_15": {
+    "as_reported": 0.9092637771950143,
+    "plain_throughout": 0.9267765799713613,
+    "balanced_throughout": 0.9112334855226343
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9232000467521609,
+    "plain_throughout": 0.9434601563772118,
+    "balanced_throughout": 0.925472787130184
+   },
+   "questions_as_reported": {
+    "flow": 0.868,
+    "intent": 0.7693,
+    "primary_team": 0.9026,
+    "journey_stage": 0.9448,
+    "message_type": 0.8807,
+    "cannot_log_in": 0.9528,
+    "security_related": 0.9528,
+    "mentions_account_issue": 0.9271,
+    "mentions_billing_issue": 0.9247,
+    "mentions_bug": 0.9602,
+    "refund_requested": 0.9167,
+    "refund_implied": 0.9018,
+    "needs_staff_action": 0.7567,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.9983
+   }
+  },
+  {
+   "size": 50,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.6405885360273836,
+    "plain_throughout": 0.8010584096458767,
+    "balanced_throughout": 0.6244224397572109
+   },
+   "mean_13_shared": {
+    "as_reported": 0.6767241046499374,
+    "plain_throughout": 0.8591699598478065,
+    "balanced_throughout": 0.6580709166458919
+   },
+   "questions_as_reported": {
+    "flow": 0.5632,
+    "intent": 0.2482,
+    "primary_team": 0.7491,
+    "journey_stage": 0.8483,
+    "message_type": 0.6632,
+    "cannot_log_in": 0.8264,
+    "security_related": 0.8264,
+    "mentions_account_issue": 0.7799,
+    "mentions_billing_issue": 0.6373,
+    "mentions_bug": 0.6944,
+    "refund_requested": 0.5833,
+    "refund_implied": 0.6192,
+    "needs_staff_action": 0.57,
+    "identity_details_given": 0.5,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 100,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.6950368864679825,
+    "plain_throughout": 0.837217230683263,
+    "balanced_throughout": 0.6793669593057913
+   },
+   "mean_13_shared": {
+    "as_reported": 0.720165229207876,
+    "plain_throughout": 0.8837121892499188,
+    "balanced_throughout": 0.7020845440207323
+   },
+   "questions_as_reported": {
+    "flow": 0.665,
+    "intent": 0.3984,
+    "primary_team": 0.794,
+    "journey_stage": 0.8759,
+    "message_type": 0.7404,
+    "cannot_log_in": 0.8571,
+    "security_related": 0.8571,
+    "mentions_account_issue": 0.8289,
+    "mentions_billing_issue": 0.7098,
+    "mentions_bug": 0.7222,
+    "refund_requested": 0.5833,
+    "refund_implied": 0.7394,
+    "needs_staff_action": 0.64,
+    "identity_details_given": 0.5139,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 200,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.7630584997192423,
+    "plain_throughout": 0.8699014116011929,
+    "balanced_throughout": 0.7600538758230257
+   },
+   "mean_13_shared": {
+    "as_reported": 0.7816432030836261,
+    "plain_throughout": 0.9037323980013765,
+    "balanced_throughout": 0.7781763293572223
+   },
+   "questions_as_reported": {
+    "flow": 0.746,
+    "intent": 0.5385,
+    "primary_team": 0.8614,
+    "journey_stage": 0.9034,
+    "message_type": 0.814,
+    "cannot_log_in": 0.9135,
+    "security_related": 0.9135,
+    "mentions_account_issue": 0.8821,
+    "mentions_billing_issue": 0.8233,
+    "mentions_bug": 0.8768,
+    "refund_requested": 0.5833,
+    "refund_implied": 0.7899,
+    "needs_staff_action": 0.6333,
+    "identity_details_given": 0.6667,
+    "charge_amount_given": 0.5
+   }
+  },
+  {
+   "size": 383,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.8346062672948719,
+    "plain_throughout": 0.8993095647472139,
+    "balanced_throughout": 0.8352649257485419
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8509696837722007,
+    "plain_throughout": 0.9243315490672981,
+    "balanced_throughout": 0.8517296742956663
+   },
+   "questions_as_reported": {
+    "flow": 0.8148,
+    "intent": 0.6417,
+    "primary_team": 0.8839,
+    "journey_stage": 0.9241,
+    "message_type": 0.8596,
+    "cannot_log_in": 0.9278,
+    "security_related": 0.9278,
+    "mentions_account_issue": 0.9121,
+    "mentions_billing_issue": 0.887,
+    "mentions_bug": 0.9324,
+    "refund_requested": 0.75,
+    "refund_implied": 0.8359,
+    "needs_staff_action": 0.7167,
+    "identity_details_given": 0.762,
+    "charge_amount_given": 0.7433
+   }
+  },
+  {
+   "size": 1000,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.8771221344108567,
+    "plain_throughout": 0.9069954995978387,
+    "balanced_throughout": 0.8778231539882149
+   },
+   "mean_13_shared": {
+    "as_reported": 0.8940023312785071,
+    "plain_throughout": 0.9280717303051984,
+    "balanced_throughout": 0.8948112000216126
+   },
+   "questions_as_reported": {
+    "flow": 0.8256,
+    "intent": 0.7092,
+    "primary_team": 0.8727,
+    "journey_stage": 0.9172,
+    "message_type": 0.8596,
+    "cannot_log_in": 0.9243,
+    "security_related": 0.9243,
+    "mentions_account_issue": 0.9099,
+    "mentions_billing_issue": 0.9047,
+    "mentions_bug": 0.9839,
+    "refund_requested": 0.8222,
+    "refund_implied": 0.8547,
+    "needs_staff_action": 0.7233,
+    "identity_details_given": 0.9268,
+    "charge_amount_given": 0.9983
+   }
+  },
+  {
+   "size": 2000,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.8878175832315076,
+    "plain_throughout": 0.9006567476473896,
+    "balanced_throughout": 0.8908648441664958
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9035699697075331,
+    "plain_throughout": 0.9181936831828854,
+    "balanced_throughout": 0.9070860400171349
+   },
+   "questions_as_reported": {
+    "flow": 0.8278,
+    "intent": 0.7431,
+    "primary_team": 0.8689,
+    "journey_stage": 0.9241,
+    "message_type": 0.8807,
+    "cannot_log_in": 0.917,
+    "security_related": 0.917,
+    "mentions_account_issue": 0.9136,
+    "mentions_billing_issue": 0.8992,
+    "mentions_bug": 0.9839,
+    "refund_requested": 0.8917,
+    "refund_implied": 0.8719,
+    "needs_staff_action": 0.7167,
+    "identity_details_given": 0.9684,
+    "charge_amount_given": 0.9933
+   }
+  },
+  {
+   "size": 4000,
+   "seed": 4,
+   "mean_15": {
+    "as_reported": 0.8930435166489068,
+    "plain_throughout": 0.9099970482643057,
+    "balanced_throughout": 0.8962397854535552
+   },
+   "mean_13_shared": {
+    "as_reported": 0.9059317589282214,
+    "plain_throughout": 0.9266632608177887,
+    "balanced_throughout": 0.9096197613951233
+   },
+   "questions_as_reported": {
+    "flow": 0.8472,
+    "intent": 0.7714,
+    "primary_team": 0.8727,
+    "journey_stage": 0.931,
+    "message_type": 0.8807,
+    "cannot_log_in": 0.9135,
+    "security_related": 0.9135,
+    "mentions_account_issue": 0.914,
+    "mentions_billing_issue": 0.8986,
+    "mentions_bug": 0.9839,
+    "refund_requested": 0.9,
+    "refund_implied": 0.8652,
+    "needs_staff_action": 0.7267,
+    "identity_details_given": 0.9823,
+    "charge_amount_given": 0.995
+   }
+  }
+ ],
+ "seconds": 38.5
+}

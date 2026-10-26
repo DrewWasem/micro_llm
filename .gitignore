@@ -25,6 +25,8 @@ checkpoints/
 *.ckpt
 *.safetensors
 *.gguf
+*.pkl
+*.joblib
 
 # Secrets — never commit
 .env
@@ -37,7 +39,15 @@ checkpoints/
 README.html
 CLAUDE.html
 docs/**/*.html
+# These pages have no markdown source: two are hand-built and scripts/pipeline_diagram.py draws the third
+!docs/pipeline.html
+!docs/sample_run.html
+!docs/sample_run_flow.html
 
-# Generated training data and trained models stay on this machine
-data/
-models/
+# data/ is committed so every result can be checked. The resolve step's thread store is runtime state.
+data/threads.sqlite
+
+# Trained models stay on this machine; their scores are committed
+models/*
+!models/eval.json
+!models/RESULTS.md

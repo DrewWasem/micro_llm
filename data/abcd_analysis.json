@@ -1,0 +1,5411 @@
+{
+ "source": {
+  "commit": "6b8700ce67c6b37b062dd7a60abc76d7ef832a97",
+  "inputs": {
+   "opening": "the customer's first messages, up to the agent's first reply",
+   "all": "every customer message in the chat"
+  }
+ },
+ "profile": {
+  "chats": {
+   "train": 8034,
+   "dev": 1004,
+   "test": 1004
+  },
+  "flows": [
+   [
+    "storewide_query",
+    1094
+   ],
+   [
+    "purchase_dispute",
+    1076
+   ],
+   [
+    "product_defect",
+    1070
+   ],
+   [
+    "account_access",
+    1048
+   ],
+   [
+    "single_item_query",
+    1045
+   ],
+   [
+    "order_issue",
+    1040
+   ],
+   [
+    "troubleshoot_site",
+    1026
+   ],
+   [
+    "shipping_issue",
+    1020
+   ],
+   [
+    "subscription_inquiry",
+    910
+   ],
+   [
+    "manage_account",
+    713
+   ]
+  ],
+  "intents": [
+   [
+    "recover_username",
+    361
+   ],
+   [
+    "reset_2fa",
+    351
+   ],
+   [
+    "recover_password",
+    336
+   ],
+   [
+    "membership",
+    281
+   ],
+   [
+    "boots",
+    281
+   ],
+   [
+    "pricing",
+    277
+   ],
+   [
+    "policy",
+    272
+   ],
+   [
+    "status",
+    268
+   ],
+   [
+    "credit_card",
+    266
+   ],
+   [
+    "timing",
+    264
+   ],
+   [
+    "jacket",
+    263
+   ],
+   [
+    "missing",
+    261
+   ],
+   [
+    "search_results",
+    259
+   ],
+   [
+    "jeans",
+    252
+   ],
+   [
+    "shopping_cart",
+    251
+   ],
+   [
+    "slow_speed",
+    250
+   ],
+   [
+    "shirt",
+    249
+   ],
+   [
+    "manage",
+    248
+   ],
+   [
+    "cost",
+    243
+   ],
+   [
+    "return_size",
+    191
+   ],
+   [
+    "manage_dispute_bill",
+    190
+   ],
+   [
+    "status_due_amount",
+    185
+   ],
+   [
+    "return_color",
+    180
+   ],
+   [
+    "refund_status",
+    179
+   ],
+   [
+    "status_due_date",
+    178
+   ],
+   [
+    "refund_update",
+    177
+   ],
+   [
+    "refund_initiate",
+    176
+   ],
+   [
+    "return_stain",
+    167
+   ],
+   [
+    "manage_extension",
+    165
+   ],
+   [
+    "manage_pay_bill",
+    162
+   ],
+   [
+    "status_service_removed",
+    153
+   ],
+   [
+    "bad_price_competitor",
+    149
+   ],
+   [
+    "status_delivery_time",
+    142
+   ],
+   [
+    "out_of_stock_general",
+    140
+   ],
+   [
+    "mistimed_billing_never_bought",
+    139
+   ],
+   [
+    "bad_price_yesterday",
+    139
+   ],
+   [
+    "mistimed_billing_already_returned",
+    137
+   ],
+   [
+    "status_quantity",
+    135
+   ],
+   [
+    "status_payment_method",
+    134
+   ],
+   [
+    "manage_create",
+    134
+   ],
+   [
+    "promo_code_invalid",
+    133
+   ],
+   [
+    "status_shipping_question",
+    131
+   ],
+   [
+    "status_mystery_fee",
+    130
+   ],
+   [
+    "status_service_added",
+    129
+   ],
+   [
+    "out_of_stock_one_item",
+    127
+   ],
+   [
+    "manage_cancel",
+    125
+   ],
+   [
+    "manage_downgrade",
+    123
+   ],
+   [
+    "manage_upgrade",
+    117
+   ],
+   [
+    "status_credit_missing",
+    114
+   ],
+   [
+    "promo_code_out_of_date",
+    112
+   ],
+   [
+    "manage_change_name",
+    51
+   ],
+   [
+    "manage_change_address",
+    51
+   ],
+   [
+    "manage_change_phone",
+    48
+   ],
+   [
+    "manage_payment_method",
+    36
+   ],
+   [
+    "status_questions",
+    30
+   ]
+  ],
+  "turns": {
+   "median": 21.0,
+   "p10": 14,
+   "p90": 32
+  },
+  "customer_messages": {
+   "median": 8.0,
+   "p10": 4,
+   "p90": 14
+  },
+  "opening_messages": [
+   [
+    1,
+    7303
+   ],
+   [
+    2,
+    2075
+   ],
+   [
+    3,
+    517
+   ],
+   [
+    4,
+    115
+   ],
+   [
+    5,
+    21
+   ],
+   [
+    6,
+    7
+   ],
+   [
+    7,
+    2
+   ],
+   [
+    9,
+    1
+   ],
+   [
+    8,
+    1
+   ]
+  ],
+  "agent_speaks_first": 0.868,
+  "words": {
+   "abcd_opening": {
+    "median": 16.0,
+    "p10": 6,
+    "p90": 28
+   },
+   "abcd_all_customer": {
+    "median": 49.0,
+    "p10": 27,
+    "p90": 90
+   },
+   "our_tickets": {
+    "median": 55,
+    "p10": 30,
+    "p90": 85
+   }
+  },
+  "words_unseen_in_our_tickets": {
+   "opening": 0.125,
+   "all": 0.196
+  },
+  "examples": [
+   {
+    "intent": "timing",
+    "opening": "Hi.  My name is Chloe Zhang.  I am curious as to when my promo code expires.\nWould you be able to tell me?"
+   },
+   {
+    "intent": "manage_dispute_bill",
+    "opening": "Hello. I recently signed up for a subscription but it looks like you guys charged me twice for it."
+   },
+   {
+    "intent": "shirt",
+    "opening": "I'm thinking about buying an item but first i would like to get some more info on the product"
+   },
+   {
+    "intent": "policy",
+    "opening": "How do you cancel a subscription?"
+   },
+   {
+    "intent": "credit_card",
+    "opening": "Hi. I am trying to make a purchase but my credit card keeps declining."
+   },
+   {
+    "intent": "policy",
+    "opening": "Hi, I was wondering what the return policy is as I am torn between two sizes."
+   },
+   {
+    "intent": "promo_code_invalid",
+    "opening": "Hi.  My name is Alessandro Phoenix.  My Order ID is 9602071593.  The promo code I tried to use on these Michael Kors jeans keeps saying it's invalid.\nI just received this code 2 days ago."
+   },
+   {
+    "intent": "reset_2fa",
+    "opening": "Hi! I was wanting to check my account today.. But I don't  have my phone that I used to set up my authentication."
+   }
+  ]
+ },
+ "agents": {
+  "actions_per_chat": {
+   "median": 3.0,
+   "p10": 2,
+   "p90": 5
+  },
+  "chats_with_action": {
+   "pull-up-account": 0.691,
+   "verify-identity": 0.336,
+   "search-faq": 0.233,
+   "validate-purchase": 0.226,
+   "enter-details": 0.2,
+   "ask-the-oracle": 0.169,
+   "select-faq": 0.157,
+   "record-reason": 0.154,
+   "update-order": 0.151,
+   "membership": 0.137,
+   "log-out-in": 0.089,
+   "shipping-status": 0.088,
+   "offer-refund": 0.078,
+   "send-link": 0.074,
+   "update-account": 0.071,
+   "try-again": 0.07,
+   "subscription-status": 0.057,
+   "promo-code": 0.057,
+   "notify-team": 0.056,
+   "search-membership": 0.045,
+   "make-purchase": 0.044,
+   "instructions": 0.039,
+   "search-pricing": 0.038,
+   "search-policy": 0.037,
+   "make-password": 0.035,
+   "search-timing": 0.032,
+   "search-boots": 0.03,
+   "search-jacket": 0.029,
+   "search-jeans": 0.028,
+   "search-shirt": 0.027
+  },
+  "playbook": {
+   "within": 0.778,
+   "in_order": 0.72,
+   "whole": 0.431
+  },
+  "playbook_by_flow": {
+   "account_access": {
+    "within": 0.832,
+    "in_order": 0.827,
+    "whole": 0.876
+   },
+   "manage_account": {
+    "within": 0.75,
+    "in_order": 0.717,
+    "whole": 0.484
+   },
+   "order_issue": {
+    "within": 0.811,
+    "in_order": 0.78,
+    "whole": 0.217
+   },
+   "product_defect": {
+    "within": 0.807,
+    "in_order": 0.786,
+    "whole": 0.459
+   },
+   "purchase_dispute": {
+    "within": 0.83,
+    "in_order": 0.786,
+    "whole": 0.334
+   },
+   "shipping_issue": {
+    "within": 0.662,
+    "in_order": 0.634,
+    "whole": 0.279
+   },
+   "single_item_query": {
+    "within": 0.867,
+    "in_order": 0.861,
+    "whole": 0.733
+   },
+   "storewide_query": {
+    "within": 0.699,
+    "in_order": 0.696,
+    "whole": 0.681
+   },
+   "subscription_inquiry": {
+    "within": 0.677,
+    "in_order": 0.608,
+    "whole": 0.182
+   },
+   "troubleshoot_site": {
+    "within": 0.818,
+    "in_order": 0.475,
+    "whole": 0.018
+   }
+  },
+  "chats_that_change_something": 0.515,
+  "identity_checked_before_change": 0.939,
+  "escalations": {
+   "purchasing department": 274,
+   "website team": 187,
+   "manager": 86,
+   "unclear": 37
+  },
+  "escalated_chats": 0.056,
+  "top_sequences": [
+   [
+    "pull-up-account > verify-identity",
+    422
+   ],
+   [
+    "pull-up-account > validate-purchase > membership > enter-details > update-order",
+    301
+   ],
+   [
+    "pull-up-account > enter-details > send-link",
+    289
+   ],
+   [
+    "pull-up-account > validate-purchase",
+    221
+   ],
+   [
+    "pull-up-account > enter-details > make-password",
+    205
+   ],
+   [
+    "pull-up-account > record-reason > verify-identity > update-account",
+    180
+   ],
+   [
+    "search-faq > search-jacket > select-faq",
+    177
+   ],
+   [
+    "search-faq > search-shirt > select-faq",
+    175
+   ],
+   [
+    "search-faq > search-boots > select-faq",
+    172
+   ],
+   [
+    "search-faq > search-membership > select-faq",
+    167
+   ]
+  ]
+ },
+ "details": {
+  "typed_anywhere": {
+   "account_id": 0.275,
+   "amount": 0.124,
+   "email": 0.244,
+   "name": 0.775,
+   "order_id": 0.444,
+   "phone": 0.05,
+   "pin_number": 0.026,
+   "street_address": 0.094,
+   "username": 0.247,
+   "zip_code": 0.152
+  },
+  "typed_in_opening": {
+   "account_id": 0.004,
+   "amount": 0.02,
+   "email": 0.001,
+   "name": 0.086,
+   "order_id": 0.013,
+   "phone": 0.001,
+   "pin_number": 0.0,
+   "street_address": 0.001,
+   "username": 0.001,
+   "zip_code": 0.001
+  },
+  "opening_has_identity_detail": 0.093,
+  "entity_finder": {
+   "name": {
+    "kind": "name",
+    "typed_in": 7779,
+    "recall": 0.171,
+    "precision": 0.974,
+    "missed_examples": [
+     "Crystal Minh",
+     "Alessandro Phoenix",
+     "Crystal Minh",
+     "Chloe Zhang"
+    ]
+   },
+   "username": {
+    "kind": "username",
+    "typed_in": 2479,
+    "recall": 0.284,
+    "precision": 0.982,
+    "missed_examples": [
+     "aphoenix939",
+     "cminh948, cminh948@email.com",
+     "Joseph Banter, I don't have my account number but my username is josephb9",
+     " josephb7"
+    ]
+   },
+   "email": {
+    "kind": "email",
+    "typed_in": 2446,
+    "recall": 1.0,
+    "precision": 0.895,
+    "missed_examples": []
+   },
+   "phone": {
+    "kind": "phone",
+    "typed_in": 506,
+    "recall": 1.0,
+    "precision": 0.73,
+    "missed_examples": []
+   },
+   "order_id": {
+    "kind": "order_number",
+    "typed_in": 4457,
+    "recall": 0.408,
+    "precision": 0.986,
+    "missed_examples": [
+     "7916676427",
+     "Yes my order id is 4870952797",
+     "6820094438",
+     "6365028111"
+    ]
+   },
+   "street_address": {
+    "kind": "address",
+    "typed_in": 946,
+    "recall": 0.758,
+    "precision": 0.955,
+    "missed_examples": [
+     "The correct address is: 7370 1st Ave, Newark, MI 79177",
+     "Do you have my shipping address as  2311 1st Ave  San Mateo, NY 60315",
+     "6496 lincoln ave jacksonville ny 17178",
+     "5154 1st Ave  Baltimore, TX 7427"
+    ]
+   },
+   "amount": {
+    "kind": "money",
+    "typed_in": 1245,
+    "recall": 0.838,
+    "precision": 0.76,
+    "missed_examples": [
+     "69 for the pants and 89 for the coat",
+     "59",
+     "94$",
+     "89"
+    ]
+   }
+  }
+ },
+ "transfer": {
+  "opening": {
+   "scores": {
+    "primary_team": {
+     "n": 915,
+     "accuracy": 0.667,
+     "baseline": 0.537
+    },
+    "category": {
+     "n": 424,
+     "accuracy": 0.733,
+     "baseline": 0.538
+    },
+    "category_reordered": {
+     "n": 424,
+     "accuracy": 0.738,
+     "baseline": 0.538
+    },
+    "journey_stage": {
+     "n": 490,
+     "accuracy": 0.102,
+     "baseline": 0.671
+    },
+    "message_type": {
+     "n": 965,
+     "accuracy": 0.272,
+     "baseline": 0.41
+    },
+    "issue_count": {
+     "n": 1004,
+     "accuracy": 0.621,
+     "baseline": 1.0
+    },
+    "needs_staff_action": {
+     "n": 1004,
+     "accuracy": 0.534,
+     "baseline": 0.506,
+     "balanced": 0.539
+    },
+    "identity_details_given": {
+     "n": 1004,
+     "accuracy": 0.949,
+     "baseline": 0.893,
+     "balanced": 0.766
+    },
+    "sensitive_data_present": {
+     "n": 1004,
+     "accuracy": 1.0,
+     "baseline": 1.0
+    },
+    "charge_amount_given": {
+     "n": 1004,
+     "accuracy": 0.981,
+     "baseline": 0.977,
+     "balanced": 0.884
+    },
+    "cannot_log_in": {
+     "n": 915,
+     "accuracy": 0.936,
+     "baseline": 0.892,
+     "balanced": 0.702
+    },
+    "security_related": {
+     "n": 915,
+     "accuracy": 0.939,
+     "baseline": 0.892,
+     "balanced": 0.717
+    },
+    "mentions_account_issue": {
+     "n": 912,
+     "accuracy": 0.929,
+     "baseline": 0.872,
+     "balanced": 0.795
+    },
+    "mentions_billing_issue": {
+     "n": 772,
+     "accuracy": 0.85,
+     "baseline": 0.816,
+     "balanced": 0.66
+    },
+    "mentions_bug": {
+     "n": 915,
+     "accuracy": 0.889,
+     "baseline": 0.914,
+     "balanced": 0.532
+    },
+    "refund_requested": {
+     "n": 658,
+     "accuracy": 0.976,
+     "baseline": 0.971,
+     "balanced": 0.63
+    },
+    "refund_implied": {
+     "n": 767,
+     "accuracy": 0.84,
+     "baseline": 0.833,
+     "balanced": 0.529
+    },
+    "existing_customer": {
+     "n": 329,
+     "accuracy": 0.152,
+     "baseline": 1.0
+    },
+    "has_account": {
+     "n": 214,
+     "accuracy": 0.607,
+     "baseline": 1.0
+    },
+    "mentions_feature_request": {
+     "n": 1004,
+     "accuracy": 0.988,
+     "baseline": 1.0
+    },
+    "wants_new_payment_method": {
+     "n": 968,
+     "accuracy": 0.998,
+     "baseline": 1.0
+    },
+    "duplicate_charge": {
+     "n": 951,
+     "accuracy": 1.0,
+     "baseline": 1.0
+    },
+    "chargeback_mentioned": {
+     "n": 984,
+     "accuracy": 1.0,
+     "baseline": 1.0
+    }
+   },
+   "team_confusion": [
+    [
+     "other -> other",
+     402
+    ],
+    [
+     "billing_and_payments -> billing_and_payments",
+     115
+    ],
+    [
+     "billing_and_payments -> other",
+     90
+    ],
+    [
+     "account_support -> account_support",
+     67
+    ],
+    [
+     "engineering -> other",
+     50
+    ],
+    [
+     "other -> billing_and_payments",
+     44
+    ],
+    [
+     "account_support -> other",
+     36
+    ],
+    [
+     "engineering -> engineering",
+     26
+    ],
+    [
+     "other -> product_management",
+     20
+    ],
+    [
+     "other -> engineering",
+     13
+    ],
+    [
+     "account_support -> billing_and_payments",
+     12
+    ],
+    [
+     "other -> account_support",
+     12
+    ],
+    [
+     "billing_and_payments -> account_support",
+     11
+    ],
+    [
+     "billing_and_payments -> engineering",
+     6
+    ],
+    [
+     "billing_and_payments -> product_management",
+     6
+    ],
+    [
+     "engineering -> product_management",
+     3
+    ],
+    [
+     "account_support -> engineering",
+     1
+    ],
+    [
+     "account_support -> product_management",
+     1
+    ]
+   ],
+   "pieces_per_chat": {
+    "median": 2.0,
+    "p10": 1,
+    "p90": 3
+   },
+   "ms_per_chat": {
+    "median": 2.4382704868912697,
+    "p10": 1.6001667827367783,
+    "p90": 3.9666248485445976
+   }
+  },
+  "all": {
+   "scores": {
+    "primary_team": {
+     "n": 915,
+     "accuracy": 0.671,
+     "baseline": 0.537
+    },
+    "category": {
+     "n": 424,
+     "accuracy": 0.785,
+     "baseline": 0.538
+    },
+    "category_reordered": {
+     "n": 424,
+     "accuracy": 0.783,
+     "baseline": 0.538
+    },
+    "journey_stage": {
+     "n": 490,
+     "accuracy": 0.363,
+     "baseline": 0.671
+    },
+    "message_type": {
+     "n": 965,
+     "accuracy": 0.226,
+     "baseline": 0.41
+    },
+    "issue_count": {
+     "n": 1004,
+     "accuracy": 0.009,
+     "baseline": 1.0
+    },
+    "needs_staff_action": {
+     "n": 1004,
+     "accuracy": 0.559,
+     "baseline": 0.506,
+     "balanced": 0.563
+    },
+    "identity_details_given": {
+     "n": 1004,
+     "accuracy": 0.564,
+     "baseline": 0.794,
+     "balanced": 0.714
+    },
+    "sensitive_data_present": {
+     "n": 1004,
+     "accuracy": 0.974,
+     "baseline": 0.893,
+     "balanced": 0.899
+    },
+    "charge_amount_given": {
+     "n": 1004,
+     "accuracy": 0.944,
+     "baseline": 0.877,
+     "balanced": 0.888
+    },
+    "cannot_log_in": {
+     "n": 915,
+     "accuracy": 0.937,
+     "baseline": 0.892,
+     "balanced": 0.729
+    },
+    "security_related": {
+     "n": 915,
+     "accuracy": 0.939,
+     "baseline": 0.892,
+     "balanced": 0.762
+    },
+    "mentions_account_issue": {
+     "n": 912,
+     "accuracy": 0.716,
+     "baseline": 0.872,
+     "balanced": 0.75
+    },
+    "mentions_billing_issue": {
+     "n": 772,
+     "accuracy": 0.86,
+     "baseline": 0.816,
+     "balanced": 0.742
+    },
+    "mentions_bug": {
+     "n": 915,
+     "accuracy": 0.809,
+     "baseline": 0.914,
+     "balanced": 0.615
+    },
+    "refund_requested": {
+     "n": 658,
+     "accuracy": 0.977,
+     "baseline": 0.971,
+     "balanced": 0.784
+    },
+    "refund_implied": {
+     "n": 767,
+     "accuracy": 0.849,
+     "baseline": 0.833,
+     "balanced": 0.572
+    },
+    "existing_customer": {
+     "n": 329,
+     "accuracy": 0.541,
+     "baseline": 1.0
+    },
+    "has_account": {
+     "n": 214,
+     "accuracy": 0.869,
+     "baseline": 1.0
+    },
+    "mentions_feature_request": {
+     "n": 1004,
+     "accuracy": 0.92,
+     "baseline": 1.0
+    },
+    "wants_new_payment_method": {
+     "n": 968,
+     "accuracy": 0.993,
+     "baseline": 1.0
+    },
+    "duplicate_charge": {
+     "n": 951,
+     "accuracy": 0.999,
+     "baseline": 1.0
+    },
+    "chargeback_mentioned": {
+     "n": 984,
+     "accuracy": 0.999,
+     "baseline": 1.0
+    }
+   },
+   "team_confusion": [
+    [
+     "other -> other",
+     389
+    ],
+    [
+     "billing_and_payments -> billing_and_payments",
+     124
+    ],
+    [
+     "billing_and_payments -> other",
+     80
+    ],
+    [
+     "account_support -> account_support",
+     75
+    ],
+    [
+     "other -> billing_and_payments",
+     50
+    ],
+    [
+     "engineering -> other",
+     49
+    ],
+    [
+     "account_support -> other",
+     28
+    ],
+    [
+     "engineering -> engineering",
+     26
+    ],
+    [
+     "other -> product_management",
+     25
+    ],
+    [
+     "other -> engineering",
+     14
+    ],
+    [
+     "other -> account_support",
+     13
+    ],
+    [
+     "account_support -> billing_and_payments",
+     12
+    ],
+    [
+     "billing_and_payments -> account_support",
+     11
+    ],
+    [
+     "billing_and_payments -> product_management",
+     7
+    ],
+    [
+     "billing_and_payments -> engineering",
+     6
+    ],
+    [
+     "engineering -> product_management",
+     4
+    ],
+    [
+     "account_support -> engineering",
+     1
+    ],
+    [
+     "account_support -> product_management",
+     1
+    ]
+   ],
+   "pieces_per_chat": {
+    "median": 10.0,
+    "p10": 5,
+    "p90": 16
+   },
+   "ms_per_chat": {
+    "median": 8.382020518183708,
+    "p10": 3.619709052145481,
+    "p90": 17.495875246822834
+   }
+  },
+  "not_answerable": [
+   "bug_severity",
+   "has_reproducible_steps",
+   "frustration",
+   "priority",
+   "time_pressure",
+   "needs_more_info",
+   "payment_method_used",
+   "order_date_given",
+   "problem_after_update",
+   "blames_update",
+   "error_message_given",
+   "device_or_browser_given",
+   "tried_fix_themselves",
+   "possible_widespread_issue",
+   "feature_request_strength",
+   "sentiment",
+   "politeness",
+   "frustration_rising",
+   "threatens_to_leave",
+   "churn_risk",
+   "asks_for_human",
+   "prior_contact",
+   "likely_apple_user",
+   "issues_related"
+  ]
+ },
+ "questions": {
+  "flow": {
+   "kind": "choice",
+   "group": "intent",
+   "asks": "Which of ABCD's 10 topics the chat is about",
+   "labeled_chats": 10042,
+   "options": 10,
+   "top": [
+    [
+     "storewide_query",
+     1094
+    ],
+    [
+     "purchase_dispute",
+     1076
+    ],
+    [
+     "product_defect",
+     1070
+    ]
+   ]
+  },
+  "intent": {
+   "kind": "choice",
+   "group": "intent",
+   "asks": "Which of ABCD's 55 intents the chat is about",
+   "labeled_chats": 10042,
+   "options": 55,
+   "top": [
+    [
+     "recover_username",
+     361
+    ],
+    [
+     "reset_2fa",
+     351
+    ],
+    [
+     "recover_password",
+     336
+    ]
+   ]
+  },
+  "faq_answer": {
+   "kind": "choice",
+   "group": "intent",
+   "asks": "Which of 48 FAQ entries answers the question",
+   "labeled_chats": 2139,
+   "options": 48,
+   "top": [
+    [
+     "None",
+     7903
+    ],
+    [
+     "pricing_3",
+     81
+    ],
+    [
+     "pricing_2",
+     76
+    ]
+   ]
+  },
+  "flow:account_access": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about account_access",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8994
+    ],
+    [
+     "True",
+     1048
+    ]
+   ]
+  },
+  "flow:manage_account": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about manage_account",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9329
+    ],
+    [
+     "True",
+     713
+    ]
+   ]
+  },
+  "flow:order_issue": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about order_issue",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9002
+    ],
+    [
+     "True",
+     1040
+    ]
+   ]
+  },
+  "flow:product_defect": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about product_defect",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8972
+    ],
+    [
+     "True",
+     1070
+    ]
+   ]
+  },
+  "flow:purchase_dispute": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about purchase_dispute",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8966
+    ],
+    [
+     "True",
+     1076
+    ]
+   ]
+  },
+  "flow:shipping_issue": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about shipping_issue",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9022
+    ],
+    [
+     "True",
+     1020
+    ]
+   ]
+  },
+  "flow:single_item_query": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about single_item_query",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8997
+    ],
+    [
+     "True",
+     1045
+    ]
+   ]
+  },
+  "flow:storewide_query": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about storewide_query",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8948
+    ],
+    [
+     "True",
+     1094
+    ]
+   ]
+  },
+  "flow:subscription_inquiry": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about subscription_inquiry",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9132
+    ],
+    [
+     "True",
+     910
+    ]
+   ]
+  },
+  "flow:troubleshoot_site": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat is about troubleshoot_site",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9016
+    ],
+    [
+     "True",
+     1026
+    ]
+   ]
+  },
+  "intent:recover_username": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is recover_username",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9681
+    ],
+    [
+     "True",
+     361
+    ]
+   ]
+  },
+  "intent:recover_password": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is recover_password",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9706
+    ],
+    [
+     "True",
+     336
+    ]
+   ]
+  },
+  "intent:reset_2fa": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is reset_2fa",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9691
+    ],
+    [
+     "True",
+     351
+    ]
+   ]
+  },
+  "intent:status_service_added": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_service_added",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9913
+    ],
+    [
+     "True",
+     129
+    ]
+   ]
+  },
+  "intent:status_service_removed": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_service_removed",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9889
+    ],
+    [
+     "True",
+     153
+    ]
+   ]
+  },
+  "intent:status_shipping_question": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_shipping_question",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9911
+    ],
+    [
+     "True",
+     131
+    ]
+   ]
+  },
+  "intent:status_credit_missing": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_credit_missing",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9928
+    ],
+    [
+     "True",
+     114
+    ]
+   ]
+  },
+  "intent:manage_change_address": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_change_address",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9991
+    ],
+    [
+     "True",
+     51
+    ]
+   ]
+  },
+  "intent:manage_change_name": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_change_name",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9991
+    ],
+    [
+     "True",
+     51
+    ]
+   ]
+  },
+  "intent:manage_change_phone": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_change_phone",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9994
+    ],
+    [
+     "True",
+     48
+    ]
+   ]
+  },
+  "intent:manage_payment_method": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_payment_method",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     10006
+    ],
+    [
+     "True",
+     36
+    ]
+   ]
+  },
+  "intent:status_mystery_fee": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_mystery_fee",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9912
+    ],
+    [
+     "True",
+     130
+    ]
+   ]
+  },
+  "intent:status_delivery_time": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_delivery_time",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9900
+    ],
+    [
+     "True",
+     142
+    ]
+   ]
+  },
+  "intent:status_payment_method": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_payment_method",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9908
+    ],
+    [
+     "True",
+     134
+    ]
+   ]
+  },
+  "intent:status_quantity": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_quantity",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9907
+    ],
+    [
+     "True",
+     135
+    ]
+   ]
+  },
+  "intent:manage_upgrade": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_upgrade",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9925
+    ],
+    [
+     "True",
+     117
+    ]
+   ]
+  },
+  "intent:manage_downgrade": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_downgrade",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9919
+    ],
+    [
+     "True",
+     123
+    ]
+   ]
+  },
+  "intent:manage_create": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_create",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9908
+    ],
+    [
+     "True",
+     134
+    ]
+   ]
+  },
+  "intent:manage_cancel": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_cancel",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9917
+    ],
+    [
+     "True",
+     125
+    ]
+   ]
+  },
+  "intent:refund_initiate": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is refund_initiate",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9866
+    ],
+    [
+     "True",
+     176
+    ]
+   ]
+  },
+  "intent:refund_update": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is refund_update",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9865
+    ],
+    [
+     "True",
+     177
+    ]
+   ]
+  },
+  "intent:refund_status": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is refund_status",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9863
+    ],
+    [
+     "True",
+     179
+    ]
+   ]
+  },
+  "intent:return_stain": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is return_stain",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9875
+    ],
+    [
+     "True",
+     167
+    ]
+   ]
+  },
+  "intent:return_color": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is return_color",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9862
+    ],
+    [
+     "True",
+     180
+    ]
+   ]
+  },
+  "intent:return_size": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is return_size",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9851
+    ],
+    [
+     "True",
+     191
+    ]
+   ]
+  },
+  "intent:bad_price_competitor": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is bad_price_competitor",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9893
+    ],
+    [
+     "True",
+     149
+    ]
+   ]
+  },
+  "intent:bad_price_yesterday": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is bad_price_yesterday",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9903
+    ],
+    [
+     "True",
+     139
+    ]
+   ]
+  },
+  "intent:out_of_stock_general": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is out_of_stock_general",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9902
+    ],
+    [
+     "True",
+     140
+    ]
+   ]
+  },
+  "intent:out_of_stock_one_item": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is out_of_stock_one_item",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9915
+    ],
+    [
+     "True",
+     127
+    ]
+   ]
+  },
+  "intent:promo_code_invalid": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is promo_code_invalid",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9909
+    ],
+    [
+     "True",
+     133
+    ]
+   ]
+  },
+  "intent:promo_code_out_of_date": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is promo_code_out_of_date",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9930
+    ],
+    [
+     "True",
+     112
+    ]
+   ]
+  },
+  "intent:mistimed_billing_already_returned": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is mistimed_billing_already_returned",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9905
+    ],
+    [
+     "True",
+     137
+    ]
+   ]
+  },
+  "intent:mistimed_billing_never_bought": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is mistimed_billing_never_bought",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9903
+    ],
+    [
+     "True",
+     139
+    ]
+   ]
+  },
+  "intent:status": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9774
+    ],
+    [
+     "True",
+     268
+    ]
+   ]
+  },
+  "intent:manage": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9794
+    ],
+    [
+     "True",
+     248
+    ]
+   ]
+  },
+  "intent:missing": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is missing",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9781
+    ],
+    [
+     "True",
+     261
+    ]
+   ]
+  },
+  "intent:cost": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is cost",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9799
+    ],
+    [
+     "True",
+     243
+    ]
+   ]
+  },
+  "intent:boots": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is boots",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9761
+    ],
+    [
+     "True",
+     281
+    ]
+   ]
+  },
+  "intent:shirt": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is shirt",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9793
+    ],
+    [
+     "True",
+     249
+    ]
+   ]
+  },
+  "intent:jeans": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is jeans",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9790
+    ],
+    [
+     "True",
+     252
+    ]
+   ]
+  },
+  "intent:jacket": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is jacket",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9779
+    ],
+    [
+     "True",
+     263
+    ]
+   ]
+  },
+  "intent:pricing": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is pricing",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9765
+    ],
+    [
+     "True",
+     277
+    ]
+   ]
+  },
+  "intent:membership": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is membership",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9761
+    ],
+    [
+     "True",
+     281
+    ]
+   ]
+  },
+  "intent:timing": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is timing",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9778
+    ],
+    [
+     "True",
+     264
+    ]
+   ]
+  },
+  "intent:policy": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is policy",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9770
+    ],
+    [
+     "True",
+     272
+    ]
+   ]
+  },
+  "intent:status_active": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_active",
+   "labeled_chats": 10042,
+   "options": 1,
+   "top": [
+    [
+     "False",
+     10042
+    ]
+   ]
+  },
+  "intent:status_due_amount": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_due_amount",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9857
+    ],
+    [
+     "True",
+     185
+    ]
+   ]
+  },
+  "intent:status_due_date": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is status_due_date",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9864
+    ],
+    [
+     "True",
+     178
+    ]
+   ]
+  },
+  "intent:manage_pay_bill": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_pay_bill",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9880
+    ],
+    [
+     "True",
+     162
+    ]
+   ]
+  },
+  "intent:manage_extension": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_extension",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9877
+    ],
+    [
+     "True",
+     165
+    ]
+   ]
+  },
+  "intent:manage_dispute_bill": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is manage_dispute_bill",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9852
+    ],
+    [
+     "True",
+     190
+    ]
+   ]
+  },
+  "intent:credit_card": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is credit_card",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9776
+    ],
+    [
+     "True",
+     266
+    ]
+   ]
+  },
+  "intent:shopping_cart": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is shopping_cart",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9791
+    ],
+    [
+     "True",
+     251
+    ]
+   ]
+  },
+  "intent:search_results": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is search_results",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9783
+    ],
+    [
+     "True",
+     259
+    ]
+   ]
+  },
+  "intent:slow_speed": {
+   "kind": "noul",
+   "group": "intent",
+   "asks": "The chat's intent is slow_speed",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9792
+    ],
+    [
+     "True",
+     250
+    ]
+   ]
+  },
+  "action:verify-identity": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs verify-identity",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     6663
+    ],
+    [
+     "True",
+     3379
+    ]
+   ]
+  },
+  "action:ask-the-oracle": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs ask-the-oracle",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8346
+    ],
+    [
+     "True",
+     1696
+    ]
+   ]
+  },
+  "action:validate-purchase": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs validate-purchase",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     7769
+    ],
+    [
+     "True",
+     2273
+    ]
+   ]
+  },
+  "action:make-password": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs make-password",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9694
+    ],
+    [
+     "True",
+     348
+    ]
+   ]
+  },
+  "action:promo-code": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs promo-code",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9469
+    ],
+    [
+     "True",
+     573
+    ]
+   ]
+  },
+  "action:subscription-status": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs subscription-status",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9465
+    ],
+    [
+     "True",
+     577
+    ]
+   ]
+  },
+  "action:offer-refund": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs offer-refund",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9254
+    ],
+    [
+     "True",
+     788
+    ]
+   ]
+  },
+  "action:make-purchase": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs make-purchase",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9603
+    ],
+    [
+     "True",
+     439
+    ]
+   ]
+  },
+  "action:record-reason": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs record-reason",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8496
+    ],
+    [
+     "True",
+     1546
+    ]
+   ]
+  },
+  "action:enter-details": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs enter-details",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8037
+    ],
+    [
+     "True",
+     2005
+    ]
+   ]
+  },
+  "action:shipping-status": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs shipping-status",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9160
+    ],
+    [
+     "True",
+     882
+    ]
+   ]
+  },
+  "action:update-order": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs update-order",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8530
+    ],
+    [
+     "True",
+     1512
+    ]
+   ]
+  },
+  "action:pull-up-account": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs pull-up-account",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "True",
+     6936
+    ],
+    [
+     "False",
+     3106
+    ]
+   ]
+  },
+  "action:update-account": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs update-account",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9328
+    ],
+    [
+     "True",
+     714
+    ]
+   ]
+  },
+  "action:send-link": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs send-link",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9297
+    ],
+    [
+     "True",
+     745
+    ]
+   ]
+  },
+  "action:notify-team": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs notify-team",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9475
+    ],
+    [
+     "True",
+     567
+    ]
+   ]
+  },
+  "action:membership": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs membership",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8671
+    ],
+    [
+     "True",
+     1371
+    ]
+   ]
+  },
+  "action:search-faq": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-faq",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     7701
+    ],
+    [
+     "True",
+     2341
+    ]
+   ]
+  },
+  "action:try-again": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs try-again",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9338
+    ],
+    [
+     "True",
+     704
+    ]
+   ]
+  },
+  "action:log-out-in": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs log-out-in",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9150
+    ],
+    [
+     "True",
+     892
+    ]
+   ]
+  },
+  "action:instructions": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs instructions",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9654
+    ],
+    [
+     "True",
+     388
+    ]
+   ]
+  },
+  "action:search-jeans": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-jeans",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9758
+    ],
+    [
+     "True",
+     284
+    ]
+   ]
+  },
+  "action:search-shirt": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-shirt",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9771
+    ],
+    [
+     "True",
+     271
+    ]
+   ]
+  },
+  "action:search-boots": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-boots",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9745
+    ],
+    [
+     "True",
+     297
+    ]
+   ]
+  },
+  "action:search-jacket": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-jacket",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9751
+    ],
+    [
+     "True",
+     291
+    ]
+   ]
+  },
+  "action:search-pricing": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-pricing",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9659
+    ],
+    [
+     "True",
+     383
+    ]
+   ]
+  },
+  "action:search-timing": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-timing",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9720
+    ],
+    [
+     "True",
+     322
+    ]
+   ]
+  },
+  "action:search-membership": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-membership",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9593
+    ],
+    [
+     "True",
+     449
+    ]
+   ]
+  },
+  "action:search-policy": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs search-policy",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9675
+    ],
+    [
+     "True",
+     367
+    ]
+   ]
+  },
+  "action:select-faq": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent runs select-faq",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8463
+    ],
+    [
+     "True",
+     1579
+    ]
+   ]
+  },
+  "first_action": {
+   "kind": "choice",
+   "group": "action",
+   "asks": "Which action the agent runs first",
+   "labeled_chats": 10042,
+   "options": 21,
+   "top": [
+    [
+     "pull-up-account",
+     6715
+    ],
+    [
+     "search-faq",
+     2051
+    ],
+    [
+     "log-out-in",
+     344
+    ]
+   ]
+  },
+  "identity_check": {
+   "kind": "choice",
+   "group": "action",
+   "asks": "The strongest identity check the agent runs",
+   "labeled_chats": 10042,
+   "options": 4,
+   "top": [
+    [
+     "verify-identity",
+     3379
+    ],
+    [
+     "none",
+     2918
+    ],
+    [
+     "pull-up-account",
+     1878
+    ]
+   ]
+  },
+  "agent_changes_something": {
+   "kind": "noul",
+   "group": "action",
+   "asks": "The agent changes something, not only looks it up",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "True",
+     5174
+    ],
+    [
+     "False",
+     4868
+    ]
+   ]
+  },
+  "action_count": {
+   "kind": "score",
+   "group": "action",
+   "asks": "How many actions the agent runs: 1-2, 3, 4 or 5+",
+   "labeled_chats": 10042,
+   "options": 4,
+   "top": [
+    [
+     "1",
+     3356
+    ],
+    [
+     "2",
+     2749
+    ],
+    [
+     "3",
+     2142
+    ]
+   ]
+  },
+  "escalation_team": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which company_team the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 4,
+   "top": [
+    [
+     "none",
+     9501
+    ],
+    [
+     "purchasing department",
+     269
+    ],
+    [
+     "website team",
+     187
+    ]
+   ]
+  },
+  "account_change": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which account_slotval the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 5,
+   "top": [
+    [
+     "none",
+     9607
+    ],
+    [
+     "extend subscription",
+     193
+    ],
+    [
+     "renew subscription",
+     143
+    ]
+   ]
+  },
+  "order_change": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which change_option the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 7,
+   "top": [
+    [
+     "none",
+     9718
+    ],
+    [
+     "change order",
+     170
+    ],
+    [
+     "change time",
+     47
+    ]
+   ]
+  },
+  "order_option": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which order_slotval the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 8,
+   "top": [
+    [
+     "none",
+     9220
+    ],
+    [
+     "by mail",
+     455
+    ],
+    [
+     "give credit",
+     141
+    ]
+   ]
+  },
+  "recorded_reason": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which reason_slotval the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 11,
+   "top": [
+    [
+     "none",
+     9386
+    ],
+    [
+     "yesterday",
+     133
+    ],
+    [
+     "competitor",
+     132
+    ]
+   ]
+  },
+  "refund_method": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which refund_target the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 5,
+   "top": [
+    [
+     "none",
+     9935
+    ],
+    [
+     "credit card",
+     76
+    ],
+    [
+     "add value",
+     19
+    ]
+   ]
+  },
+  "product": {
+   "kind": "choice",
+   "group": "value",
+   "asks": "Which product the agent enters, or none",
+   "labeled_chats": 10042,
+   "options": 17,
+   "top": [
+    [
+     "none",
+     9433
+    ],
+    [
+     "tommy hilfiger shirt",
+     49
+    ],
+    [
+     "guess shirt",
+     48
+    ]
+   ]
+  },
+  "member_level": {
+   "kind": "choice",
+   "group": "scenario",
+   "asks": "The customer's membership level",
+   "labeled_chats": 10042,
+   "options": 4,
+   "top": [
+    [
+     "guest",
+     2592
+    ],
+    [
+     "gold",
+     2586
+    ],
+    [
+     "silver",
+     2462
+    ]
+   ]
+  },
+  "payment_method_on_file": {
+   "kind": "choice",
+   "group": "scenario",
+   "asks": "How the customer paid, where ABCD records it",
+   "labeled_chats": 10042,
+   "options": 4,
+   "top": [
+    [
+     "not_recorded",
+     8802
+    ],
+    [
+     "credit card",
+     432
+    ],
+    [
+     "debit card",
+     410
+    ]
+   ]
+  },
+  "needs:account_id": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their account_id",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     7277
+    ],
+    [
+     "True",
+     2765
+    ]
+   ]
+  },
+  "needs:amount": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their amount",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8797
+    ],
+    [
+     "True",
+     1245
+    ]
+   ]
+  },
+  "needs:email": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their email",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     7596
+    ],
+    [
+     "True",
+     2446
+    ]
+   ]
+  },
+  "needs:name": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their name",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "True",
+     7779
+    ],
+    [
+     "False",
+     2263
+    ]
+   ]
+  },
+  "needs:order_id": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their order_id",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     5585
+    ],
+    [
+     "True",
+     4457
+    ]
+   ]
+  },
+  "needs:phone": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their phone",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9536
+    ],
+    [
+     "True",
+     506
+    ]
+   ]
+  },
+  "needs:pin_number": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their pin_number",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9779
+    ],
+    [
+     "True",
+     263
+    ]
+   ]
+  },
+  "needs:street_address": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their street_address",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     9096
+    ],
+    [
+     "True",
+     946
+    ]
+   ]
+  },
+  "needs:username": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their username",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     7563
+    ],
+    [
+     "True",
+     2479
+    ]
+   ]
+  },
+  "needs:zip_code": {
+   "kind": "noul",
+   "group": "detail",
+   "asks": "The customer will have to give their zip_code",
+   "labeled_chats": 10042,
+   "options": 2,
+   "top": [
+    [
+     "False",
+     8511
+    ],
+    [
+     "True",
+     1531
+    ]
+   ]
+  },
+  "chat_length": {
+   "kind": "score",
+   "group": "shape",
+   "asks": "How many turns the chat takes: under 18, 18-21, 22-26 or 27+",
+   "labeled_chats": 10042,
+   "options": 4,
+   "top": [
+    [
+     "0",
+     2949
+    ],
+    [
+     "1",
+     2374
+    ],
+    [
+     "2",
+     2363
+    ]
+   ]
+  }
+ },
+ "learn": {
+  "flow": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.876,
+    "baseline": 0.111,
+    "balanced": 0.877
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.111,
+    "balanced": 0.967
+   }
+  },
+  "intent": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.782,
+    "baseline": 0.038,
+    "balanced": 0.761
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.936,
+    "baseline": 0.038,
+    "balanced": 0.924
+   }
+  },
+  "faq_answer": {
+   "opening": {
+    "n": 213,
+    "accuracy": 0.667,
+    "baseline": 0.047,
+    "balanced": 0.614
+   },
+   "all": {
+    "n": 213,
+    "accuracy": 0.906,
+    "baseline": 0.047,
+    "balanced": 0.893
+   }
+  },
+  "flow:account_access": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.961,
+    "baseline": 0.901,
+    "balanced": 0.947,
+    "positives": 99
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.901,
+    "balanced": 0.992,
+    "positives": 99
+   }
+  },
+  "flow:manage_account": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.952,
+    "baseline": 0.932,
+    "balanced": 0.92,
+    "positives": 68
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.988,
+    "baseline": 0.932,
+    "balanced": 0.973,
+    "positives": 68
+   }
+  },
+  "flow:order_issue": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.931,
+    "baseline": 0.895,
+    "balanced": 0.915,
+    "positives": 105
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.983,
+    "baseline": 0.895,
+    "balanced": 0.97,
+    "positives": 105
+   }
+  },
+  "flow:product_defect": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.973,
+    "baseline": 0.895,
+    "balanced": 0.935,
+    "positives": 105
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.985,
+    "baseline": 0.895,
+    "balanced": 0.979,
+    "positives": 105
+   }
+  },
+  "flow:purchase_dispute": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.957,
+    "baseline": 0.889,
+    "balanced": 0.933,
+    "positives": 111
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.991,
+    "baseline": 0.889,
+    "balanced": 0.983,
+    "positives": 111
+   }
+  },
+  "flow:shipping_issue": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.894,
+    "balanced": 0.919,
+    "positives": 106
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.983,
+    "baseline": 0.894,
+    "balanced": 0.966,
+    "positives": 106
+   }
+  },
+  "flow:single_item_query": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.934,
+    "baseline": 0.894,
+    "balanced": 0.938,
+    "positives": 106
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.992,
+    "baseline": 0.894,
+    "balanced": 0.983,
+    "positives": 106
+   }
+  },
+  "flow:storewide_query": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.935,
+    "baseline": 0.893,
+    "balanced": 0.931,
+    "positives": 107
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.989,
+    "baseline": 0.893,
+    "balanced": 0.977,
+    "positives": 107
+   }
+  },
+  "flow:subscription_inquiry": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.966,
+    "baseline": 0.906,
+    "balanced": 0.938,
+    "positives": 94
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.906,
+    "balanced": 0.987,
+    "positives": 94
+   }
+  },
+  "flow:troubleshoot_site": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.957,
+    "baseline": 0.897,
+    "balanced": 0.933,
+    "positives": 103
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.995,
+    "baseline": 0.897,
+    "balanced": 0.984,
+    "positives": 103
+   }
+  },
+  "intent:recover_username": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.965,
+    "baseline": 0.97,
+    "balanced": 0.934,
+    "positives": 30
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.989,
+    "baseline": 0.97,
+    "balanced": 0.978,
+    "positives": 30
+   }
+  },
+  "intent:recover_password": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.962,
+    "balanced": 0.907,
+    "positives": 38
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.995,
+    "baseline": 0.962,
+    "balanced": 0.972,
+    "positives": 38
+   }
+  },
+  "intent:reset_2fa": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.983,
+    "baseline": 0.969,
+    "balanced": 0.898,
+    "positives": 31
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 1.0,
+    "baseline": 0.969,
+    "balanced": 1.0,
+    "positives": 31
+   }
+  },
+  "intent:status_service_added": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.946,
+    "baseline": 0.988,
+    "balanced": 0.89,
+    "positives": 12
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.988,
+    "balanced": 0.873,
+    "positives": 12
+   }
+  },
+  "intent:status_service_removed": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.969,
+    "baseline": 0.985,
+    "balanced": 0.886,
+    "positives": 15
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.995,
+    "baseline": 0.985,
+    "balanced": 0.965,
+    "positives": 15
+   }
+  },
+  "intent:status_shipping_question": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.966,
+    "baseline": 0.99,
+    "balanced": 0.834,
+    "positives": 10
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 1.0,
+    "baseline": 0.99,
+    "balanced": 1.0,
+    "positives": 10
+   }
+  },
+  "intent:status_credit_missing": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.972,
+    "baseline": 0.99,
+    "balanced": 0.887,
+    "positives": 10
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.99,
+    "balanced": 0.95,
+    "positives": 10
+   }
+  },
+  "intent:manage_change_address": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.952,
+    "baseline": 0.995,
+    "balanced": 0.976,
+    "positives": 5
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.994,
+    "baseline": 0.995,
+    "balanced": 0.798,
+    "positives": 5
+   }
+  },
+  "intent:manage_change_name": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.976,
+    "baseline": 0.993,
+    "balanced": 0.775,
+    "positives": 7
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.996,
+    "baseline": 0.993,
+    "balanced": 0.856,
+    "positives": 7
+   }
+  },
+  "intent:manage_change_phone": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.968,
+    "baseline": 0.994,
+    "balanced": 0.984,
+    "positives": 6
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.997,
+    "baseline": 0.994,
+    "balanced": 0.998,
+    "positives": 6
+   }
+  },
+  "intent:manage_payment_method": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.98,
+    "baseline": 0.997,
+    "balanced": 0.99,
+    "positives": 3
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.997,
+    "balanced": 1.0,
+    "positives": 3
+   }
+  },
+  "intent:status_mystery_fee": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.99,
+    "baseline": 0.988,
+    "balanced": 0.83,
+    "positives": 12
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.988,
+    "balanced": 0.999,
+    "positives": 12
+   }
+  },
+  "intent:status_delivery_time": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.965,
+    "baseline": 0.983,
+    "balanced": 0.867,
+    "positives": 17
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.983,
+    "balanced": 0.97,
+    "positives": 17
+   }
+  },
+  "intent:status_payment_method": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.991,
+    "balanced": 0.928,
+    "positives": 9
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.996,
+    "baseline": 0.991,
+    "balanced": 0.833,
+    "positives": 9
+   }
+  },
+  "intent:status_quantity": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.959,
+    "baseline": 0.988,
+    "balanced": 0.856,
+    "positives": 12
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.988,
+    "balanced": 0.958,
+    "positives": 12
+   }
+  },
+  "intent:manage_upgrade": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.953,
+    "baseline": 0.988,
+    "balanced": 0.935,
+    "positives": 12
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.988,
+    "balanced": 0.958,
+    "positives": 12
+   }
+  },
+  "intent:manage_downgrade": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.965,
+    "baseline": 0.988,
+    "balanced": 0.9,
+    "positives": 12
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.988,
+    "balanced": 0.999,
+    "positives": 12
+   }
+  },
+  "intent:manage_create": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.968,
+    "baseline": 0.98,
+    "balanced": 0.861,
+    "positives": 20
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.98,
+    "balanced": 0.95,
+    "positives": 20
+   }
+  },
+  "intent:manage_cancel": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.945,
+    "baseline": 0.989,
+    "balanced": 0.882,
+    "positives": 11
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 1.0,
+    "baseline": 0.989,
+    "balanced": 1.0,
+    "positives": 11
+   }
+  },
+  "intent:refund_initiate": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.971,
+    "baseline": 0.981,
+    "balanced": 0.805,
+    "positives": 19
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.992,
+    "baseline": 0.981,
+    "balanced": 0.893,
+    "positives": 19
+   }
+  },
+  "intent:refund_update": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.986,
+    "baseline": 0.985,
+    "balanced": 0.829,
+    "positives": 15
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.995,
+    "baseline": 0.985,
+    "balanced": 0.932,
+    "positives": 15
+   }
+  },
+  "intent:refund_status": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.986,
+    "balanced": 0.926,
+    "positives": 14
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.992,
+    "baseline": 0.986,
+    "balanced": 0.961,
+    "positives": 14
+   }
+  },
+  "intent:return_stain": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.959,
+    "baseline": 0.987,
+    "balanced": 0.865,
+    "positives": 13
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.99,
+    "baseline": 0.987,
+    "balanced": 0.995,
+    "positives": 13
+   }
+  },
+  "intent:return_color": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.978,
+    "baseline": 0.976,
+    "balanced": 0.786,
+    "positives": 24
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.989,
+    "baseline": 0.976,
+    "balanced": 0.954,
+    "positives": 24
+   }
+  },
+  "intent:return_size": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.955,
+    "baseline": 0.98,
+    "balanced": 0.953,
+    "positives": 20
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.981,
+    "baseline": 0.98,
+    "balanced": 0.917,
+    "positives": 20
+   }
+  },
+  "intent:bad_price_competitor": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.968,
+    "baseline": 0.986,
+    "balanced": 0.878,
+    "positives": 14
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.986,
+    "balanced": 0.999,
+    "positives": 14
+   }
+  },
+  "intent:bad_price_yesterday": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.975,
+    "baseline": 0.983,
+    "balanced": 0.843,
+    "positives": 17
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.983,
+    "balanced": 0.941,
+    "positives": 17
+   }
+  },
+  "intent:out_of_stock_general": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.962,
+    "baseline": 0.985,
+    "balanced": 0.948,
+    "positives": 15
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.985,
+    "balanced": 0.996,
+    "positives": 15
+   }
+  },
+  "intent:out_of_stock_one_item": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.976,
+    "balanced": 0.859,
+    "positives": 24
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.99,
+    "baseline": 0.976,
+    "balanced": 0.914,
+    "positives": 24
+   }
+  },
+  "intent:promo_code_invalid": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.989,
+    "baseline": 0.988,
+    "balanced": 0.83,
+    "positives": 12
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.992,
+    "baseline": 0.988,
+    "balanced": 0.955,
+    "positives": 12
+   }
+  },
+  "intent:promo_code_out_of_date": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.992,
+    "balanced": 0.919,
+    "positives": 8
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.991,
+    "baseline": 0.992,
+    "balanced": 0.933,
+    "positives": 8
+   }
+  },
+  "intent:mistimed_billing_already_returned": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.97,
+    "baseline": 0.99,
+    "balanced": 0.836,
+    "positives": 10
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 1.0,
+    "baseline": 0.99,
+    "balanced": 1.0,
+    "positives": 10
+   }
+  },
+  "intent:mistimed_billing_never_bought": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.974,
+    "baseline": 0.989,
+    "balanced": 0.942,
+    "positives": 11
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.989,
+    "balanced": 0.999,
+    "positives": 11
+   }
+  },
+  "intent:status": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.984,
+    "baseline": 0.968,
+    "balanced": 0.856,
+    "positives": 32
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.996,
+    "baseline": 0.968,
+    "balanced": 0.953,
+    "positives": 32
+   }
+  },
+  "intent:manage": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.987,
+    "baseline": 0.971,
+    "balanced": 0.91,
+    "positives": 29
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.991,
+    "baseline": 0.971,
+    "balanced": 0.945,
+    "positives": 29
+   }
+  },
+  "intent:missing": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.959,
+    "baseline": 0.973,
+    "balanced": 0.889,
+    "positives": 27
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.994,
+    "baseline": 0.973,
+    "balanced": 0.961,
+    "positives": 27
+   }
+  },
+  "intent:cost": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.949,
+    "baseline": 0.982,
+    "balanced": 0.92,
+    "positives": 18
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.995,
+    "baseline": 0.982,
+    "balanced": 0.943,
+    "positives": 18
+   }
+  },
+  "intent:boots": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.941,
+    "baseline": 0.976,
+    "balanced": 0.95,
+    "positives": 24
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.997,
+    "baseline": 0.976,
+    "balanced": 0.978,
+    "positives": 24
+   }
+  },
+  "intent:shirt": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.957,
+    "baseline": 0.965,
+    "balanced": 0.909,
+    "positives": 35
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.965,
+    "balanced": 0.969,
+    "positives": 35
+   }
+  },
+  "intent:jeans": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.945,
+    "baseline": 0.976,
+    "balanced": 0.952,
+    "positives": 24
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.976,
+    "balanced": 0.999,
+    "positives": 24
+   }
+  },
+  "intent:jacket": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.978,
+    "baseline": 0.977,
+    "balanced": 0.968,
+    "positives": 23
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.993,
+    "baseline": 0.977,
+    "balanced": 0.975,
+    "positives": 23
+   }
+  },
+  "intent:pricing": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.962,
+    "baseline": 0.975,
+    "balanced": 0.883,
+    "positives": 25
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.997,
+    "baseline": 0.975,
+    "balanced": 0.959,
+    "positives": 25
+   }
+  },
+  "intent:membership": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.968,
+    "baseline": 0.979,
+    "balanced": 0.914,
+    "positives": 21
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.979,
+    "balanced": 0.999,
+    "positives": 21
+   }
+  },
+  "intent:timing": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.944,
+    "baseline": 0.971,
+    "balanced": 0.904,
+    "positives": 29
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.971,
+    "balanced": 0.983,
+    "positives": 29
+   }
+  },
+  "intent:policy": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.968,
+    "balanced": 0.936,
+    "positives": 32
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.996,
+    "baseline": 0.968,
+    "balanced": 0.998,
+    "positives": 32
+   }
+  },
+  "intent:status_active": {
+   "opening": null,
+   "all": null
+  },
+  "intent:status_due_amount": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.944,
+    "baseline": 0.985,
+    "balanced": 0.84,
+    "positives": 15
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.985,
+    "baseline": 0.985,
+    "balanced": 0.927,
+    "positives": 15
+   }
+  },
+  "intent:status_due_date": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.957,
+    "baseline": 0.986,
+    "balanced": 0.837,
+    "positives": 14
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.98,
+    "baseline": 0.986,
+    "balanced": 0.884,
+    "positives": 14
+   }
+  },
+  "intent:manage_pay_bill": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.956,
+    "baseline": 0.984,
+    "balanced": 0.886,
+    "positives": 16
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.989,
+    "baseline": 0.984,
+    "balanced": 0.964,
+    "positives": 16
+   }
+  },
+  "intent:manage_extension": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.991,
+    "baseline": 0.974,
+    "balanced": 0.902,
+    "positives": 26
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.974,
+    "balanced": 0.98,
+    "positives": 26
+   }
+  },
+  "intent:manage_dispute_bill": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.994,
+    "baseline": 0.98,
+    "balanced": 0.972,
+    "positives": 20
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.98,
+    "balanced": 0.974,
+    "positives": 20
+   }
+  },
+  "intent:credit_card": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.992,
+    "baseline": 0.976,
+    "balanced": 0.915,
+    "positives": 24
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.976,
+    "balanced": 0.958,
+    "positives": 24
+   }
+  },
+  "intent:shopping_cart": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.945,
+    "baseline": 0.984,
+    "balanced": 0.941,
+    "positives": 16
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.999,
+    "baseline": 0.984,
+    "balanced": 0.999,
+    "positives": 16
+   }
+  },
+  "intent:search_results": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.963,
+    "balanced": 0.903,
+    "positives": 37
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.996,
+    "baseline": 0.963,
+    "balanced": 0.959,
+    "positives": 37
+   }
+  },
+  "intent:slow_speed": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.995,
+    "baseline": 0.974,
+    "balanced": 0.941,
+    "positives": 26
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 1.0,
+    "baseline": 0.974,
+    "balanced": 1.0,
+    "positives": 26
+   }
+  },
+  "action:verify-identity": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.838,
+    "baseline": 0.656,
+    "balanced": 0.824,
+    "positives": 345
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.925,
+    "baseline": 0.656,
+    "balanced": 0.919,
+    "positives": 345
+   }
+  },
+  "action:ask-the-oracle": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.894,
+    "baseline": 0.838,
+    "balanced": 0.843,
+    "positives": 163
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.942,
+    "baseline": 0.838,
+    "balanced": 0.914,
+    "positives": 163
+   }
+  },
+  "action:validate-purchase": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.919,
+    "baseline": 0.785,
+    "balanced": 0.888,
+    "positives": 216
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.785,
+    "balanced": 0.958,
+    "positives": 216
+   }
+  },
+  "action:make-password": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.96,
+    "balanced": 0.911,
+    "positives": 40
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.96,
+    "balanced": 0.987,
+    "positives": 40
+   }
+  },
+  "action:promo-code": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.931,
+    "baseline": 0.948,
+    "balanced": 0.818,
+    "positives": 52
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.948,
+    "balanced": 0.901,
+    "positives": 52
+   }
+  },
+  "action:subscription-status": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.911,
+    "baseline": 0.953,
+    "balanced": 0.893,
+    "positives": 47
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.971,
+    "baseline": 0.953,
+    "balanced": 0.934,
+    "positives": 47
+   }
+  },
+  "action:offer-refund": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.873,
+    "baseline": 0.932,
+    "balanced": 0.775,
+    "positives": 68
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.951,
+    "baseline": 0.932,
+    "balanced": 0.878,
+    "positives": 68
+   }
+  },
+  "action:make-purchase": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.898,
+    "baseline": 0.947,
+    "balanced": 0.777,
+    "positives": 53
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.972,
+    "baseline": 0.947,
+    "balanced": 0.95,
+    "positives": 53
+   }
+  },
+  "action:record-reason": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.874,
+    "baseline": 0.838,
+    "balanced": 0.821,
+    "positives": 163
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.922,
+    "baseline": 0.838,
+    "balanced": 0.882,
+    "positives": 163
+   }
+  },
+  "action:enter-details": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.872,
+    "baseline": 0.801,
+    "balanced": 0.824,
+    "positives": 200
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.925,
+    "baseline": 0.801,
+    "balanced": 0.901,
+    "positives": 200
+   }
+  },
+  "action:shipping-status": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.864,
+    "baseline": 0.922,
+    "balanced": 0.809,
+    "positives": 78
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.947,
+    "baseline": 0.922,
+    "balanced": 0.919,
+    "positives": 78
+   }
+  },
+  "action:update-order": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.845,
+    "baseline": 0.867,
+    "balanced": 0.8,
+    "positives": 134
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.905,
+    "baseline": 0.867,
+    "balanced": 0.895,
+    "positives": 134
+   }
+  },
+  "action:pull-up-account": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.885,
+    "baseline": 0.688,
+    "balanced": 0.884,
+    "positives": 691
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.953,
+    "baseline": 0.688,
+    "balanced": 0.942,
+    "positives": 691
+   }
+  },
+  "action:update-account": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.879,
+    "baseline": 0.91,
+    "balanced": 0.829,
+    "positives": 90
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.952,
+    "baseline": 0.91,
+    "balanced": 0.909,
+    "positives": 90
+   }
+  },
+  "action:send-link": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.944,
+    "baseline": 0.944,
+    "balanced": 0.828,
+    "positives": 56
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.957,
+    "baseline": 0.944,
+    "balanced": 0.91,
+    "positives": 56
+   }
+  },
+  "action:notify-team": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.912,
+    "baseline": 0.928,
+    "balanced": 0.831,
+    "positives": 72
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.957,
+    "baseline": 0.928,
+    "balanced": 0.913,
+    "positives": 72
+   }
+  },
+  "action:membership": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.868,
+    "baseline": 0.868,
+    "balanced": 0.838,
+    "positives": 133
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.921,
+    "baseline": 0.868,
+    "balanced": 0.916,
+    "positives": 133
+   }
+  },
+  "action:search-faq": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.893,
+    "baseline": 0.768,
+    "balanced": 0.874,
+    "positives": 233
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.96,
+    "baseline": 0.768,
+    "balanced": 0.938,
+    "positives": 233
+   }
+  },
+  "action:try-again": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.923,
+    "baseline": 0.942,
+    "balanced": 0.846,
+    "positives": 58
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.958,
+    "baseline": 0.942,
+    "balanced": 0.913,
+    "positives": 58
+   }
+  },
+  "action:log-out-in": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.947,
+    "baseline": 0.908,
+    "balanced": 0.922,
+    "positives": 92
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.991,
+    "baseline": 0.908,
+    "balanced": 0.995,
+    "positives": 92
+   }
+  },
+  "action:instructions": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.978,
+    "baseline": 0.953,
+    "balanced": 0.908,
+    "positives": 47
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.977,
+    "baseline": 0.953,
+    "balanced": 0.948,
+    "positives": 47
+   }
+  },
+  "action:search-jeans": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.94,
+    "baseline": 0.974,
+    "balanced": 0.894,
+    "positives": 26
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.998,
+    "baseline": 0.974,
+    "balanced": 0.98,
+    "positives": 26
+   }
+  },
+  "action:search-shirt": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.949,
+    "baseline": 0.966,
+    "balanced": 0.903,
+    "positives": 34
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.985,
+    "baseline": 0.966,
+    "balanced": 0.978,
+    "positives": 34
+   }
+  },
+  "action:search-boots": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.935,
+    "baseline": 0.978,
+    "balanced": 0.967,
+    "positives": 22
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.994,
+    "baseline": 0.978,
+    "balanced": 0.997,
+    "positives": 22
+   }
+  },
+  "action:search-jacket": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.968,
+    "baseline": 0.973,
+    "balanced": 0.876,
+    "positives": 27
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.988,
+    "baseline": 0.973,
+    "balanced": 0.94,
+    "positives": 27
+   }
+  },
+  "action:search-pricing": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.944,
+    "baseline": 0.964,
+    "balanced": 0.797,
+    "positives": 36
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.98,
+    "baseline": 0.964,
+    "balanced": 0.856,
+    "positives": 36
+   }
+  },
+  "action:search-timing": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.938,
+    "baseline": 0.971,
+    "balanced": 0.885,
+    "positives": 29
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.991,
+    "baseline": 0.971,
+    "balanced": 0.945,
+    "positives": 29
+   }
+  },
+  "action:search-membership": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.944,
+    "baseline": 0.967,
+    "balanced": 0.796,
+    "positives": 33
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.974,
+    "baseline": 0.967,
+    "balanced": 0.855,
+    "positives": 33
+   }
+  },
+  "action:search-policy": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.928,
+    "baseline": 0.958,
+    "balanced": 0.815,
+    "positives": 42
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.979,
+    "baseline": 0.958,
+    "balanced": 0.864,
+    "positives": 42
+   }
+  },
+  "action:select-faq": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.878,
+    "baseline": 0.842,
+    "balanced": 0.861,
+    "positives": 159
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.931,
+    "baseline": 0.842,
+    "balanced": 0.923,
+    "positives": 159
+   }
+  },
+  "first_action": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.733,
+    "baseline": 0.664,
+    "balanced": 0.232
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.866,
+    "baseline": 0.664,
+    "balanced": 0.211
+   }
+  },
+  "identity_check": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.792,
+    "baseline": 0.344,
+    "balanced": 0.784
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.897,
+    "baseline": 0.344,
+    "balanced": 0.897
+   }
+  },
+  "agent_changes_something": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.736,
+    "baseline": 0.506,
+    "balanced": 0.736,
+    "positives": 508
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.859,
+    "baseline": 0.506,
+    "balanced": 0.858,
+    "positives": 508
+   }
+  },
+  "action_count": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.46,
+    "baseline": 0.351,
+    "mae": 0.726
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.55,
+    "baseline": 0.351,
+    "mae": 0.56
+   }
+  },
+  "escalation_team": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.892,
+    "baseline": 0.931,
+    "balanced": 0.734
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.959,
+    "baseline": 0.931,
+    "balanced": 0.893
+   }
+  },
+  "account_change": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.899,
+    "baseline": 0.942,
+    "balanced": 0.715
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.942,
+    "balanced": 0.751
+   }
+  },
+  "order_change": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.897,
+    "baseline": 0.969,
+    "balanced": 0.544
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.962,
+    "baseline": 0.969,
+    "balanced": 0.661
+   }
+  },
+  "order_option": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.835,
+    "baseline": 0.926,
+    "balanced": 0.684
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.936,
+    "baseline": 0.926,
+    "balanced": 0.762
+   }
+  },
+  "recorded_reason": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.882,
+    "baseline": 0.93,
+    "balanced": 0.458
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.962,
+    "baseline": 0.93,
+    "balanced": 0.73
+   }
+  },
+  "refund_method": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.967,
+    "baseline": 0.989,
+    "balanced": 0.491
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.988,
+    "baseline": 0.989,
+    "balanced": 0.498
+   }
+  },
+  "product": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.813,
+    "baseline": 0.927,
+    "balanced": 0.11
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.949,
+    "baseline": 0.927,
+    "balanced": 0.622
+   }
+  },
+  "member_level": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.264,
+    "baseline": 0.266,
+    "balanced": 0.263
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.443,
+    "baseline": 0.266,
+    "balanced": 0.443
+   }
+  },
+  "payment_method_on_file": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.86,
+    "baseline": 0.883,
+    "balanced": 0.452
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.918,
+    "baseline": 0.883,
+    "balanced": 0.528
+   }
+  },
+  "needs:account_id": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.872,
+    "baseline": 0.724,
+    "balanced": 0.852,
+    "positives": 277
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.933,
+    "baseline": 0.724,
+    "balanced": 0.934,
+    "positives": 277
+   }
+  },
+  "needs:amount": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.807,
+    "baseline": 0.877,
+    "balanced": 0.691,
+    "positives": 123
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.966,
+    "baseline": 0.877,
+    "balanced": 0.932,
+    "positives": 123
+   }
+  },
+  "needs:email": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.882,
+    "baseline": 0.772,
+    "balanced": 0.865,
+    "positives": 229
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.973,
+    "baseline": 0.772,
+    "balanced": 0.983,
+    "positives": 229
+   }
+  },
+  "needs:name": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.852,
+    "baseline": 0.791,
+    "balanced": 0.857,
+    "positives": 794
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.962,
+    "baseline": 0.791,
+    "balanced": 0.957,
+    "positives": 794
+   }
+  },
+  "needs:order_id": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.889,
+    "baseline": 0.563,
+    "balanced": 0.887,
+    "positives": 439
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.963,
+    "baseline": 0.563,
+    "balanced": 0.965,
+    "positives": 439
+   }
+  },
+  "needs:phone": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.873,
+    "baseline": 0.951,
+    "balanced": 0.768,
+    "positives": 49
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.982,
+    "baseline": 0.951,
+    "balanced": 0.981,
+    "positives": 49
+   }
+  },
+  "needs:pin_number": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.938,
+    "baseline": 0.978,
+    "balanced": 0.88,
+    "positives": 22
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.981,
+    "baseline": 0.978,
+    "balanced": 0.946,
+    "positives": 22
+   }
+  },
+  "needs:street_address": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.89,
+    "baseline": 0.893,
+    "balanced": 0.799,
+    "positives": 107
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.994,
+    "baseline": 0.893,
+    "balanced": 0.997,
+    "positives": 107
+   }
+  },
+  "needs:username": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.902,
+    "baseline": 0.761,
+    "balanced": 0.89,
+    "positives": 240
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.948,
+    "baseline": 0.761,
+    "balanced": 0.95,
+    "positives": 240
+   }
+  },
+  "needs:zip_code": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.862,
+    "baseline": 0.837,
+    "balanced": 0.839,
+    "positives": 164
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.983,
+    "baseline": 0.837,
+    "balanced": 0.983,
+    "positives": 164
+   }
+  },
+  "chat_length": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.414,
+    "baseline": 0.285,
+    "mae": 0.837
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.524,
+    "baseline": 0.285,
+    "mae": 0.579
+   }
+  }
+ },
+ "retrained": {
+  "primary_team": {
+   "opening": {
+    "n": 915,
+    "accuracy": 0.893,
+    "baseline": 0.537,
+    "balanced": 0.898
+   },
+   "all": {
+    "n": 915,
+    "accuracy": 0.969,
+    "baseline": 0.537,
+    "balanced": 0.973
+   }
+  },
+  "category": {
+   "opening": {
+    "n": 424,
+    "accuracy": 0.934,
+    "baseline": 0.538,
+    "balanced": 0.931
+   },
+   "all": {
+    "n": 424,
+    "accuracy": 0.988,
+    "baseline": 0.538,
+    "balanced": 0.987
+   }
+  },
+  "category_reordered": {
+   "opening": {
+    "n": 424,
+    "accuracy": 0.934,
+    "baseline": 0.538,
+    "balanced": 0.931
+   },
+   "all": {
+    "n": 424,
+    "accuracy": 0.988,
+    "baseline": 0.538,
+    "balanced": 0.987
+   }
+  },
+  "journey_stage": {
+   "opening": {
+    "n": 490,
+    "accuracy": 0.916,
+    "baseline": 0.671,
+    "balanced": 0.926
+   },
+   "all": {
+    "n": 490,
+    "accuracy": 0.99,
+    "baseline": 0.671,
+    "balanced": 0.991
+   }
+  },
+  "message_type": {
+   "opening": {
+    "n": 965,
+    "accuracy": 0.884,
+    "baseline": 0.41,
+    "balanced": 0.884
+   },
+   "all": {
+    "n": 965,
+    "accuracy": 0.962,
+    "baseline": 0.41,
+    "balanced": 0.96
+   }
+  },
+  "issue_count": {
+   "opening": null,
+   "all": null
+  },
+  "needs_staff_action": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.736,
+    "baseline": 0.506,
+    "balanced": 0.736,
+    "positives": 508
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.859,
+    "baseline": 0.506,
+    "balanced": 0.858,
+    "positives": 508
+   }
+  },
+  "identity_details_given": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.992,
+    "baseline": 0.893,
+    "balanced": 0.983,
+    "positives": 107
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.966,
+    "baseline": 0.794,
+    "balanced": 0.966,
+    "positives": 797
+   }
+  },
+  "sensitive_data_present": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 1.0,
+    "baseline": 1.0,
+    "positives": 0
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.994,
+    "baseline": 0.893,
+    "balanced": 0.997,
+    "positives": 107
+   }
+  },
+  "charge_amount_given": {
+   "opening": {
+    "n": 1004,
+    "accuracy": 0.986,
+    "baseline": 0.977,
+    "balanced": 0.887,
+    "positives": 23
+   },
+   "all": {
+    "n": 1004,
+    "accuracy": 0.966,
+    "baseline": 0.877,
+    "balanced": 0.932,
+    "positives": 123
+   }
+  },
+  "cannot_log_in": {
+   "opening": {
+    "n": 915,
+    "accuracy": 0.962,
+    "baseline": 0.892,
+    "balanced": 0.947,
+    "positives": 99
+   },
+   "all": {
+    "n": 915,
+    "accuracy": 0.993,
+    "baseline": 0.892,
+    "balanced": 0.992,
+    "positives": 99
+   }
+  },
+  "security_related": {
+   "opening": {
+    "n": 915,
+    "accuracy": 0.962,
+    "baseline": 0.892,
+    "balanced": 0.947,
+    "positives": 99
+   },
+   "all": {
+    "n": 915,
+    "accuracy": 0.993,
+    "baseline": 0.892,
+    "balanced": 0.992,
+    "positives": 99
+   }
+  },
+  "mentions_account_issue": {
+   "opening": {
+    "n": 912,
+    "accuracy": 0.956,
+    "baseline": 0.872,
+    "balanced": 0.942,
+    "positives": 117
+   },
+   "all": {
+    "n": 912,
+    "accuracy": 0.99,
+    "baseline": 0.872,
+    "balanced": 0.98,
+    "positives": 117
+   }
+  },
+  "mentions_billing_issue": {
+   "opening": {
+    "n": 772,
+    "accuracy": 0.966,
+    "baseline": 0.816,
+    "balanced": 0.936,
+    "positives": 142
+   },
+   "all": {
+    "n": 772,
+    "accuracy": 0.983,
+    "baseline": 0.816,
+    "balanced": 0.976,
+    "positives": 142
+   }
+  },
+  "mentions_bug": {
+   "opening": {
+    "n": 915,
+    "accuracy": 0.96,
+    "baseline": 0.914,
+    "balanced": 0.932,
+    "positives": 79
+   },
+   "all": {
+    "n": 915,
+    "accuracy": 0.997,
+    "baseline": 0.914,
+    "balanced": 0.992,
+    "positives": 79
+   }
+  },
+  "refund_requested": {
+   "opening": {
+    "n": 658,
+    "accuracy": 0.979,
+    "baseline": 0.971,
+    "balanced": 0.912,
+    "positives": 19
+   },
+   "all": {
+    "n": 658,
+    "accuracy": 0.997,
+    "baseline": 0.971,
+    "balanced": 0.998,
+    "positives": 19
+   }
+  },
+  "refund_implied": {
+   "opening": {
+    "n": 767,
+    "accuracy": 0.935,
+    "baseline": 0.833,
+    "balanced": 0.917,
+    "positives": 128
+   },
+   "all": {
+    "n": 767,
+    "accuracy": 0.983,
+    "baseline": 0.833,
+    "balanced": 0.984,
+    "positives": 128
+   }
+  },
+  "existing_customer": {
+   "opening": null,
+   "all": null
+  },
+  "has_account": {
+   "opening": null,
+   "all": null
+  },
+  "mentions_feature_request": {
+   "opening": null,
+   "all": null
+  },
+  "wants_new_payment_method": {
+   "opening": null,
+   "all": null
+  },
+  "duplicate_charge": {
+   "opening": null,
+   "all": null
+  },
+  "chargeback_mentioned": {
+   "opening": null,
+   "all": null
+  }
+ },
+ "seconds": 109
+}

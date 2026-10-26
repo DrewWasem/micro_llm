@@ -1,0 +1,73 @@
+{
+ "machine": {
+  "cpu": "Apple M1 Max",
+  "cores": "10",
+  "python": "3.13.9",
+  "sklearn": "1.7.2",
+  "processes": 1
+ },
+ "train": {
+  "chats": 8034,
+  "seconds_total": 26.5,
+  "seconds_features": 1.0,
+  "seconds_per_head": {
+   "flow": 3.86,
+   "intent": 13.87,
+   "primary_team": 2.63,
+   "journey_stage": 0.96,
+   "message_type": 2.1,
+   "cannot_log_in": 0.22,
+   "security_related": 0.25,
+   "mentions_account_issue": 0.18,
+   "mentions_billing_issue": 0.18,
+   "mentions_bug": 0.23,
+   "refund_requested": 0.12,
+   "refund_implied": 0.18,
+   "needs_staff_action": 0.45,
+   "identity_details_given": 0.17,
+   "charge_amount_given": 0.11
+  },
+  "feature_count": 38990
+ },
+ "size_mb": 27.4,
+ "latency_ms_15_questions": {
+  "openings": 300,
+  "features": {
+   "p50": 0.489,
+   "p90": 0.589,
+   "p99": 0.707
+  },
+  "heads": {
+   "p50": 3.465,
+   "p90": 3.797,
+   "p99": 4.201
+  },
+  "total": {
+   "p50": 3.977,
+   "p90": 4.327,
+   "p99": 4.851
+  },
+  "per_head_p50": {
+   "flow": 0.3923,
+   "intent": 1.9366,
+   "primary_team": 0.178,
+   "journey_stage": 0.1661,
+   "message_type": 0.1658,
+   "cannot_log_in": 0.0208,
+   "security_related": 0.0208,
+   "mentions_account_issue": 0.0208,
+   "mentions_billing_issue": 0.0207,
+   "mentions_bug": 0.0207,
+   "refund_requested": 0.0207,
+   "refund_implied": 0.0207,
+   "needs_staff_action": 0.0207,
+   "identity_details_given": 0.0215,
+   "charge_amount_given": 0.0208
+  }
+ },
+ "latency_ms_47_question_pipeline": {
+  "p50": 2.237,
+  "p90": 3.435,
+  "p99": 5.169
+ }
+}

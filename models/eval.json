@@ -1,0 +1,750 @@
+{
+ "test_tickets": 96,
+ "models": {
+  "router": {
+   "piece_kind": {
+    "n": 333,
+    "accuracy": 0.976,
+    "baseline": 0.396
+   },
+   "primary_team": {
+    "n": 333,
+    "accuracy": 0.994,
+    "baseline": 0.505
+   }
+  },
+  "tone": {
+   "frustration": {
+    "n": 333,
+    "accuracy": 0.706,
+    "baseline": 0.658,
+    "mae": 0.347
+   },
+   "sentiment": {
+    "n": 333,
+    "accuracy": 0.577,
+    "baseline": 0.462,
+    "mae": 0.529
+   },
+   "politeness": {
+    "n": 333,
+    "accuracy": 0.508,
+    "baseline": 0.402,
+    "mae": 0.546
+   },
+   "time_pressure": {
+    "n": 333,
+    "accuracy": 0.979,
+    "baseline": 0.94,
+    "balanced": 0.825
+   },
+   "threatens_to_leave": {
+    "n": 333,
+    "accuracy": 1.0,
+    "baseline": 0.961,
+    "balanced": 1.0
+   },
+   "asks_for_human": {
+    "n": 333,
+    "accuracy": 0.997,
+    "baseline": 0.973,
+    "balanced": 0.944
+   },
+   "prior_contact": {
+    "n": 333,
+    "accuracy": 0.994,
+    "baseline": 0.955,
+    "balanced": 0.965
+   },
+   "frustration_rising": {
+    "n": 333,
+    "accuracy": 1.0,
+    "baseline": 0.949,
+    "balanced": 1.0
+   }
+  },
+  "billing": {
+   "duplicate_charge": {
+    "n": 40,
+    "accuracy": 0.975,
+    "baseline": 0.75,
+    "balanced": 0.983
+   },
+   "refund_requested": {
+    "n": 40,
+    "accuracy": 0.975,
+    "baseline": 0.625,
+    "balanced": 0.98
+   },
+   "refund_implied": {
+    "n": 40,
+    "accuracy": 1.0,
+    "baseline": 0.7,
+    "balanced": 1.0
+   },
+   "payment_method_used": {
+    "n": 40,
+    "accuracy": 0.825,
+    "baseline": 0.4
+   },
+   "chargeback_mentioned": {
+    "n": 40,
+    "accuracy": 1.0,
+    "baseline": 0.9,
+    "balanced": 1.0
+   }
+  },
+  "account": {
+   "cannot_log_in": {
+    "n": 51,
+    "accuracy": 1.0,
+    "baseline": 0.569,
+    "balanced": 1.0
+   },
+   "security_related": {
+    "n": 51,
+    "accuracy": 0.98,
+    "baseline": 0.51,
+    "balanced": 0.98
+   },
+   "tried_fix_themselves": {
+    "n": 51,
+    "accuracy": 0.824,
+    "baseline": 0.765,
+    "balanced": 0.827
+   }
+  },
+  "bug": {
+   "bug_severity": {
+    "n": 87,
+    "accuracy": 0.908,
+    "baseline": 0.448,
+    "mae": 0.151
+   },
+   "has_reproducible_steps": {
+    "n": 87,
+    "accuracy": 0.862,
+    "baseline": 0.563,
+    "balanced": 0.863
+   },
+   "problem_after_update": {
+    "n": 87,
+    "accuracy": 0.966,
+    "baseline": 0.609,
+    "balanced": 0.956
+   },
+   "blames_update": {
+    "n": 87,
+    "accuracy": 0.897,
+    "baseline": 0.77,
+    "balanced": 0.88
+   },
+   "possible_widespread_issue": {
+    "n": 87,
+    "accuracy": 0.908,
+    "baseline": 0.575,
+    "balanced": 0.902
+   }
+  },
+  "feature": {
+   "wants_new_payment_method": {
+    "n": 25,
+    "accuracy": 1.0,
+    "baseline": 0.6,
+    "balanced": 1.0
+   },
+   "feature_request_strength": {
+    "n": 25,
+    "accuracy": 0.96,
+    "baseline": 0.52,
+    "mae": 0.131
+   }
+  },
+  "linker": {
+   "issues_related": {
+    "n": 155,
+    "accuracy": 0.994,
+    "baseline": 0.826,
+    "balanced": 0.981
+   }
+  }
+ },
+ "splitter": {
+  "pieces_exact": 0.914,
+  "tickets_all_exact": 0.917
+ },
+ "ticket_answers": {
+  "category": {
+   "n": 96,
+   "accuracy": 0.896,
+   "baseline": 0.365
+  },
+  "bug_severity": {
+   "n": 96,
+   "accuracy": 0.906,
+   "baseline": 0.375,
+   "mae": 0.142
+  },
+  "has_reproducible_steps": {
+   "n": 96,
+   "accuracy": 0.854,
+   "baseline": 0.604,
+   "balanced": 0.843
+  },
+  "refund_requested": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.865,
+   "balanced": 0.962
+  },
+  "frustration": {
+   "n": 96,
+   "accuracy": 0.677,
+   "baseline": 0.448,
+   "mae": 0.365
+  },
+  "category_reordered": {
+   "n": 96,
+   "accuracy": 0.854,
+   "baseline": 0.375
+  },
+  "mentions_billing_issue": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.646,
+   "balanced": 1.0
+  },
+  "mentions_account_issue": {
+   "n": 96,
+   "accuracy": 0.979,
+   "baseline": 0.5,
+   "balanced": 0.979
+  },
+  "mentions_bug": {
+   "n": 96,
+   "accuracy": 0.969,
+   "baseline": 0.75,
+   "balanced": 0.979
+  },
+  "mentions_feature_request": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.74,
+   "balanced": 1.0
+  },
+  "issue_count": {
+   "n": 96,
+   "accuracy": 0.906,
+   "baseline": 0.396
+  },
+  "message_type": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.896
+  },
+  "primary_team": {
+   "n": 96,
+   "accuracy": 0.927,
+   "baseline": 0.292
+  },
+  "priority": {
+   "n": 96,
+   "accuracy": 0.896,
+   "baseline": 0.406,
+   "mae": 0.226
+  },
+  "time_pressure": {
+   "n": 96,
+   "accuracy": 0.927,
+   "baseline": 0.792,
+   "balanced": 0.825
+  },
+  "needs_staff_action": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.542,
+   "balanced": 1.0
+  },
+  "needs_more_info": {
+   "n": 96,
+   "accuracy": 0.896,
+   "baseline": 0.573,
+   "balanced": 0.89
+  },
+  "journey_stage": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.604
+  },
+  "duplicate_charge": {
+   "n": 96,
+   "accuracy": 0.979,
+   "baseline": 0.896,
+   "balanced": 0.944
+  },
+  "refund_implied": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.75,
+   "balanced": 1.0
+  },
+  "charge_amount_given": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.823,
+   "balanced": 1.0
+  },
+  "payment_method_used": {
+   "n": 96,
+   "accuracy": 0.917,
+   "baseline": 0.698
+  },
+  "order_date_given": {
+   "n": 96,
+   "accuracy": 0.927,
+   "baseline": 0.875,
+   "balanced": 0.887
+  },
+  "chargeback_mentioned": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.958,
+   "balanced": 1.0
+  },
+  "cannot_log_in": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.771,
+   "balanced": 1.0
+  },
+  "problem_after_update": {
+   "n": 96,
+   "accuracy": 0.948,
+   "baseline": 0.667,
+   "balanced": 0.922
+  },
+  "blames_update": {
+   "n": 96,
+   "accuracy": 0.927,
+   "baseline": 0.812,
+   "balanced": 0.891
+  },
+  "error_message_given": {
+   "n": 96,
+   "accuracy": 0.927,
+   "baseline": 0.75,
+   "balanced": 0.854
+  },
+  "device_or_browser_given": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.656,
+   "balanced": 1.0
+  },
+  "tried_fix_themselves": {
+   "n": 96,
+   "accuracy": 0.917,
+   "baseline": 0.875,
+   "balanced": 0.845
+  },
+  "security_related": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.74,
+   "balanced": 0.98
+  },
+  "possible_widespread_issue": {
+   "n": 96,
+   "accuracy": 0.917,
+   "baseline": 0.646,
+   "balanced": 0.902
+  },
+  "wants_new_payment_method": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.896,
+   "balanced": 1.0
+  },
+  "feature_request_strength": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.74,
+   "mae": 0.039
+  },
+  "sentiment": {
+   "n": 96,
+   "accuracy": 0.573,
+   "baseline": 0.604,
+   "mae": 0.411
+  },
+  "politeness": {
+   "n": 96,
+   "accuracy": 0.562,
+   "baseline": 0.375,
+   "mae": 0.51
+  },
+  "frustration_rising": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.823,
+   "balanced": 0.971
+  },
+  "threatens_to_leave": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.865,
+   "balanced": 1.0
+  },
+  "churn_risk": {
+   "n": 96,
+   "accuracy": 0.75,
+   "baseline": 0.771,
+   "mae": 0.198
+  },
+  "asks_for_human": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.906,
+   "balanced": 0.944
+  },
+  "prior_contact": {
+   "n": 96,
+   "accuracy": 0.958,
+   "baseline": 0.844,
+   "balanced": 0.921
+  },
+  "existing_customer": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.604,
+   "balanced": 1.0
+  },
+  "has_account": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.729,
+   "balanced": 0.993
+  },
+  "identity_details_given": {
+   "n": 96,
+   "accuracy": 0.938,
+   "baseline": 0.823,
+   "balanced": 0.824
+  },
+  "likely_apple_user": {
+   "n": 96,
+   "accuracy": 1.0,
+   "baseline": 0.781,
+   "balanced": 1.0
+  },
+  "sensitive_data_present": {
+   "n": 96,
+   "accuracy": 0.99,
+   "baseline": 0.875,
+   "balanced": 0.958
+  },
+  "issues_related": {
+   "n": 96,
+   "accuracy": 0.958,
+   "baseline": 0.719,
+   "balanced": 0.926
+  }
+ },
+ "latency_ms": {
+  "median": 3.9,
+  "p95": 5.96
+ },
+ "sample": {
+  "pieces": [
+   {
+    "id": "P1",
+    "text": "I placed an order (#98423) last Thursday and was charged twice.",
+    "kind": "problem",
+    "team": "billing_and_payments",
+    "models": [
+     "router",
+     "tone",
+     "billing"
+    ]
+   },
+   {
+    "id": "P2",
+    "text": "I also can't log in after the site update",
+    "kind": "problem",
+    "team": "account_support",
+    "models": [
+     "router",
+     "tone",
+     "account",
+     "bug"
+    ]
+   },
+   {
+    "id": "P3",
+    "text": "adding Apple Pay would be really helpful.",
+    "kind": "request",
+    "team": "product_management",
+    "models": [
+     "router",
+     "tone",
+     "feature"
+    ]
+   },
+   {
+    "id": "P4",
+    "text": "This is getting frustrating.",
+    "kind": "feeling",
+    "team": "other",
+    "models": [
+     "router",
+     "tone"
+    ]
+   }
+  ],
+  "model_runs": 15,
+  "ms": {
+   "split_and_entities": 0.13,
+   "router_and_tone": 1.84,
+   "specialists_and_linker": 2.67,
+   "rules": 0.1,
+   "total": 4.74
+  },
+  "vs_predictions": {
+   "category": {
+    "expect": "billing",
+    "got": "billing",
+    "gap": false
+   },
+   "bug_severity": {
+    "expect": 1.5,
+    "got": 1.64,
+    "gap": 0.14
+   },
+   "has_reproducible_steps": {
+    "expect": 0.1,
+    "got": 0.372,
+    "gap": 0.27
+   },
+   "refund_requested": {
+    "expect": 0.4,
+    "got": 0.127,
+    "gap": 0.27
+   },
+   "frustration": {
+    "expect": 1.0,
+    "got": 1.04,
+    "gap": 0.04
+   },
+   "category_reordered": {
+    "expect": "billing",
+    "got": "billing",
+    "gap": false
+   },
+   "mentions_billing_issue": {
+    "expect": 0.97,
+    "got": 0.895,
+    "gap": 0.07
+   },
+   "mentions_account_issue": {
+    "expect": 0.95,
+    "got": 0.944,
+    "gap": 0.01
+   },
+   "mentions_bug": {
+    "expect": 0.6,
+    "got": 0.953,
+    "gap": 0.35
+   },
+   "mentions_feature_request": {
+    "expect": 0.95,
+    "got": 0.775,
+    "gap": 0.17
+   },
+   "issue_count": {
+    "expect": "three",
+    "got": "three",
+    "gap": false
+   },
+   "message_type": {
+    "expect": "problem_report",
+    "got": "problem_report",
+    "gap": false
+   },
+   "primary_team": {
+    "expect": "billing_and_payments",
+    "got": "billing_and_payments",
+    "gap": false
+   },
+   "priority": {
+    "expect": 2.0,
+    "got": 2.19,
+    "gap": 0.19
+   },
+   "time_pressure": {
+    "expect": 0.1,
+    "got": 0.093,
+    "gap": 0.01
+   },
+   "needs_staff_action": {
+    "expect": 0.9,
+    "got": 0.969,
+    "gap": 0.07
+   },
+   "needs_more_info": {
+    "expect": 0.85,
+    "got": 0.93,
+    "gap": 0.08
+   },
+   "journey_stage": {
+    "expect": "post_purchase",
+    "got": "post_purchase",
+    "gap": false
+   },
+   "duplicate_charge": {
+    "expect": 0.97,
+    "got": 0.905,
+    "gap": 0.06
+   },
+   "refund_implied": {
+    "expect": 0.9,
+    "got": 0.717,
+    "gap": 0.18
+   },
+   "charge_amount_given": {
+    "expect": 0.03,
+    "got": 0.0,
+    "gap": 0.03
+   },
+   "payment_method_used": {
+    "expect": "not_stated",
+    "got": "not_stated",
+    "gap": false
+   },
+   "order_date_given": {
+    "expect": 0.9,
+    "got": 1.0,
+    "gap": 0.1
+   },
+   "chargeback_mentioned": {
+    "expect": 0.03,
+    "got": 0.019,
+    "gap": 0.01
+   },
+   "cannot_log_in": {
+    "expect": 0.97,
+    "got": 0.969,
+    "gap": 0.0
+   },
+   "problem_after_update": {
+    "expect": 0.95,
+    "got": 0.998,
+    "gap": 0.05
+   },
+   "blames_update": {
+    "expect": 0.6,
+    "got": 0.923,
+    "gap": 0.32
+   },
+   "error_message_given": {
+    "expect": 0.05,
+    "got": 0.0,
+    "gap": 0.05
+   },
+   "device_or_browser_given": {
+    "expect": 0.03,
+    "got": 0.0,
+    "gap": 0.03
+   },
+   "tried_fix_themselves": {
+    "expect": 0.05,
+    "got": 0.467,
+    "gap": 0.42
+   },
+   "security_related": {
+    "expect": 0.55,
+    "got": 0.951,
+    "gap": 0.4
+   },
+   "possible_widespread_issue": {
+    "expect": 0.65,
+    "got": 0.318,
+    "gap": 0.33
+   },
+   "wants_new_payment_method": {
+    "expect": 0.95,
+    "got": 0.733,
+    "gap": 0.22
+   },
+   "feature_request_strength": {
+    "expect": 1.3,
+    "got": 1.01,
+    "gap": 0.29
+   },
+   "sentiment": {
+    "expect": 1.0,
+    "got": 1.79,
+    "gap": 0.79
+   },
+   "politeness": {
+    "expect": 2.5,
+    "got": 1.61,
+    "gap": 0.89
+   },
+   "frustration_rising": {
+    "expect": 0.75,
+    "got": 0.612,
+    "gap": 0.14
+   },
+   "threatens_to_leave": {
+    "expect": 0.03,
+    "got": 0.026,
+    "gap": 0.0
+   },
+   "churn_risk": {
+    "expect": 1.0,
+    "got": 0.56,
+    "gap": 0.44
+   },
+   "asks_for_human": {
+    "expect": 0.03,
+    "got": 0.016,
+    "gap": 0.01
+   },
+   "prior_contact": {
+    "expect": 0.15,
+    "got": 0.014,
+    "gap": 0.14
+   },
+   "existing_customer": {
+    "expect": 0.95,
+    "got": 1.0,
+    "gap": 0.05
+   },
+   "has_account": {
+    "expect": 0.95,
+    "got": 1.0,
+    "gap": 0.05
+   },
+   "identity_details_given": {
+    "expect": 0.05,
+    "got": 0.0,
+    "gap": 0.05
+   },
+   "likely_apple_user": {
+    "expect": 0.6,
+    "got": 1.0,
+    "gap": 0.4
+   },
+   "sensitive_data_present": {
+    "expect": 0.05,
+    "got": 0.0,
+    "gap": 0.05
+   },
+   "issues_related": {
+    "expect": 0.3,
+    "got": 0.101,
+    "gap": 0.2
+   }
+  }
+ }
+}

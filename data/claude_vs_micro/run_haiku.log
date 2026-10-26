@@ -1,0 +1,43 @@
+asking haiku about 300 chats (0 cached), 16 at a time
+  20/300 chats answered, 32 s
+  40/300 chats answered, 66 s
+  60/300 chats answered, 97 s
+  80/300 chats answered, 126 s
+  100/300 chats answered, 155 s
+  120/300 chats answered, 188 s
+  140/300 chats answered, 224 s
+  160/300 chats answered, 251 s
+  180/300 chats answered, 270 s
+  200/300 chats answered, 296 s
+  220/300 chats answered, 328 s
+  240/300 chats answered, 356 s
+  260/300 chats answered, 384 s
+  280/300 chats answered, 411 s
+  300/300 chats answered, 450 s
+{
+ "model": "haiku",
+ "chats": 300,
+ "claude_answered": 300,
+ "claude_wall_s": 18.61,
+ "claude_api_s": 16.6575,
+ "claude_output_tokens": 3768.0,
+ "claude_input_tokens": 1826.0,
+ "claude_cost_usd": 0.8287
+}
+
+question                    n common    syn   abcd claude   (balanced; accuracy for our 3 choice questions)
+flow                      300   10%   —     86%   76%
+intent                    300    2%   —     77%   67%
+primary_team              267   52%   66%   88%   83%
+journey_stage             145   69%   10%   93%   72%
+message_type              285   41%   27%   88%   67%
+cannot_log_in             267   50%   69%   92%   89%
+security_related          267   50%   69%   92%   92%
+mentions_account_issue    267   50%   77%   91%   90%
+mentions_billing_issue    223   50%   65%   93%   85%
+mentions_bug              267   50%   53%   98%   97%
+refund_requested          186   50%   67%   99%  100%
+refund_implied            221   50%   53%   90%   78%
+needs_staff_action        300   50%   52%   73%   58%
+identity_details_given    300   50%   76%   98%   93%
+charge_amount_given       300   50%  100%   99%   75%

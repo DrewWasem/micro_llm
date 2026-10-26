@@ -1,0 +1,817 @@
+{
+ "model": "haiku",
+ "chats": 300,
+ "routed": {
+  "questions": [
+   "primary_team",
+   "journey_stage",
+   "message_type",
+   "cannot_log_in",
+   "security_related",
+   "mentions_account_issue",
+   "mentions_billing_issue",
+   "mentions_bug",
+   "refund_requested",
+   "refund_implied"
+  ],
+  "claude_intents_usable": 270,
+  "per_question": {
+   "primary_team": {
+    "micro_abcd_direct": 0.883895,
+    "micro_abcd_routed": 0.910112,
+    "claude_direct": 0.831461,
+    "claude_routed": 0.872659
+   },
+   "journey_stage": {
+    "micro_abcd_direct": 0.931034,
+    "micro_abcd_routed": 0.937931,
+    "claude_direct": 0.724138,
+    "claude_routed": 0.862069
+   },
+   "message_type": {
+    "micro_abcd_direct": 0.880702,
+    "micro_abcd_routed": 0.894737,
+    "claude_direct": 0.673684,
+    "claude_routed": 0.807018
+   },
+   "cannot_log_in": {
+    "micro_abcd_direct": 0.923461,
+    "micro_abcd_routed": 0.928571,
+    "claude_direct": 0.885714,
+    "claude_routed": 0.926416
+   },
+   "security_related": {
+    "micro_abcd_direct": 0.923461,
+    "micro_abcd_routed": 0.928571,
+    "claude_direct": 0.917796,
+    "claude_routed": 0.926416
+   },
+   "mentions_account_issue": {
+    "micro_abcd_direct": 0.913968,
+    "micro_abcd_routed": 0.92274,
+    "claude_direct": 0.901484,
+    "claude_routed": 0.907726
+   },
+   "mentions_billing_issue": {
+    "micro_abcd_direct": 0.933527,
+    "micro_abcd_routed": 0.939599,
+    "claude_direct": 0.852649,
+    "claude_routed": 0.916344
+   },
+   "mentions_bug": {
+    "micro_abcd_direct": 0.97992,
+    "micro_abcd_routed": 0.985944,
+    "claude_direct": 0.970214,
+    "claude_routed": 0.972222
+   },
+   "refund_requested": {
+    "micro_abcd_direct": 0.988889,
+    "micro_abcd_routed": 0.997222,
+    "claude_direct": 1,
+    "claude_routed": 1
+   },
+   "refund_implied": {
+    "micro_abcd_direct": 0.901829,
+    "micro_abcd_routed": 0.91294,
+    "claude_direct": 0.77771,
+    "claude_routed": 0.909079
+   }
+  },
+  "mean": {
+   "micro_abcd_direct": 0.926069,
+   "micro_abcd_routed": 0.935837,
+   "claude_direct": 0.853485,
+   "claude_routed": 0.909995
+  }
+ },
+ "exclusions": {
+  "cannot_log_in_equals_security_related_on": "300 of 300 chats",
+  "means": {
+   "none": {
+    "questions": 15,
+    "heads": 0.906599,
+    "claude": 0.814534,
+    "gap_points": 9.2
+   },
+   "charge_amount_given (2 positives)": {
+    "questions": 14,
+    "heads": 0.900287,
+    "claude": 0.819144,
+    "gap_points": 8.1
+   },
+   "needs_staff_action (follows the agent's later actions)": {
+    "questions": 14,
+    "heads": 0.918975,
+    "claude": 0.831287,
+    "gap_points": 8.8
+   },
+   "cannot_log_in (same truth as security_related)": {
+    "questions": 14,
+    "heads": 0.905395,
+    "claude": 0.80945,
+    "gap_points": 9.6
+   },
+   "all three": {
+    "questions": 12,
+    "heads": 0.912269,
+    "claude": 0.833525,
+    "gap_points": 7.9
+   },
+   "the 13 mapped questions (ABCD-native only)": {
+    "questions": 2,
+    "heads": 0.81384,
+    "claude": 0.712252,
+    "gap_points": 10.2
+   },
+   "flow and intent (mapped only)": {
+    "questions": 13,
+    "heads": 0.92087,
+    "claude": 0.83027,
+    "gap_points": 9.1
+   }
+  },
+  "gap_range_points": [
+   7.9,
+   10.2
+  ]
+ },
+ "rare_yes": {
+  "questions": [
+   "cannot_log_in",
+   "security_related",
+   "mentions_account_issue",
+   "mentions_billing_issue",
+   "mentions_bug",
+   "refund_requested",
+   "refund_implied",
+   "identity_details_given",
+   "charge_amount_given"
+  ],
+  "recall": {
+   "yes_micro_abcd": {
+    "right": 230,
+    "of": 255,
+    "share": 0.901961
+   },
+   "yes_claude": {
+    "right": 199,
+    "of": 255,
+    "share": 0.780392
+   },
+   "no_micro_abcd": {
+    "right": 1984,
+    "of": 2043,
+    "share": 0.971121
+   },
+   "no_claude": {
+    "right": 2024,
+    "of": 2043,
+    "share": 0.9907
+   }
+  },
+  "needs_staff_action_yes": {
+   "micro_abcd": [
+    122,
+    150
+   ],
+   "claude": [
+    82,
+    150
+   ]
+  }
+ },
+ "shrink": {
+  "total_points": 4.0,
+  "per_question_points": {
+   "charge_amount_given": 1.68,
+   "refund_implied": 0.71,
+   "cannot_log_in": 0.38,
+   "identity_details_given": 0.29,
+   "mentions_bug": 0.26,
+   "mentions_billing_issue": 0.24,
+   "mentions_account_issue": 0.18,
+   "security_related": 0.11,
+   "refund_requested": 0.07,
+   "flow": 0.05,
+   "intent": -0.01,
+   "primary_team": 0.0,
+   "journey_stage": 0.0,
+   "message_type": 0.0,
+   "needs_staff_action": 0.0
+  },
+  "largest_share": 0.424242
+ },
+ "false_alarms_per_missed_yes": {
+  "cannot_log_in": {
+   "yes": 35,
+   "no": 232,
+   "no_per_yes": 6.6
+  },
+  "security_related": {
+   "yes": 35,
+   "no": 232,
+   "no_per_yes": 6.6
+  },
+  "mentions_account_issue": {
+   "yes": 39,
+   "no": 228,
+   "no_per_yes": 5.8
+  },
+  "mentions_billing_issue": {
+   "yes": 43,
+   "no": 180,
+   "no_per_yes": 4.2
+  },
+  "mentions_bug": {
+   "yes": 18,
+   "no": 249,
+   "no_per_yes": 13.8
+  },
+  "refund_requested": {
+   "yes": 6,
+   "no": 180,
+   "no_per_yes": 30.0
+  },
+  "refund_implied": {
+   "yes": 41,
+   "no": 180,
+   "no_per_yes": 4.4
+  },
+  "needs_staff_action": {
+   "yes": 150,
+   "no": 150,
+   "no_per_yes": 1.0
+  },
+  "identity_details_given": {
+   "yes": 36,
+   "no": 264,
+   "no_per_yes": 7.3
+  },
+  "charge_amount_given": {
+   "yes": 2,
+   "no": 298,
+   "no_per_yes": 149.0
+  }
+ },
+ "baselines": {
+  "per_question": {
+   "flow": {
+    "reported_metric": 0.1,
+    "plain_accuracy": 0.136667,
+    "classes": 10
+   },
+   "intent": {
+    "reported_metric": 0.018868,
+    "plain_accuracy": 0.04,
+    "classes": 53
+   },
+   "primary_team": {
+    "reported_metric": 0.520599,
+    "plain_accuracy": 0.520599,
+    "classes": 4
+   },
+   "journey_stage": {
+    "reported_metric": 0.689655,
+    "plain_accuracy": 0.689655,
+    "classes": 3
+   },
+   "message_type": {
+    "reported_metric": 0.407018,
+    "plain_accuracy": 0.407018,
+    "classes": 3
+   },
+   "cannot_log_in": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.868914,
+    "classes": 2
+   },
+   "security_related": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.868914,
+    "classes": 2
+   },
+   "mentions_account_issue": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.853933,
+    "classes": 2
+   },
+   "mentions_billing_issue": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.807175,
+    "classes": 2
+   },
+   "mentions_bug": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.932584,
+    "classes": 2
+   },
+   "refund_requested": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.967742,
+    "classes": 2
+   },
+   "refund_implied": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.81448,
+    "classes": 2
+   },
+   "needs_staff_action": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.5,
+    "classes": 2
+   },
+   "identity_details_given": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.88,
+    "classes": 2
+   },
+   "charge_amount_given": {
+    "reported_metric": 0.5,
+    "plain_accuracy": 0.993333,
+    "classes": 2
+   }
+  },
+  "interval_or_score_not_above_baseline": [
+   {
+    "question": "journey_stage",
+    "system": "claude",
+    "score": 0.7241,
+    "ci95": [
+     0.6483,
+     0.8
+    ],
+    "baseline": 0.689655
+   },
+   {
+    "question": "charge_amount_given",
+    "system": "micro_abcd",
+    "plain_accuracy": 0.99,
+    "always_majority": 0.993333
+   },
+   {
+    "question": "charge_amount_given",
+    "system": "claude",
+    "score": 0.75,
+    "ci95": [
+     0.5,
+     1.0
+    ],
+    "baseline": 0.5
+   }
+  ]
+ },
+ "answer_kinds": {
+  "flow": {
+   "micro_abcd": {
+    "possible": 300
+   },
+   "claude": {
+    "possible": 275,
+    "empty": 25
+   },
+   "micro_abcd_answers_no_chat_has": {},
+   "claude_answers_no_chat_has": {
+    "null": 25
+   }
+  },
+  "intent": {
+   "micro_abcd": {
+    "possible": 293,
+    "offered_but_no_chat_has_it": 7
+   },
+   "claude": {
+    "possible": 258,
+    "empty": 30,
+    "offered_but_no_chat_has_it": 12
+   },
+   "micro_abcd_answers_no_chat_has": {
+    "manage_payment_method": 5,
+    "status_questions": 2
+   },
+   "claude_answers_no_chat_has": {
+    "null": 30,
+    "status_questions": 12
+   }
+  },
+  "primary_team": {
+   "micro_abcd": {
+    "possible": 267
+   },
+   "claude": {
+    "possible": 267
+   },
+   "micro_abcd_answers_no_chat_has": {},
+   "claude_answers_no_chat_has": {}
+  },
+  "journey_stage": {
+   "micro_abcd": {
+    "possible": 145
+   },
+   "claude": {
+    "possible": 118,
+    "offered_but_no_chat_has_it": 27
+   },
+   "micro_abcd_answers_no_chat_has": {},
+   "claude_answers_no_chat_has": {
+    "unclear": 27
+   }
+  },
+  "message_type": {
+   "micro_abcd": {
+    "possible": 285
+   },
+   "claude": {
+    "possible": 259,
+    "offered_but_no_chat_has_it": 26
+   },
+   "micro_abcd_answers_no_chat_has": {},
+   "claude_answers_no_chat_has": {
+    "other": 25,
+    "feedback": 1
+   }
+  }
+ },
+ "overhead_s": {
+  "p10": 0.81,
+  "p50": 1.46,
+  "p90": 2.55
+ },
+ "overlap": {
+  "exact_match_after_lowercasing": 28,
+  "cosine_at_least_0.9": 37,
+  "median_best_cosine": 0.659,
+  "words_in_exact_matches_median": 2.0,
+  "without_near_duplicates": {
+   "chats": 263,
+   "heads": 0.936899,
+   "claude": 0.84,
+   "gap_points": 9.7
+  }
+ },
+ "full_test": {
+  "openings": 1004,
+  "heads_mean": 0.898,
+  "heads_sample_mean": 0.9066,
+  "largest_moves_points": {
+   "charge_amount_given": -10.8,
+   "refund_requested": -7.7,
+   "mentions_bug": -4.8
+  }
+ },
+ "synthetic_own_tickets": {
+  "tickets": 96,
+  "mean_13_shared": 0.973154,
+  "primary_team_per_ticket": 0.927
+ },
+ "misroutes_per_1000": {
+  "micro_abcd": 116.1,
+  "claude": 168.5
+ },
+ "confusions": {
+  "primary_team": {
+   "micro_abcd": {
+    "errors": 31,
+    "pairs": {
+     "other -> account_support": {
+      "count": 7,
+      "intents": {
+       "manage_downgrade": 1,
+       "pricing": 1,
+       "manage_create": 1,
+       "out_of_stock_one_item": 1,
+       "status_delivery_time": 1
+      }
+     },
+     "billing_and_payments -> other": {
+      "count": 5,
+      "intents": {
+       "refund_update": 2,
+       "bad_price_competitor": 1,
+       "manage_extension": 1,
+       "bad_price_yesterday": 1
+      }
+     },
+     "other -> billing_and_payments": {
+      "count": 5,
+      "intents": {
+       "policy": 2,
+       "return_color": 1,
+       "status_shipping_question": 1,
+       "jacket": 1
+      }
+     },
+     "other -> engineering": {
+      "count": 4,
+      "intents": {
+       "manage_upgrade": 2,
+       "manage_cancel": 1,
+       "policy": 1
+      }
+     }
+    }
+   },
+   "claude": {
+    "errors": 45,
+    "pairs": {
+     "other -> billing_and_payments": {
+      "count": 20,
+      "intents": {
+       "policy": 4,
+       "return_color": 3,
+       "return_size": 3,
+       "status": 3,
+       "return_stain": 2
+      }
+     },
+     "billing_and_payments -> other": {
+      "count": 10,
+      "intents": {
+       "bad_price_competitor": 3,
+       "manage_extension": 3,
+       "bad_price_yesterday": 3,
+       "refund_update": 1
+      }
+     },
+     "other -> account_support": {
+      "count": 6,
+      "intents": {
+       "manage": 4,
+       "status": 2
+      }
+     },
+     "account_support -> other": {
+      "count": 5,
+      "intents": {
+       "reset_2fa": 3,
+       "manage_change_name": 1,
+       "recover_username": 1
+      }
+     }
+    }
+   }
+  },
+  "journey_stage": {
+   "micro_abcd": {
+    "errors": 10,
+    "pairs": {
+     "post_purchase -> checkout": {
+      "count": 5,
+      "intents": {
+       "bad_price_yesterday": 2,
+       "manage_downgrade": 1,
+       "manage_upgrade": 1,
+       "refund_update": 1
+      }
+     },
+     "post_purchase -> browsing": {
+      "count": 2,
+      "intents": {
+       "bad_price_competitor": 1,
+       "bad_price_yesterday": 1
+      }
+     },
+     "browsing -> post_purchase": {
+      "count": 2,
+      "intents": {
+       "shirt": 1,
+       "jacket": 1
+      }
+     },
+     "browsing -> checkout": {
+      "count": 1,
+      "intents": {
+       "out_of_stock_one_item": 1
+      }
+     }
+    }
+   },
+   "claude": {
+    "errors": 40,
+    "pairs": {
+     "post_purchase -> unclear": {
+      "count": 16,
+      "intents": {
+       "bad_price_yesterday": 4,
+       "manage_upgrade": 2,
+       "manage": 2,
+       "status": 2,
+       "manage_downgrade": 1
+      }
+     },
+     "browsing -> unclear": {
+      "count": 10,
+      "intents": {
+       "shirt": 3,
+       "jeans": 2,
+       "jacket": 2,
+       "out_of_stock_general": 1,
+       "out_of_stock_one_item": 1
+      }
+     },
+     "checkout -> browsing": {
+      "count": 7,
+      "intents": {
+       "shopping_cart": 7
+      }
+     },
+     "post_purchase -> browsing": {
+      "count": 5,
+      "intents": {
+       "bad_price_yesterday": 4,
+       "bad_price_competitor": 1
+      }
+     }
+    }
+   }
+  },
+  "message_type": {
+   "micro_abcd": {
+    "errors": 34,
+    "pairs": {
+     "request -> problem_report": {
+      "count": 11,
+      "intents": {
+       "manage_upgrade": 2,
+       "manage_extension": 2,
+       "bad_price_yesterday": 2,
+       "return_stain": 1,
+       "manage_change_name": 1
+      }
+     },
+     "question -> request": {
+      "count": 9,
+      "intents": {
+       "status_delivery_time": 2,
+       "refund_status": 1,
+       "status_due_amount": 1,
+       "shirt": 1,
+       "timing": 1
+      }
+     },
+     "request -> question": {
+      "count": 6,
+      "intents": {
+       "manage_downgrade": 1,
+       "refund_update": 1,
+       "bad_price_competitor": 1,
+       "bad_price_yesterday": 1,
+       "manage_pay_bill": 1
+      }
+     },
+     "question -> problem_report": {
+      "count": 4,
+      "intents": {
+       "status_quantity": 1,
+       "refund_status": 1,
+       "policy": 1,
+       "status_due_date": 1
+      }
+     }
+    }
+   },
+   "claude": {
+    "errors": 93,
+    "pairs": {
+     "request -> problem_report": {
+      "count": 21,
+      "intents": {
+       "reset_2fa": 6,
+       "recover_password": 4,
+       "bad_price_yesterday": 4,
+       "recover_username": 3,
+       "return_stain": 2
+      }
+     },
+     "question -> problem_report": {
+      "count": 17,
+      "intents": {
+       "status_service_added": 4,
+       "status_delivery_time": 3,
+       "status_quantity": 3,
+       "status_service_removed": 2,
+       "policy": 1
+      }
+     },
+     "request -> other": {
+      "count": 15,
+      "intents": {
+       "manage_extension": 3,
+       "bad_price_yesterday": 3,
+       "reset_2fa": 2,
+       "manage_downgrade": 1,
+       "manage_change_name": 1
+      }
+     },
+     "request -> question": {
+      "count": 13,
+      "intents": {
+       "refund_update": 3,
+       "bad_price_yesterday": 2,
+       "manage_upgrade": 2,
+       "bad_price_competitor": 1,
+       "manage_extension": 1
+      }
+     }
+    }
+   }
+  },
+  "refund_implied": {
+   "micro_abcd": {
+    "errors": 15,
+    "pairs": {
+     "no -> yes": {
+      "count": 9,
+      "intents": {
+       "manage_extension": 2,
+       "reset_2fa": 2,
+       "manage_change_name": 1,
+       "manage_upgrade": 1,
+       "status_delivery_time": 1
+      }
+     },
+     "yes -> no": {
+      "count": 6,
+      "intents": {
+       "bad_price_yesterday": 3,
+       "return_color": 2,
+       "bad_price_competitor": 1
+      }
+     }
+    }
+   },
+   "claude": {
+    "errors": 19,
+    "pairs": {
+     "yes -> no": {
+      "count": 18,
+      "intents": {
+       "bad_price_yesterday": 8,
+       "return_color": 4,
+       "bad_price_competitor": 3,
+       "return_stain": 2,
+       "return_size": 1
+      }
+     },
+     "no -> yes": {
+      "count": 1,
+      "intents": {
+       "reset_2fa": 1
+      }
+     }
+    }
+   }
+  },
+  "needs_staff_action": {
+   "micro_abcd": {
+    "errors": 80,
+    "pairs": {
+     "no -> yes": {
+      "count": 52,
+      "intents": {
+       "status_quantity": 4,
+       "manage_downgrade": 3,
+       "missing": 3,
+       "manage_dispute_bill": 3,
+       "status_service_removed": 3
+      }
+     },
+     "yes -> no": {
+      "count": 28,
+      "intents": {
+       "status_delivery_time": 3,
+       "missing": 3,
+       "manage_extension": 3,
+       "manage_create": 2,
+       "reset_2fa": 2
+      }
+     }
+    }
+   },
+   "claude": {
+    "errors": 126,
+    "pairs": {
+     "yes -> no": {
+      "count": 68,
+      "intents": {
+       "recover_password": 10,
+       "out_of_stock_one_item": 10,
+       "status_due_date": 7,
+       "bad_price_yesterday": 4,
+       "status_due_amount": 4
+      }
+     },
+     "no -> yes": {
+      "count": 58,
+      "intents": {
+       "shopping_cart": 8,
+       "search_results": 6,
+       "status": 5,
+       "manage_downgrade": 4,
+       "manage_dispute_bill": 3
+      }
+     }
+    }
+   }
+  }
+ }
+}
