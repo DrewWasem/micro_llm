@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question paths</title>
+<style>
+:root {
+  --bg: #f7f7f5; --fg: #1c1f24; --muted: #5d6570; --line: #c8cdd4; --lane: #eceef1; --card: #ffffff; --bar: #dfe2e7;
+  --router: #2f6fdb; --tone: #8452e0; --billing: #a86900; --account: #0b8576; --bug: #c8412f;
+  --feature: #3a8524; --linker: #bd3a83; --entities: #7d6446; --combined: #4f5966;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121417; --fg: #e7e9ec; --muted: #9aa2ad; --line: #3b414a; --lane: #1b1e23; --card: #181b20; --bar: #272b32;
+    --router: #7ea6ff; --tone: #b495ff; --billing: #f0b44c; --account: #4fd1bf; --bug: #ff8a78;
+    --feature: #8fd46f; --linker: #f08ac2; --entities: #cdb894; --combined: #aab3bf;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 var(--sans); }
+main { max-width: 1400px; margin: 0 auto; padding: 28px 24px 48px; }
+.eyebrow { margin: 0; color: var(--muted); font-size: 13px; }
+h1 { font-size: 24px; line-height: 1.3; margin: 6px 0 18px; max-width: 62ch; }
+figure { margin: 0; }
+.scroll { overflow-x: auto; }
+#flow { display: block; width: 100%; min-width: 980px; height: auto; }
+figcaption { color: var(--muted); font-size: 13px; margin-top: 8px; max-width: 115ch; }
+code { font-family: var(--mono); font-size: .92em; }
+a { color: var(--router); }
+
+.card { margin-top: 16px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c, var(--line)); border-radius: 10px; padding: 14px 18px; }
+.card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.card h2 { font-size: 17px; margin: 0 0 4px; }
+.card .ask { margin: 0 0 8px; color: var(--muted); }
+.card ol { margin: 0 0 10px; padding-left: 22px; }
+.card li { margin: 2px 0; }
+.card dl { display: flex; flex-wrap: wrap; gap: 8px 32px; margin: 0; }
+.card dt { font-size: 12px; color: var(--muted); }
+.card dd { margin: 0; font-weight: 600; }
+.hint { margin: 0; }
+.card button { font: 13px var(--mono); padding: 2px 8px; margin: 2px 0; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); cursor: pointer; }
+.card button:hover { border-color: var(--fg); }
+
+.rules h2 { font-size: 18px; margin: 30px 0 8px; }
+.rules ul { margin: 0; padding-left: 20px; max-width: 100ch; }
+.rules li { margin: 6px 0; }
+footer { margin-top: 26px; color: var(--muted); font-size: 13px; max-width: 110ch; }
+
+#flow text { font-family: var(--sans); }
+.t { font-size: 12px; fill: var(--fg); }
+.b { font-weight: 650; }
+.sub, .lbl { font-size: 10.5px; fill: var(--muted); }
+.hd { font-size: 11px; font-weight: 700; letter-spacing: .08em; fill: var(--fg); }
+.tk { font-size: 13px; fill: var(--fg); white-space: pre; }
+.tk .lab { font-size: 10px; font-weight: 700; letter-spacing: .1em; fill: var(--muted); }
+.tk .pm { font-size: 9px; font-weight: 700; fill: var(--muted); }
+.tk .ent { font-weight: 700; }
+.tk .drop { fill: var(--muted); text-decoration: line-through; }
+.tk .gap { fill: var(--muted); }
+.box { fill: var(--card); stroke: var(--line); }
+.chip { fill: color-mix(in srgb, var(--c) 16%, var(--card)); stroke: var(--c); stroke-width: 1.3; }
+.ghost { fill: none; stroke: var(--line); stroke-dasharray: 4 3; }
+.lane { fill: var(--lane); }
+.bar { fill: var(--bar); }
+.bartxt { font-size: 11.5px; font-weight: 600; fill: var(--fg); }
+.edge { fill: none; stroke: var(--muted); stroke-width: 1.3; marker-end: url(#ah); }
+.edge.plain { marker-end: none; }
+.edge.dash { stroke-dasharray: 4 3; }
+.ahead { fill: var(--muted); }
+.ahead-on { fill: var(--fg); }
+.gt { font-size: 12px; font-weight: 700; fill: var(--c); }
+.dot { fill: var(--c); }
+.qt { font-size: 11.5px; fill: var(--fg); }
+.qbg { fill: transparent; }
+.qrow { cursor: pointer; outline: none; }
+.qrow:hover .qbg, .qrow:focus-visible .qbg { fill: color-mix(in srgb, var(--c) 14%, transparent); }
+.qrow:focus-visible .qbg { stroke: var(--c); }
+.m-router { --c: var(--router); } .m-tone { --c: var(--tone); } .m-billing { --c: var(--billing); }
+.m-account { --c: var(--account); } .m-bug { --c: var(--bug); } .m-feature { --c: var(--feature); }
+.m-linker { --c: var(--linker); } .m-entities { --c: var(--entities); } .m-combined { --c: var(--combined); }
+
+[data-n] { transition: opacity .15s; }
+#flow.tracing [data-n] { opacity: .12; }
+#flow.tracing .qrow { opacity: .45; }
+#flow.tracing [data-n].on, #flow.tracing [data-n].feed, #flow.tracing [data-n].sel { opacity: 1; }
+.on .edge { stroke: var(--fg); stroke-width: 2; marker-end: url(#ah-on); }
+.on .edge.plain { marker-end: none; }
+.feed .qbg { fill: color-mix(in srgb, var(--c) 10%, transparent); stroke: var(--c); stroke-dasharray: 3 2; }
+.sel .qbg { fill: color-mix(in srgb, var(--c) 28%, transparent); stroke: var(--c); stroke-dasharray: none; }
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">micro_llm · sample ticket #98423 · models trained 2026-10-24</p>
+<h1>__H1__</h1>
+
+<figure>
+  <div class="scroll">__SVG__</div>
+  <figcaption>__CAPTION__</figcaption>
+</figure>
+
+<section id="trace" class="card" aria-live="polite">
+  <p class="hint"><strong>Click any of the __N__ questions on the right of the diagram</strong> to light up the pieces, models and rule behind its answer. Press Esc to clear. Try __TRY__</p>
+</section>
+
+<section class="rules">
+  <h2>Four rules decide every path</h2>
+  <ul>
+    <li><strong>Only issues reach specialists.</strong> The router must rate a piece a problem or a request at 0.5 or more. P4 is a feeling, so only the router and tone read it.</li>
+    <li><strong>An issue goes to every team the router rates 0.3 or more.</strong> An account problem also goes to bug, so P2's login failure reaches both account and bug.</li>
+    <li><strong>The linker reads every pair of issue pieces.</strong> Three issues make three pairs.</li>
+    <li><strong>Rules merge piece answers one question at a time.</strong> Specialist answers take the strongest piece. Tone takes the angriest piece, the average mood and the rudest piece. Router answers come from each piece's kind and team chances, and 7 combined answers are built from other answers.</li>
+  </ul>
+</section>
+
+<footer>
+  Five of these answers are walked through step by step in <a href="how_it_works.html">how_it_works.html</a>, along with how the models were made and trained.
+  Held-out accuracy is measured on __TEST__ synthetic tickets the models never saw. The baseline always gives the most common answer.
+  Timings come from <code>models/eval.json</code>, and every other number comes from a fresh run of the sample ticket.
+</footer>
+</main>
+
+<script>
+const QUESTIONS = __DATA__;
+const svg = document.getElementById('flow');
+const card = document.getElementById('trace');
+const hint = card.innerHTML;
+
+function setHash(q) {
+  try { history.replaceState(null, '', q ? '#' + q : location.pathname); } catch (e) { /* file pages may refuse */ }
+}
+
+function reset() {
+  svg.querySelectorAll('.on, .feed, .sel').forEach(el => el.classList.remove('on', 'feed', 'sel'));
+}
+
+function pick(q) {
+  const d = QUESTIONS[q];
+  if (!d) return;
+  reset();
+  svg.classList.add('tracing');
+  d.nodes.forEach(n => svg.querySelector(`[data-n="${n}"]`)?.classList.add('on'));
+  d.feeds.forEach(f => svg.querySelector(`[data-n="q-${f}"]`)?.classList.add('feed'));
+  svg.querySelector(`[data-n="q-${q}"]`)?.classList.add('sel');
+  card.style.setProperty('--c', `var(--${d.group})`);
+  card.innerHTML = `
+    <div class="card-head"><h2><code>${q}</code> ${d.headline}</h2><button type="button" data-clear>Clear</button></div>
+    <p class="ask">“${d.text}”</p>
+    <ol>${d.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+    <dl>
+      <div><dt>Sample answer</dt><dd>${d.got}</dd></div>
+      <div><dt>Predicted before training</dt><dd>${d.expect}</dd></div>
+      <div><dt>Held-out accuracy</dt><dd>${d.acc} vs ${d.base} baseline</dd></div>
+    </dl>`;
+  setHash(q);
+}
+
+function clear() {
+  reset();
+  svg.classList.remove('tracing');
+  card.style.removeProperty('--c');
+  card.innerHTML = hint;
+  setHash('');
+}
+
+svg.addEventListener('click', e => {
+  const row = e.target.closest('.qrow');
+  row ? pick(row.dataset.q) : clear();
+});
+svg.addEventListener('keydown', e => {
+  const row = e.target.closest('.qrow');
+  if (row && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); pick(row.dataset.q); }
+});
+card.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (b) b.dataset.pick ? pick(b.dataset.pick) : clear();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') clear(); });
+const start = decodeURIComponent(location.hash.slice(1));
+if (QUESTIONS[start]) pick(start);
+</script>
+</body>
+</html>
