@@ -37,3 +37,7 @@ checkpoints/
 README.html
 CLAUDE.html
 docs/**/*.html
+
+# Generated training data and trained models stay on this machine
+data/
+models/

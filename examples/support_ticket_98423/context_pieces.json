@@ -1,0 +1,170 @@
+{
+  "note": "Pieces come from a rule-based splitter; Jev labels them. Token counts are estimates fitted to TypeSafe's billed docs examples.",
+  "how_it_runs": [
+    "Split the ticket with code: sentence ends, then ', and' / ', but' / ', plus' joins; drop a leading greeting",
+    "Send the whole ticket once with the ticket-level questions",
+    "Send each piece with the same piece-level questions, all requests in parallel",
+    "Read piece_kind and category per piece in code, and ignore answers that don't apply"
+  ],
+  "splitter_time_microseconds": 4.6,
+  "pieces": [
+    {
+      "id": "P1",
+      "text": "I placed an order (#98423) last Thursday and was charged twice.",
+      "start": 4,
+      "end": 67
+    },
+    {
+      "id": "P2",
+      "text": "I also can't log in after the site update",
+      "start": 68,
+      "end": 109
+    },
+    {
+      "id": "P3",
+      "text": "adding Apple Pay would be really helpful.",
+      "start": 115,
+      "end": 156
+    },
+    {
+      "id": "P4",
+      "text": "This is getting frustrating.",
+      "start": 157,
+      "end": 185
+    }
+  ],
+  "dropped": [
+    {
+      "text": "Hi,",
+      "why": "Greeting, no content"
+    }
+  ],
+  "ticket_level_questions": [
+    "category",
+    "category_reordered",
+    "frustration",
+    "issue_count",
+    "message_type",
+    "time_pressure",
+    "needs_more_info",
+    "journey_stage",
+    "sentiment",
+    "politeness",
+    "frustration_rising",
+    "threatens_to_leave",
+    "churn_risk",
+    "asks_for_human",
+    "prior_contact",
+    "existing_customer",
+    "has_account",
+    "identity_details_given",
+    "likely_apple_user",
+    "sensitive_data_present",
+    "issues_related"
+  ],
+  "piece_level_questions": [
+    "piece_kind",
+    "bug_severity",
+    "has_reproducible_steps",
+    "refund_requested",
+    "primary_team",
+    "priority",
+    "needs_staff_action",
+    "duplicate_charge",
+    "refund_implied",
+    "charge_amount_given",
+    "payment_method_used",
+    "order_date_given",
+    "chargeback_mentioned",
+    "cannot_log_in",
+    "problem_after_update",
+    "blames_update",
+    "error_message_given",
+    "device_or_browser_given",
+    "tried_fix_themselves",
+    "security_related",
+    "possible_widespread_issue",
+    "wants_new_payment_method",
+    "feature_request_strength"
+  ],
+  "replaced_by_pieces": {
+    "questions": [
+      "mentions_billing_issue",
+      "mentions_account_issue",
+      "mentions_bug",
+      "mentions_feature_request"
+    ],
+    "why": "Each piece gets its own category, so the ticket no longer needs one yes/no per category"
+  },
+  "piece_kind_question": {
+    "type": "choice",
+    "instructions": "Determine what this part of a support ticket does",
+    "criteria": {
+      "greeting": "Says hello or goodbye, with no request",
+      "feeling": "Expresses an emotion about the situation",
+      "request": "Asks for something new to be added or done",
+      "problem": "Reports something that went wrong"
+    }
+  },
+  "requests": [
+    {
+      "id": "R0",
+      "state": "whole ticket",
+      "questions": 21,
+      "est_tokens": 1403
+    },
+    {
+      "id": "R1",
+      "state": "piece P1",
+      "questions": 23,
+      "est_tokens": 1462
+    },
+    {
+      "id": "R2",
+      "state": "piece P2",
+      "questions": 23,
+      "est_tokens": 1456
+    },
+    {
+      "id": "R3",
+      "state": "piece P3",
+      "questions": 23,
+      "est_tokens": 1456
+    },
+    {
+      "id": "R4",
+      "state": "piece P4",
+      "questions": 23,
+      "est_tokens": 1453
+    }
+  ],
+  "token_estimates": {
+    "docs 5 questions, whole ticket": {
+      "input_tokens": 569,
+      "cost_usd": 2.39e-05
+    },
+    "our 47 questions, whole ticket": {
+      "input_tokens": 2695,
+      "cost_usd": 0.0001132
+    },
+    "context pieces, 5 parallel requests": {
+      "input_tokens": 7230,
+      "cost_usd": 0.0003037
+    }
+  },
+  "token_formula": {
+    "input_tokens": "241 + 25.8 x questions + characters / 4",
+    "fitted_on": [
+      "quick start",
+      "choice page",
+      "noul page",
+      "score page"
+    ],
+    "fit_errors_tokens": [
+      0,
+      -3,
+      0,
+      3
+    ]
+  }
+}

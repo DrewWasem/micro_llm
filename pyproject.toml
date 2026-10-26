@@ -1,0 +1,16 @@
+[project]
+name = "micro-llm"
+version = "0.1.0"
+description = "Small specialist models that each answer a few narrow questions about a support ticket"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy==2.3.5",
+    "scikit-learn==1.7.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=9.0.3"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

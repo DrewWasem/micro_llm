@@ -1,0 +1,417 @@
+{
+  "note": "Rough design. Routing for this ticket is what we expect a router to say; no model exists yet.",
+  "answer": {
+    "model_types": 9,
+    "start_as_rules": [
+      "splitter",
+      "entities"
+    ],
+    "models_to_train": [
+      "router",
+      "tone",
+      "billing",
+      "account",
+      "bug",
+      "feature",
+      "linker"
+    ],
+    "answered_by_models": 25,
+    "computed_in_code": 22,
+    "dropped": 1,
+    "runs_for_this_ticket": 17,
+    "waves": 3,
+    "first_subset": [
+      "router",
+      "tone",
+      "billing"
+    ],
+    "first_subset_covers": "25 of 47 answers"
+  },
+  "models": {
+    "splitter": {
+      "job": "Cut the ticket into pieces",
+      "reads": "whole ticket",
+      "now": "rules, 4.6 µs per ticket",
+      "later": "a small boundary tagger for messy text",
+      "answers": [],
+      "runs_on_this_ticket": [
+        "whole ticket"
+      ],
+      "peak_instances": 1
+    },
+    "router": {
+      "job": "Say what each piece does and which team owns it",
+      "reads": "each piece",
+      "answers": [
+        "piece_kind",
+        "primary_team"
+      ],
+      "runs_on_this_ticket": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "peak_instances": 4
+    },
+    "tone": {
+      "job": "Read how the customer feels",
+      "reads": "each piece; code combines the pieces for the ticket",
+      "answers": [
+        "frustration",
+        "sentiment",
+        "politeness",
+        "time_pressure",
+        "threatens_to_leave",
+        "asks_for_human",
+        "prior_contact"
+      ],
+      "runs_on_this_ticket": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "peak_instances": 4
+    },
+    "entities": {
+      "job": "Find exact spans: order numbers, dates, amounts, payment methods, devices, error text, personal data",
+      "reads": "whole ticket",
+      "now": "rules (regex)",
+      "later": "a small span tagger",
+      "answers": [],
+      "runs_on_this_ticket": [
+        "whole ticket"
+      ],
+      "peak_instances": 1
+    },
+    "billing": {
+      "job": "Read billing problems",
+      "reads": "pieces routed to billing_and_payments",
+      "answers": [
+        "duplicate_charge",
+        "refund_requested",
+        "refund_implied",
+        "payment_method_used",
+        "chargeback_mentioned"
+      ],
+      "runs_on_this_ticket": [
+        "P1"
+      ],
+      "peak_instances": 1
+    },
+    "account": {
+      "job": "Read account problems",
+      "reads": "pieces routed to account_support",
+      "answers": [
+        "cannot_log_in",
+        "security_related",
+        "tried_fix_themselves"
+      ],
+      "runs_on_this_ticket": [
+        "P2"
+      ],
+      "peak_instances": 1
+    },
+    "bug": {
+      "job": "Triage reports of something broken",
+      "reads": "problem pieces routed to engineering or account_support",
+      "answers": [
+        "bug_severity",
+        "has_reproducible_steps",
+        "problem_after_update",
+        "blames_update",
+        "possible_widespread_issue"
+      ],
+      "runs_on_this_ticket": [
+        "P2"
+      ],
+      "peak_instances": 1
+    },
+    "feature": {
+      "job": "Read feature requests",
+      "reads": "pieces routed to product_management",
+      "answers": [
+        "wants_new_payment_method",
+        "feature_request_strength"
+      ],
+      "runs_on_this_ticket": [
+        "P3"
+      ],
+      "peak_instances": 1
+    },
+    "linker": {
+      "job": "Say whether two issues share a cause",
+      "reads": "each pair of issue pieces",
+      "answers": [
+        "issues_related"
+      ],
+      "runs_on_this_ticket": [
+        "P1+P2",
+        "P1+P3",
+        "P2+P3"
+      ],
+      "peak_instances": 3
+    }
+  },
+  "routing": {
+    "every piece": [
+      "router",
+      "tone"
+    ],
+    "billing_and_payments": [
+      "billing"
+    ],
+    "account_support": [
+      "account",
+      "bug (problem pieces only)"
+    ],
+    "engineering": [
+      "bug"
+    ],
+    "product_management": [
+      "feature"
+    ],
+    "each pair of issue pieces": [
+      "linker"
+    ],
+    "this ticket (expected)": {
+      "P1": {
+        "kind": "problem",
+        "team": "billing_and_payments"
+      },
+      "P2": {
+        "kind": "problem",
+        "team": "account_support"
+      },
+      "P3": {
+        "kind": "request",
+        "team": "product_management"
+      },
+      "P4": {
+        "kind": "feeling",
+        "team": "other"
+      }
+    }
+  },
+  "waves": [
+    {
+      "wave": 1,
+      "runs": [
+        "splitter on whole ticket"
+      ],
+      "waits_for": "nothing"
+    },
+    {
+      "wave": 2,
+      "runs": [
+        "router on P1",
+        "router on P2",
+        "router on P3",
+        "router on P4",
+        "tone on P1",
+        "tone on P2",
+        "tone on P3",
+        "tone on P4",
+        "entities on whole ticket"
+      ],
+      "waits_for": "wave 1"
+    },
+    {
+      "wave": 3,
+      "runs": [
+        "billing on P1",
+        "account on P2",
+        "bug on P2",
+        "feature on P3",
+        "linker on P1+P2",
+        "linker on P1+P3",
+        "linker on P2+P3"
+      ],
+      "waits_for": "wave 2"
+    },
+    {
+      "wave": 4,
+      "runs": [
+        "code rules"
+      ],
+      "waits_for": "wave 3"
+    }
+  ],
+  "computed_in_code": {
+    "category": {
+      "needs": [
+        "router"
+      ],
+      "rule": "map each issue piece's team to a category; a ticket can have several"
+    },
+    "mentions_billing_issue": {
+      "needs": [
+        "router"
+      ],
+      "rule": "a piece went to billing_and_payments"
+    },
+    "mentions_account_issue": {
+      "needs": [
+        "router"
+      ],
+      "rule": "a piece went to account_support"
+    },
+    "mentions_bug": {
+      "needs": [
+        "router"
+      ],
+      "rule": "a problem piece went to the bug model"
+    },
+    "mentions_feature_request": {
+      "needs": [
+        "router"
+      ],
+      "rule": "a request piece went to product_management"
+    },
+    "issue_count": {
+      "needs": [
+        "router"
+      ],
+      "rule": "count the problem and request pieces"
+    },
+    "message_type": {
+      "needs": [
+        "router"
+      ],
+      "rule": "problem_report if any piece is a problem, else request if any is a request"
+    },
+    "journey_stage": {
+      "needs": [
+        "router",
+        "billing"
+      ],
+      "rule": "post_purchase when a billing piece reports a charge on an order"
+    },
+    "frustration_rising": {
+      "needs": [
+        "tone"
+      ],
+      "rule": "frustration goes up from earlier pieces to later ones"
+    },
+    "churn_risk": {
+      "needs": [
+        "tone"
+      ],
+      "rule": "rule over frustration and threats to leave"
+    },
+    "existing_customer": {
+      "needs": [
+        "billing"
+      ],
+      "rule": "they were charged for an order"
+    },
+    "priority": {
+      "needs": [
+        "bug",
+        "billing",
+        "tone"
+      ],
+      "rule": "rule over severity, money at stake and frustration"
+    },
+    "needs_staff_action": {
+      "needs": [
+        "billing",
+        "account"
+      ],
+      "rule": "a refund or an account fix needs a person"
+    },
+    "needs_more_info": {
+      "needs": [
+        "router",
+        "entities"
+      ],
+      "rule": "a problem piece lacks details its team needs, such as an error message"
+    },
+    "has_account": {
+      "needs": [
+        "account"
+      ],
+      "rule": "they report a login problem"
+    },
+    "likely_apple_user": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "they name Apple Pay or an Apple product"
+    },
+    "charge_amount_given": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "a money amount was found"
+    },
+    "order_date_given": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "a date was found"
+    },
+    "identity_details_given": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "an order number, email or name was found"
+    },
+    "sensitive_data_present": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "card numbers, passwords or similar were found"
+    },
+    "error_message_given": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "error text was found"
+    },
+    "device_or_browser_given": {
+      "needs": [
+        "entities"
+      ],
+      "rule": "a device or browser was found"
+    }
+  },
+  "dropped": {
+    "category_reordered": "It tested Jev's bias toward the first option. Our models have fixed outputs, so option order can't bias them"
+  },
+  "first_subset": {
+    "models": {
+      "router": "Every specialist waits on its routing, so nothing else runs without it",
+      "tone": "It runs on every piece of every ticket, whatever the topic",
+      "billing": "It handles the duplicate charge, the issue with money at stake"
+    },
+    "covers": [
+      "piece_kind",
+      "primary_team",
+      "frustration",
+      "sentiment",
+      "politeness",
+      "time_pressure",
+      "threatens_to_leave",
+      "asks_for_human",
+      "prior_contact",
+      "duplicate_charge",
+      "refund_requested",
+      "refund_implied",
+      "payment_method_used",
+      "chargeback_mentioned",
+      "category",
+      "mentions_billing_issue",
+      "mentions_account_issue",
+      "mentions_bug",
+      "mentions_feature_request",
+      "issue_count",
+      "message_type",
+      "journey_stage",
+      "frustration_rising",
+      "churn_risk",
+      "existing_customer"
+    ]
+  }
+}

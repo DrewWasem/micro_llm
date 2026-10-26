@@ -1,0 +1,19 @@
+{
+  "about": "Stand-in records for the systems the step-3 actions call. Every name, address and id is made up.",
+  "accounts": [
+    {"id": "A-1001", "email": "sam.rivera@example.com", "username": "samr"},
+    {"id": "A-1002", "email": "lee.chen@example.com", "username": "leec"}
+  ],
+  "orders": [
+    {"number": "98423", "account": "A-1001", "placed": "2026-10-22", "total": "49.99"},
+    {"number": "98424", "account": "A-1002", "placed": "2026-10-22", "total": "18.00"}
+  ],
+  "charges": [
+    {"id": "ch_301", "order": "98423", "amount": "49.99", "status": "settled", "at": "2026-10-22T14:02:11Z"},
+    {"id": "ch_302", "order": "98423", "amount": "49.99", "status": "settled", "at": "2026-10-22T14:02:14Z"},
+    {"id": "ch_303", "order": "98424", "amount": "18.00", "status": "settled", "at": "2026-10-22T16:40:05Z"}
+  ],
+  "incidents": [
+    {"id": "INC-77", "topic": "login", "status": "open", "title": "Logins fail for some accounts since the 2026-10-21 site update"}
+  ]
+}

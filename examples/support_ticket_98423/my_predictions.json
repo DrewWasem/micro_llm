@@ -1,0 +1,292 @@
+{
+  "note": "My predictions for every Playground question, written 2026-10-24 before seeing Jev's answers",
+  "answer_shapes": {
+    "choice": "the winning option",
+    "score": "expected level, 0 = first level",
+    "noul": "probability of yes"
+  },
+  "predictions": {
+    "category": {
+      "type": "choice",
+      "expect": "billing",
+      "why": "Money comes first in the ticket",
+      "breakdown": "ticket_level_labels.primary_category_if_forced_to_pick_one"
+    },
+    "bug_severity": {
+      "type": "score",
+      "expect": 1.5,
+      "why": "Login blocked (2), double charge fixable (1)",
+      "breakdown": "issues[].severity"
+    },
+    "has_reproducible_steps": {
+      "type": "noul",
+      "expect": 0.1,
+      "why": "No steps, errors or device",
+      "breakdown": "ISSUE-2 info_needed"
+    },
+    "refund_requested": {
+      "type": "noul",
+      "expect": 0.4,
+      "why": "Implied, never asked; the question says 'explicitly'",
+      "breakdown": "ISSUE-1 customer_ask"
+    },
+    "frustration": {
+      "type": "score",
+      "expect": 1.0,
+      "why": "Names frustration, stays civil",
+      "breakdown": "sentiment.typesafe_frustration_level"
+    },
+    "category_reordered": {
+      "type": "choice",
+      "expect": "billing",
+      "why": "Should match category; a flip means option order mattered",
+      "breakdown": "ticket_level_labels.all_categories"
+    },
+    "mentions_billing_issue": {
+      "type": "noul",
+      "expect": 0.97,
+      "why": "Charged twice",
+      "breakdown": "ISSUE-1"
+    },
+    "mentions_account_issue": {
+      "type": "noul",
+      "expect": 0.95,
+      "why": "Can't log in",
+      "breakdown": "ISSUE-2"
+    },
+    "mentions_bug": {
+      "type": "noul",
+      "expect": 0.6,
+      "why": "Login broke after an update",
+      "breakdown": "ISSUE-2 other_fitting_categories"
+    },
+    "mentions_feature_request": {
+      "type": "noul",
+      "expect": 0.95,
+      "why": "Apple Pay",
+      "breakdown": "ISSUE-3"
+    },
+    "issue_count": {
+      "type": "choice",
+      "expect": "three",
+      "why": "Charge, login, Apple Pay",
+      "breakdown": "ticket_level_labels.issue_count"
+    },
+    "message_type": {
+      "type": "choice",
+      "expect": "problem_report",
+      "why": "Two of three items are failures",
+      "breakdown": "ticket_level_labels.ticket_type"
+    },
+    "primary_team": {
+      "type": "choice",
+      "expect": "billing_and_payments",
+      "why": "Money taken in error",
+      "breakdown": "routing.child_tickets"
+    },
+    "priority": {
+      "type": "score",
+      "expect": 2.0,
+      "why": "Money and access, one customer",
+      "breakdown": "ticket_level_labels.overall_priority"
+    },
+    "time_pressure": {
+      "type": "noul",
+      "expect": 0.1,
+      "why": "No deadline or 'urgent'",
+      "breakdown": "intents_absent"
+    },
+    "needs_staff_action": {
+      "type": "noul",
+      "expect": 0.9,
+      "why": "Refund and access reset",
+      "breakdown": "ticket_level_labels.needs_a_human"
+    },
+    "needs_more_info": {
+      "type": "noul",
+      "expect": 0.85,
+      "why": "No amount, email or error",
+      "breakdown": "missing_information"
+    },
+    "journey_stage": {
+      "type": "choice",
+      "expect": "post_purchase",
+      "why": "Placed an order",
+      "breakdown": "ticket_level_labels.customer_journey_stage"
+    },
+    "duplicate_charge": {
+      "type": "noul",
+      "expect": 0.97,
+      "why": "Charged twice",
+      "breakdown": "ISSUE-1 subcategory"
+    },
+    "refund_implied": {
+      "type": "noul",
+      "expect": 0.9,
+      "why": "Contrast with refund_requested, which needs an explicit ask",
+      "breakdown": "F6"
+    },
+    "charge_amount_given": {
+      "type": "noul",
+      "expect": 0.03,
+      "why": "No amount",
+      "breakdown": "entities: charged twice"
+    },
+    "payment_method_used": {
+      "type": "choice",
+      "expect": "not_stated",
+      "why": "Trap: Apple Pay is a request, not how they paid",
+      "breakdown": "customer.payment_method_used"
+    },
+    "order_date_given": {
+      "type": "noul",
+      "expect": 0.9,
+      "why": "'last Thursday'",
+      "breakdown": "F3"
+    },
+    "chargeback_mentioned": {
+      "type": "noul",
+      "expect": 0.03,
+      "why": "Not mentioned",
+      "breakdown": "risk_flags: chargeback"
+    },
+    "cannot_log_in": {
+      "type": "noul",
+      "expect": 0.97,
+      "why": "Stated",
+      "breakdown": "F7"
+    },
+    "problem_after_update": {
+      "type": "noul",
+      "expect": 0.95,
+      "why": "'after the site update'",
+      "breakdown": "F8"
+    },
+    "blames_update": {
+      "type": "noul",
+      "expect": 0.6,
+      "why": "Timing or blame is the ambiguity",
+      "breakdown": "F9"
+    },
+    "error_message_given": {
+      "type": "noul",
+      "expect": 0.05,
+      "why": "None given",
+      "breakdown": "ISSUE-2 info_needed"
+    },
+    "device_or_browser_given": {
+      "type": "noul",
+      "expect": 0.03,
+      "why": "None given",
+      "breakdown": "ISSUE-2 info_needed"
+    },
+    "tried_fix_themselves": {
+      "type": "noul",
+      "expect": 0.05,
+      "why": "None given",
+      "breakdown": "missing_information"
+    },
+    "security_related": {
+      "type": "noul",
+      "expect": 0.55,
+      "why": "Access, but no suspicious activity",
+      "breakdown": "risk_flags: account takeover"
+    },
+    "possible_widespread_issue": {
+      "type": "noul",
+      "expect": 0.65,
+      "why": "A release broke login",
+      "breakdown": "risk_flags: systemic login incident"
+    },
+    "wants_new_payment_method": {
+      "type": "noul",
+      "expect": 0.95,
+      "why": "Apple Pay",
+      "breakdown": "ISSUE-3 subcategory"
+    },
+    "feature_request_strength": {
+      "type": "score",
+      "expect": 1.3,
+      "why": "'would be really helpful'",
+      "breakdown": "ISSUE-3 customer_ask"
+    },
+    "sentiment": {
+      "type": "score",
+      "expect": 1.0,
+      "why": "Somewhat negative",
+      "breakdown": "sentiment.overall_polarity"
+    },
+    "politeness": {
+      "type": "score",
+      "expect": 2.5,
+      "why": "'Hi', 'would be really helpful'",
+      "breakdown": "sentiment.politeness"
+    },
+    "frustration_rising": {
+      "type": "noul",
+      "expect": 0.75,
+      "why": "'getting frustrating'",
+      "breakdown": "F14"
+    },
+    "threatens_to_leave": {
+      "type": "noul",
+      "expect": 0.03,
+      "why": "No threat",
+      "breakdown": "intents_absent"
+    },
+    "churn_risk": {
+      "type": "score",
+      "expect": 1.0,
+      "why": "Three problems, no threat",
+      "breakdown": "sentiment.churn_risk"
+    },
+    "asks_for_human": {
+      "type": "noul",
+      "expect": 0.03,
+      "why": "Not asked",
+      "breakdown": "intents_absent"
+    },
+    "prior_contact": {
+      "type": "noul",
+      "expect": 0.15,
+      "why": "Only 'getting frustrating' hints at it",
+      "breakdown": "F17"
+    },
+    "existing_customer": {
+      "type": "noul",
+      "expect": 0.95,
+      "why": "Placed an order",
+      "breakdown": "customer.existing_customer"
+    },
+    "has_account": {
+      "type": "noul",
+      "expect": 0.95,
+      "why": "Tries to log in",
+      "breakdown": "F15"
+    },
+    "identity_details_given": {
+      "type": "noul",
+      "expect": 0.05,
+      "why": "Only an order number",
+      "breakdown": "customer.identity_given"
+    },
+    "likely_apple_user": {
+      "type": "noul",
+      "expect": 0.6,
+      "why": "Wants Apple Pay",
+      "breakdown": "F18"
+    },
+    "sensitive_data_present": {
+      "type": "noul",
+      "expect": 0.05,
+      "why": "Order number only",
+      "breakdown": "risk_flags: sensitive data"
+    },
+    "issues_related": {
+      "type": "noul",
+      "expect": 0.3,
+      "why": "Possible if the update came first",
+      "breakdown": "issues[].links_to_other_issues"
+    }
+  }
+}

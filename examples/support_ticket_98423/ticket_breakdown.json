@@ -1,0 +1,1126 @@
+{
+  "ticket": {
+    "text": "Hi, I placed an order (#98423) last Thursday and was charged twice. I also can't log in after the site update, and adding Apple Pay would be really helpful. This is getting frustrating.",
+    "source": "TypeSafe docs, 'Speculative fan-out' pattern, support ticket triage example",
+    "source_url": "https://docs.typesafe.ai/patterns/fan-out",
+    "playground_url": "https://console.typesafe.ai/decode#share/N4IghgDglgagpgJwM5QPYDsQC4QDcCMIANCACaoDGArgLZzoAuAKnAB4PYgASURABAEk+EADZgKcUnzDo+qBKUR8AFAGIAnAA4ALACYAzAEo+YpAz5MAFlWSkwAT2nopAdzBI+FS2AQBzSXwMLlASAHSC0iJIqJ4yAOTmIqi+fFCyYABmDEoMlnB8KNl8VBB22fwyUmCkpGkpAIIQovkACg58LqhUIlIARvkIcGAiIo55IhAZ3eFWUB5zfP4MDHV8GQhUZghgK+i+ocQgEAioNBAMSCzsnMAAOrJ8tyAUO3C+8vZPWHx3D3yPIAY9ggcC+AK8qBCoOI93+-yeaS2VAoKwwSDBTwAInBsggaGl8rl8r0TtVYtl3ghHKgMoFLAskCUIPJzCsKABrHFPIiwuFPCgIKC4qBgMG-OF8kC9Ki+AD6g2ZCAYGJAVnymyUCwVLNW0TouVWuR2qQ8JNQnNk8mEJ1IyNWiBOyG5vIlT16UBGdRVAGFvH44Eh+GlcJCJIG+IMps5w4zekgBVBzmh0OiYX9JRkhgwbHB5XAAI5UAPK7AAtXFJCajyDQvF1boOAuNZUdAo5PDIWfNMS+HgCgULqMFUAGWSaX4ILxcxQaInJwyHrg-Er1EFQKeLr4AF9eVueQ83TLZZXcIhO2LN08gSCVfH5ND966QIiGBs22iVVxUE2T4h8gsiQjOBFWyKRpyLZ1035Ncz1FUsAG1N17b1UCQfUQgAbj4dAYigM5xFZGIo3fdAO3XbseyeAAhE4LTkBA+EUXxtkUKRMx2HMsM6BB2R8QcpDYOYLkgnsASopIOVWcC4CwnCOnkXiThbATWCE1NNwAXV3R8AW8JA82OVBbQoKBehEXMzGA1NvnFSVr2hb4nhw7oRMlF831RFMVXLDUGMUeNBX6DwkBBEyFwoApsggDwGBiBUbWRQk8hNRloW03knkjZS81rSzSAvKDAWBByAWckRXN7dzkU86yy2S3yTT4NhRBCIVRmkJB2VWDIrTAICoykK0BUkIUNwePcMpAdZNlfHZkwKp97NvAdBgqgEqpI2qni-Jtpq2V4pEAhrIBBHxUx03sE2FODvkQ9NkOGGh+BoHZcQAWhpN6MgItbewAMQ2fbQL4aVzBM3APV+gF4CpJxmK7TTd3uLcQC3IA",
+    "retrieved": "2026-10-24",
+    "analysis": "Claude, written 2026-10-24 before seeing Jev's answers"
+  },
+  "how_to_read": {
+    "basis": {
+      "stated": "The ticket says it",
+      "implied": "Follows from the wording; most readers would agree",
+      "inferred": "My judgment; could be wrong"
+    },
+    "spans": "start and end are character offsets into ticket.text; end is exclusive",
+    "priority": "P1 urgent, P2 high, P3 normal, P4 low"
+  },
+  "ticket_level_labels": {
+    "primary_category_if_forced_to_pick_one": {
+      "label": "billing",
+      "why": "Money taken in error is the most serious problem, and it comes first"
+    },
+    "all_categories": [
+      "billing",
+      "account",
+      "feature_request",
+      "bug_report (possible: login broke after an update)"
+    ],
+    "issue_count": 3,
+    "multi_issue": true,
+    "departments": [
+      "Billing and payments",
+      "Account support",
+      "Engineering (if the login failure is a release regression)",
+      "Product management"
+    ],
+    "ticket_type": "complaint with a suggestion",
+    "overall_priority": "P2 (its highest issue)",
+    "urgency": "medium-high",
+    "sentiment": "negative: frustrated but civil",
+    "needs_a_human": {
+      "value": true,
+      "why": "A refund and an identity check both need a person or an approved workflow"
+    },
+    "automatable_parts": [
+      "Logging the Apple Pay feedback",
+      "Sending a password reset link once identity is verified"
+    ],
+    "needs_more_info_from_customer": true,
+    "language": "en",
+    "channel": "unknown",
+    "customer_journey_stage": "post-purchase"
+  },
+  "issues": [
+    {
+      "id": "ISSUE-1",
+      "summary": "Charged twice for order #98423",
+      "evidence": [
+        {
+          "quote": "I placed an order (#98423) last Thursday and was charged twice",
+          "start": 4,
+          "end": 66
+        }
+      ],
+      "basis": "stated",
+      "typesafe_category": "billing",
+      "other_fitting_categories": [
+        {
+          "category": "bug_report",
+          "basis": "inferred",
+          "why": "A payment-system fault could have caused the second charge"
+        }
+      ],
+      "issue_type": "problem report",
+      "record_type": "incident",
+      "domain": "payments",
+      "subcategory": "duplicate charge",
+      "product_area": [
+        "checkout",
+        "payment processing"
+      ],
+      "impact": {
+        "kind": "financial",
+        "who": "this customer",
+        "size": "one extra charge; the amount isn't given"
+      },
+      "customer_ask": {
+        "explicit": null,
+        "implicit": "Reverse or refund the extra charge",
+        "basis": "implied"
+      },
+      "severity": {
+        "business": "high",
+        "typesafe_bug_severity_estimate": 1,
+        "why": "Money was taken in error, and a refund fixes it"
+      },
+      "urgency": {
+        "level": "medium-high",
+        "why": "The customer is out of pocket until it's reversed; no deadline is stated"
+      },
+      "priority": "P2",
+      "owner_team": "Billing and payments",
+      "first_actions": [
+        "Find order 98423 in the payment processor",
+        "Check whether the second charge settled or is a pending authorization that will drop off",
+        "Refund the duplicate if it settled",
+        "Tell the customer the amount and when the refund lands"
+      ],
+      "info_needed": [
+        "Amount of each charge",
+        "Payment method and last 4 digits",
+        "Dates the charges posted"
+      ],
+      "links_to_other_issues": [
+        {
+          "issue": "ISSUE-2",
+          "basis": "inferred",
+          "confidence": "low",
+          "note": "Both could trace to the site update, if the update came before the order"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE-2",
+      "summary": "Can't log in since the site update",
+      "evidence": [
+        {
+          "quote": "I also can't log in after the site update",
+          "start": 68,
+          "end": 109
+        }
+      ],
+      "basis": "stated",
+      "typesafe_category": "account",
+      "other_fitting_categories": [
+        {
+          "category": "bug_report",
+          "basis": "implied",
+          "why": "Login broke after an update, which fits 'something that is broken or producing errors'"
+        }
+      ],
+      "issue_type": "problem report",
+      "record_type": "incident (part of a wider problem if other users are affected)",
+      "domain": "authentication and account access",
+      "subcategory": "login failure, possible release regression",
+      "product_area": [
+        "sign-in",
+        "website release"
+      ],
+      "impact": {
+        "kind": "access",
+        "who": "this customer, and possibly everyone the update affected",
+        "size": "locked out of the account"
+      },
+      "customer_ask": {
+        "explicit": null,
+        "implicit": "Restore access to the account",
+        "basis": "implied"
+      },
+      "severity": {
+        "business": "high",
+        "typesafe_bug_severity_estimate": 2,
+        "why": "Fully blocked with no workaround mentioned; drops to 1 if a password reset works"
+      },
+      "urgency": {
+        "level": "medium-high",
+        "why": "Blocked access; the customer may also be unable to check order 98423 online (inferred)"
+      },
+      "priority": "P2, or P1 if other users report login failures since the update",
+      "owner_team": "Account support first, then engineering if it's a regression",
+      "first_actions": [
+        "Check for an open incident or a spike in login failures since the update",
+        "Verify the customer's identity before changing anything on the account",
+        "Send a password reset or sign-in link",
+        "Escalate to engineering with the error details if the reset fails"
+      ],
+      "info_needed": [
+        "Account email or username",
+        "The exact error, or what happens on the login page",
+        "Device, browser or app",
+        "Whether a password reset was tried"
+      ],
+      "links_to_other_issues": [
+        {
+          "issue": "ISSUE-1",
+          "basis": "inferred",
+          "confidence": "low",
+          "note": "Both could trace to the site update, if the update came before the order"
+        }
+      ]
+    },
+    {
+      "id": "ISSUE-3",
+      "summary": "Wants Apple Pay as a payment option",
+      "evidence": [
+        {
+          "quote": "adding Apple Pay would be really helpful",
+          "start": 115,
+          "end": 155
+        }
+      ],
+      "basis": "stated",
+      "typesafe_category": "feature_request",
+      "other_fitting_categories": [
+        {
+          "category": "billing",
+          "basis": "inferred",
+          "why": "Payment methods sit next to billing, though no charge is wrong"
+        }
+      ],
+      "issue_type": "suggestion",
+      "record_type": "enhancement request (not an incident)",
+      "domain": "payments",
+      "subcategory": "new payment method",
+      "product_area": [
+        "checkout"
+      ],
+      "impact": {
+        "kind": "convenience",
+        "who": "this customer and other Apple Pay users",
+        "size": "nothing is broken"
+      },
+      "customer_ask": {
+        "explicit": "Add Apple Pay",
+        "implicit": null,
+        "basis": "stated, phrased politely and indirectly"
+      },
+      "severity": {
+        "business": "low",
+        "typesafe_bug_severity_estimate": null,
+        "why": "Nothing is broken"
+      },
+      "urgency": {
+        "level": "low",
+        "why": "A wish, not a failure"
+      },
+      "priority": "P4",
+      "owner_team": "Product management",
+      "first_actions": [
+        "Log it as payment-method feedback",
+        "Thank the customer without promising a date"
+      ],
+      "info_needed": [
+        "Whether they shop on the website, the app or both"
+      ],
+      "links_to_other_issues": []
+    }
+  ],
+  "typesafe_predictions": {
+    "note": "My guesses for TypeSafe's five questions, written before seeing Jev's answers",
+    "category": {
+      "type": "choice",
+      "predicted_choice": "billing",
+      "rough_probabilities": {
+        "billing": 0.5,
+        "account": 0.25,
+        "bug_report": 0.15,
+        "feature_request": 0.1
+      },
+      "implied_jev_confidence": 0.33,
+      "why": "The double charge comes first and involves money; login and Apple Pay pull probability toward account and feature_request"
+    },
+    "bug_severity": {
+      "type": "score",
+      "scale": {
+        "0": "Cosmetic; no impact to functionality",
+        "1": "Broken or degraded feature; workaround exists",
+        "2": "Blocking issue; no workaround exists"
+      },
+      "predicted_score": 1.5,
+      "why": "Login is blocked with no workaround mentioned (2); the double charge reads as broken but fixable (1)"
+    },
+    "has_reproducible_steps": {
+      "type": "noul",
+      "predicted_probability": 0.1,
+      "why": "No steps, error text or device details"
+    },
+    "refund_requested": {
+      "type": "noul",
+      "predicted_probability": 0.4,
+      "why": "'Charged twice' implies a refund, but the customer never asks, and the question says 'explicitly'"
+    },
+    "frustration": {
+      "type": "score",
+      "scale": {
+        "0": "Calm, matter-of-fact",
+        "1": "Frustrated but civil",
+        "2": "Very angry"
+      },
+      "predicted_score": 1.0,
+      "why": "Names the frustration and stays civil"
+    },
+    "docs_routing_code_with_these_answers": {
+      "result": "route_to_billing(ticket_id), with no refund flag and no priority flag",
+      "why": "billing wins; refund 0.40 is under the 0.7 flag line; frustration 1.0 is under the 1.5 priority line",
+      "dropped": [
+        "The login problem",
+        "The Apple Pay request"
+      ],
+      "gap_in_the_docs_code": "It has no branch for account, so a ticket labeled account gets no routing at all"
+    }
+  },
+  "intents": [
+    {
+      "intent": "greet",
+      "explicitness": "explicit",
+      "evidence": {
+        "quote": "Hi",
+        "start": 0,
+        "end": 2
+      },
+      "issue": null
+    },
+    {
+      "intent": "give context: placed an order",
+      "explicitness": "explicit",
+      "evidence": {
+        "quote": "I placed an order (#98423) last Thursday",
+        "start": 4,
+        "end": 44
+      },
+      "issue": "ISSUE-1"
+    },
+    {
+      "intent": "report a duplicate charge",
+      "explicitness": "explicit",
+      "evidence": {
+        "quote": "was charged twice",
+        "start": 49,
+        "end": 66
+      },
+      "issue": "ISSUE-1"
+    },
+    {
+      "intent": "get the extra charge refunded",
+      "explicitness": "implicit",
+      "evidence": {
+        "quote": "was charged twice",
+        "start": 49,
+        "end": 66
+      },
+      "issue": "ISSUE-1"
+    },
+    {
+      "intent": "report a login failure",
+      "explicitness": "explicit",
+      "evidence": {
+        "quote": "can't log in",
+        "start": 75,
+        "end": 87
+      },
+      "issue": "ISSUE-2"
+    },
+    {
+      "intent": "get account access back",
+      "explicitness": "implicit",
+      "evidence": {
+        "quote": "can't log in",
+        "start": 75,
+        "end": 87
+      },
+      "issue": "ISSUE-2"
+    },
+    {
+      "intent": "suggest a feature: Apple Pay",
+      "explicitness": "explicit, phrased indirectly",
+      "evidence": {
+        "quote": "adding Apple Pay would be really helpful",
+        "start": 115,
+        "end": 155
+      },
+      "issue": "ISSUE-3"
+    },
+    {
+      "intent": "express frustration",
+      "explicitness": "explicit",
+      "evidence": {
+        "quote": "This is getting frustrating",
+        "start": 157,
+        "end": 184
+      },
+      "issue": null
+    }
+  ],
+  "intents_absent": [
+    "Asks a direct question (the ticket has no question marks)",
+    "Threatens to cancel or leave",
+    "Asks for a manager",
+    "Sets a deadline"
+  ],
+  "sentiment": {
+    "overall_polarity": "negative",
+    "polarity_estimate": {
+      "value": -0.5,
+      "scale": "-1 very negative to 1 very positive",
+      "basis": "inferred"
+    },
+    "emotions": [
+      {
+        "emotion": "frustration",
+        "evidence": {
+          "quote": "frustrating",
+          "start": 173,
+          "end": 184
+        },
+        "basis": "stated"
+      },
+      {
+        "emotion": "annoyance at repeated problems",
+        "evidence": {
+          "quote": "also",
+          "start": 70,
+          "end": 74
+        },
+        "basis": "inferred"
+      }
+    ],
+    "not_present": [
+      "anger",
+      "threats",
+      "profanity",
+      "sarcasm",
+      "all-caps words",
+      "exclamation marks"
+    ],
+    "intensity": "moderate",
+    "trajectory": {
+      "value": "rising",
+      "evidence": {
+        "quote": "getting frustrating",
+        "start": 165,
+        "end": 184
+      },
+      "basis": "implied"
+    },
+    "politeness": {
+      "value": "polite",
+      "markers": [
+        {
+          "quote": "Hi",
+          "start": 0,
+          "end": 2
+        },
+        {
+          "quote": "would be really helpful",
+          "start": 132,
+          "end": 155
+        }
+      ]
+    },
+    "target": "the whole experience; 'This' doesn't name one issue",
+    "typesafe_frustration_level": {
+      "level": 1,
+      "label": "Frustrated but civil"
+    },
+    "churn_risk": {
+      "value": "medium",
+      "basis": "inferred",
+      "why": "Three problems at once and rising frustration, but no threat to leave"
+    }
+  },
+  "entities": [
+    {
+      "quote": "#98423",
+      "start": 23,
+      "end": 29,
+      "type": "order_id",
+      "normalized": "98423",
+      "basis": "stated",
+      "note": "The only identifier in the ticket"
+    },
+    {
+      "quote": "last Thursday",
+      "start": 31,
+      "end": 44,
+      "type": "relative_date",
+      "normalized": null,
+      "basis": "stated",
+      "note": "Resolves only against the send date, which is unknown. If sent on 2026-10-24 (Saturday): most likely 2026-10-22, possibly 2026-10-15"
+    },
+    {
+      "quote": "an order",
+      "start": 13,
+      "end": 21,
+      "type": "transaction",
+      "normalized": "order 98423",
+      "basis": "stated",
+      "note": null
+    },
+    {
+      "quote": "charged twice",
+      "start": 53,
+      "end": 66,
+      "type": "billing_event",
+      "normalized": {
+        "event": "duplicate_charge",
+        "count": 2,
+        "amount": null,
+        "currency": null,
+        "payment_method": null
+      },
+      "basis": "stated",
+      "note": "Amount, currency and payment method are all missing"
+    },
+    {
+      "quote": "log in",
+      "start": 81,
+      "end": 87,
+      "type": "account_action",
+      "normalized": "sign-in",
+      "basis": "stated",
+      "note": null
+    },
+    {
+      "quote": "the site update",
+      "start": 94,
+      "end": 109,
+      "type": "software_release",
+      "normalized": {
+        "date": null,
+        "version": null
+      },
+      "basis": "stated",
+      "note": "'the' assumes support knows which update"
+    },
+    {
+      "quote": "Apple Pay",
+      "start": 122,
+      "end": 131,
+      "type": "payment_method",
+      "normalized": {
+        "name": "Apple Pay",
+        "maker": "Apple",
+        "kind": "digital wallet"
+      },
+      "basis": "stated",
+      "note": null
+    },
+    {
+      "quote": "frustrating",
+      "start": 173,
+      "end": 184,
+      "type": "emotion",
+      "normalized": "frustration",
+      "basis": "stated",
+      "note": null
+    }
+  ],
+  "facts": [
+    {
+      "id": "F1",
+      "statement": "The customer placed an order.",
+      "evidence": {
+        "quote": "I placed an order",
+        "start": 4,
+        "end": 21
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F2",
+      "statement": "The order number is 98423.",
+      "evidence": {
+        "quote": "#98423",
+        "start": 23,
+        "end": 29
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F3",
+      "statement": "The order was placed last Thursday.",
+      "evidence": {
+        "quote": "last Thursday",
+        "start": 31,
+        "end": 44
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F4",
+      "statement": "The customer was charged twice.",
+      "evidence": {
+        "quote": "was charged twice",
+        "start": 49,
+        "end": 66
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F5",
+      "statement": "Both charges were for order 98423.",
+      "evidence": {
+        "quote": "I placed an order (#98423) last Thursday and was charged twice",
+        "start": 4,
+        "end": 66
+      },
+      "basis": "implied",
+      "confidence": "medium"
+    },
+    {
+      "id": "F6",
+      "statement": "The customer expects the extra charge to be reversed.",
+      "evidence": {
+        "quote": "was charged twice",
+        "start": 49,
+        "end": 66
+      },
+      "basis": "implied",
+      "confidence": "high"
+    },
+    {
+      "id": "F7",
+      "statement": "The customer cannot log in.",
+      "evidence": {
+        "quote": "can't log in",
+        "start": 75,
+        "end": 87
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F8",
+      "statement": "The login problem started after a site update.",
+      "evidence": {
+        "quote": "after the site update",
+        "start": 88,
+        "end": 109
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F9",
+      "statement": "The customer blames the update for the login problem.",
+      "evidence": {
+        "quote": "after the site update",
+        "start": 88,
+        "end": 109
+      },
+      "basis": "implied",
+      "confidence": "medium"
+    },
+    {
+      "id": "F10",
+      "statement": "The site was updated recently.",
+      "evidence": {
+        "quote": "the site update",
+        "start": 94,
+        "end": 109
+      },
+      "basis": "implied",
+      "confidence": "high"
+    },
+    {
+      "id": "F11",
+      "statement": "The customer wants the site to accept Apple Pay.",
+      "evidence": {
+        "quote": "adding Apple Pay would be really helpful",
+        "start": 115,
+        "end": 155
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F12",
+      "statement": "The site does not accept Apple Pay today.",
+      "evidence": {
+        "quote": "adding Apple Pay",
+        "start": 115,
+        "end": 131
+      },
+      "basis": "implied",
+      "confidence": "medium"
+    },
+    {
+      "id": "F13",
+      "statement": "The customer is frustrated.",
+      "evidence": {
+        "quote": "This is getting frustrating",
+        "start": 157,
+        "end": 184
+      },
+      "basis": "stated",
+      "confidence": "high"
+    },
+    {
+      "id": "F14",
+      "statement": "The frustration is growing.",
+      "evidence": {
+        "quote": "getting frustrating",
+        "start": 165,
+        "end": 184
+      },
+      "basis": "implied",
+      "confidence": "medium"
+    },
+    {
+      "id": "F15",
+      "statement": "The customer has an account on the site.",
+      "evidence": {
+        "quote": "log in",
+        "start": 81,
+        "end": 87
+      },
+      "basis": "implied",
+      "confidence": "high"
+    },
+    {
+      "id": "F16",
+      "statement": "The ticket raises three separate problems.",
+      "evidence": {
+        "quote": "also",
+        "start": 70,
+        "end": 74
+      },
+      "basis": "implied",
+      "confidence": "high"
+    },
+    {
+      "id": "F17",
+      "statement": "The customer may have contacted support before.",
+      "evidence": {
+        "quote": "getting frustrating",
+        "start": 165,
+        "end": 184
+      },
+      "basis": "inferred",
+      "confidence": "low"
+    },
+    {
+      "id": "F18",
+      "statement": "The customer probably uses Apple devices.",
+      "evidence": {
+        "quote": "Apple Pay",
+        "start": 122,
+        "end": 131
+      },
+      "basis": "inferred",
+      "confidence": "low"
+    }
+  ],
+  "temporal": {
+    "events_in_order": [
+      {
+        "step": 1,
+        "event": "Order 98423 placed",
+        "when": "last Thursday",
+        "basis": "stated"
+      },
+      {
+        "step": 2,
+        "event": "Customer charged twice",
+        "when": "at or soon after the order",
+        "basis": "implied"
+      },
+      {
+        "step": 3,
+        "event": "Site update released",
+        "when": "unknown, but before the login failure",
+        "basis": "stated"
+      },
+      {
+        "step": 4,
+        "event": "Login stops working",
+        "when": "after the site update",
+        "basis": "stated"
+      },
+      {
+        "step": 5,
+        "event": "Ticket sent",
+        "when": "unknown (a docs example)",
+        "basis": "inferred"
+      }
+    ],
+    "unknown_order": "Whether the site update came before or after the order",
+    "relative_date_resolution": {
+      "phrase": "last Thursday",
+      "rule": "The Thursday before the send date; some people mean the Thursday of the previous week",
+      "if_sent": {
+        "date": "2026-10-24",
+        "weekday": "Saturday",
+        "most_likely": "2026-10-22",
+        "alternative": "2026-10-15"
+      }
+    },
+    "ongoing_states": [
+      "Locked out of the account",
+      "Frustration rising"
+    ]
+  },
+  "customer": {
+    "existing_customer": {
+      "value": true,
+      "basis": "implied",
+      "why": "Placed an order"
+    },
+    "has_account": {
+      "value": true,
+      "basis": "implied",
+      "why": "Tries to log in"
+    },
+    "identity_given": "None: no name, email or account ID, only the order number",
+    "likely_device": {
+      "value": "Apple (iPhone or Mac)",
+      "basis": "inferred",
+      "confidence": "low"
+    },
+    "payment_method_used": "unknown",
+    "prior_contacts": {
+      "value": "unknown",
+      "hint": "'getting frustrating' may mean earlier attempts",
+      "confidence": "low"
+    },
+    "customer_value": "unknown",
+    "journey_stage": "post-purchase",
+    "problems_hit": 2,
+    "requests_made": 1
+  },
+  "presuppositions": [
+    {
+      "quote": "the site update",
+      "start": 94,
+      "end": 109,
+      "takes_for_granted": "A recent update happened, and support knows which one"
+    },
+    {
+      "quote": "adding Apple Pay",
+      "start": 115,
+      "end": 131,
+      "takes_for_granted": "Apple Pay isn't offered today"
+    },
+    {
+      "quote": "was charged twice",
+      "start": 49,
+      "end": 66,
+      "takes_for_granted": "At least one charge went through"
+    },
+    {
+      "quote": "can't log in",
+      "start": 75,
+      "end": 87,
+      "takes_for_granted": "The customer has an account"
+    },
+    {
+      "quote": "also",
+      "start": 70,
+      "end": 74,
+      "takes_for_granted": "The login problem is separate from the billing problem"
+    }
+  ],
+  "ambiguities": [
+    {
+      "quote": "last Thursday",
+      "start": 31,
+      "end": 44,
+      "readings": [
+        "The most recent Thursday",
+        "The Thursday of the previous week"
+      ],
+      "how_to_resolve": "Check the order date for 98423"
+    },
+    {
+      "quote": "charged twice",
+      "start": 53,
+      "end": 66,
+      "readings": [
+        "Two settled charges for one order",
+        "A pending authorization plus the real charge, which often drops off",
+        "The order went through twice, making two orders"
+      ],
+      "how_to_resolve": "Check the payment processor and order history"
+    },
+    {
+      "quote": "can't log in",
+      "start": 75,
+      "end": 87,
+      "readings": [
+        "Password rejected",
+        "Account locked",
+        "An error page or a broken login form",
+        "A verification email or code never arrives"
+      ],
+      "how_to_resolve": "Ask what happens, and on which device"
+    },
+    {
+      "quote": "after the site update",
+      "start": 88,
+      "end": 109,
+      "readings": [
+        "Timing only",
+        "The customer thinks the update caused it"
+      ],
+      "how_to_resolve": "Check login error rates since the release"
+    },
+    {
+      "quote": "This",
+      "start": 157,
+      "end": 161,
+      "readings": [
+        "The whole experience",
+        "The login problem only",
+        "The double charge only"
+      ],
+      "how_to_resolve": "Answer all three issues in one reply"
+    },
+    {
+      "quote": "adding Apple Pay",
+      "start": 115,
+      "end": 131,
+      "readings": [
+        "On the website",
+        "In the app",
+        "Both"
+      ],
+      "how_to_resolve": "Ask, or log it for both"
+    }
+  ],
+  "missing_information": {
+    "ask_the_customer": [
+      "Account email or username",
+      "Amount of each charge and the dates they posted",
+      "Payment method and last 4 digits (never the full card number)",
+      "What happens when they try to log in, including any error text",
+      "Device, browser or app they use",
+      "Whether they tried a password reset"
+    ],
+    "look_up_internally": [
+      "Payment records for order 98423",
+      "Date and contents of the site update",
+      "Login failure rates since the update",
+      "Earlier tickets from this customer"
+    ]
+  },
+  "risk_flags": [
+    {
+      "risk": "financial",
+      "level": "high",
+      "basis": "stated",
+      "why": "Money was taken in error"
+    },
+    {
+      "risk": "chargeback",
+      "level": "medium",
+      "basis": "inferred",
+      "why": "The customer may dispute the charge with their bank if the refund is slow"
+    },
+    {
+      "risk": "churn",
+      "level": "medium",
+      "basis": "inferred",
+      "why": "Three problems at once and rising frustration"
+    },
+    {
+      "risk": "systemic login incident",
+      "level": "medium",
+      "basis": "inferred",
+      "why": "A release that breaks login usually hits more than one customer"
+    },
+    {
+      "risk": "systemic payment bug",
+      "level": "low",
+      "basis": "inferred",
+      "why": "Other orders may be double-charged too, if the update touched checkout"
+    },
+    {
+      "risk": "account takeover",
+      "level": "medium",
+      "basis": "inferred",
+      "why": "Restoring access without verifying identity invites it"
+    },
+    {
+      "risk": "sensitive data in the ticket",
+      "level": "low",
+      "basis": "stated",
+      "why": "Only an order number; no name, email or card data"
+    }
+  ],
+  "routing": {
+    "recommendation": "Split into three child tickets and answer the customer once",
+    "child_tickets": [
+      {
+        "issue": "ISSUE-1",
+        "team": "Billing and payments",
+        "handle_order": 1
+      },
+      {
+        "issue": "ISSUE-2",
+        "team": "Account support, then engineering",
+        "handle_order": 2
+      },
+      {
+        "issue": "ISSUE-3",
+        "team": "Product management",
+        "handle_order": 3
+      }
+    ],
+    "single_label_if_forced": {
+      "label": "billing",
+      "loses": [
+        "account (the login problem)",
+        "feature_request (the Apple Pay request)"
+      ]
+    },
+    "reply_checklist": [
+      "Acknowledge the frustration",
+      "Confirm the duplicate charge is being checked and refunded",
+      "Send a reset link, or ask what happens at login",
+      "Thank them for the Apple Pay idea"
+    ]
+  },
+  "sentences": [
+    {
+      "index": 1,
+      "quote": "Hi, I placed an order (#98423) last Thursday and was charged twice.",
+      "start": 0,
+      "end": 67,
+      "speech_acts": [
+        "greeting",
+        "narrative (the order)",
+        "complaint (the double charge)"
+      ],
+      "topics": [
+        "order",
+        "billing"
+      ],
+      "discourse_markers": [
+        "and: ties the order to the double charge"
+      ],
+      "issues": [
+        "ISSUE-1"
+      ]
+    },
+    {
+      "index": 2,
+      "quote": "I also can't log in after the site update, and adding Apple Pay would be really helpful.",
+      "start": 68,
+      "end": 156,
+      "speech_acts": [
+        "complaint (the login)",
+        "suggestion (Apple Pay)"
+      ],
+      "topics": [
+        "account access",
+        "site update",
+        "payment methods"
+      ],
+      "discourse_markers": [
+        "also: adds a separate problem",
+        "and: joins an unrelated request"
+      ],
+      "issues": [
+        "ISSUE-2",
+        "ISSUE-3"
+      ]
+    },
+    {
+      "index": 3,
+      "quote": "This is getting frustrating.",
+      "start": 157,
+      "end": 185,
+      "speech_acts": [
+        "expressive (frustration)"
+      ],
+      "topics": [
+        "sentiment"
+      ],
+      "discourse_markers": [],
+      "issues": [
+        "ISSUE-1",
+        "ISSUE-2",
+        "ISSUE-3"
+      ]
+    }
+  ],
+  "text_stats": {
+    "characters": 185,
+    "words": 33,
+    "sentences": 3,
+    "words_per_sentence": [
+      12,
+      17,
+      4
+    ],
+    "language": "en",
+    "register": "informal and polite: opens with 'Hi' and uses a contraction",
+    "question_marks": 0,
+    "exclamation_marks": 0,
+    "all_caps_words": [],
+    "numbers": [
+      "98423"
+    ],
+    "brand_names": [
+      "Apple Pay"
+    ],
+    "contractions": [
+      "can't"
+    ],
+    "profanity": []
+  },
+  "tags": [
+    "multi-issue",
+    "billing",
+    "duplicate-charge",
+    "refund-implied",
+    "order-98423",
+    "account",
+    "login-failure",
+    "post-release",
+    "possible-regression",
+    "feature-request",
+    "apple-pay",
+    "payment-methods",
+    "frustrated",
+    "polite",
+    "no-direct-question",
+    "no-account-identifier"
+  ]
+}

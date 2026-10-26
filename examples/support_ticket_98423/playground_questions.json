@@ -1,0 +1,287 @@
+{
+  "category": {
+    "type": "choice",
+    "instructions": "Determine the broad category of this support ticket",
+    "criteria": {
+      "bug_report": "The user is reporting something that is broken or producing errors",
+      "billing": "Charges, invoices, refunds, subscriptions",
+      "feature_request": "The user is requesting new functionality",
+      "account": "Login, permissions, profile, security"
+    }
+  },
+  "bug_severity": {
+    "type": "score",
+    "instructions": "How severe is the reported issue",
+    "criteria": [
+      "Cosmetic; no impact to functionality",
+      "Broken or degraded feature; workaround exists",
+      "Blocking issue; no workaround exists"
+    ]
+  },
+  "has_reproducible_steps": {
+    "type": "noul",
+    "instructions": "The user describes specific steps to reproduce the issue"
+  },
+  "refund_requested": {
+    "type": "noul",
+    "instructions": "The user is explicitly asking for a refund or credit"
+  },
+  "frustration": {
+    "type": "score",
+    "instructions": "How frustrated the user appears",
+    "criteria": [
+      "Calm, matter-of-fact",
+      "Frustrated but civil",
+      "Very angry"
+    ]
+  },
+  "category_reordered": {
+    "type": "choice",
+    "instructions": "Determine the broad category of this support ticket",
+    "criteria": {
+      "account": "Login, permissions, profile, security",
+      "feature_request": "The user is requesting new functionality",
+      "billing": "Charges, invoices, refunds, subscriptions",
+      "bug_report": "The user is reporting something that is broken or producing errors"
+    }
+  },
+  "mentions_billing_issue": {
+    "type": "noul",
+    "instructions": "The user raises a problem with a charge, invoice, refund or subscription"
+  },
+  "mentions_account_issue": {
+    "type": "noul",
+    "instructions": "The user raises a problem with logging in, permissions, their profile or account security"
+  },
+  "mentions_bug": {
+    "type": "noul",
+    "instructions": "The user reports something that is broken or producing errors"
+  },
+  "mentions_feature_request": {
+    "type": "noul",
+    "instructions": "The user asks for or suggests new functionality"
+  },
+  "issue_count": {
+    "type": "choice",
+    "instructions": "How many separate problems or requests does the user raise",
+    "criteria": {
+      "one": "One problem or request",
+      "two": "Two separate problems or requests",
+      "three": "Three separate problems or requests",
+      "four_or_more": "Four or more separate problems or requests"
+    }
+  },
+  "message_type": {
+    "type": "choice",
+    "instructions": "Determine what kind of message this is overall",
+    "criteria": {
+      "question": "Mainly asks for information",
+      "request": "Mainly asks for something to be done",
+      "feedback": "Mainly gives an opinion or a suggestion",
+      "problem_report": "Mainly reports something that went wrong",
+      "other": "None of these fit"
+    }
+  },
+  "primary_team": {
+    "type": "choice",
+    "instructions": "Which team should handle this ticket first",
+    "criteria": {
+      "account_support": "Login, passwords, profile and access",
+      "engineering": "Site errors and broken features",
+      "billing_and_payments": "Charges, refunds, invoices and payment methods",
+      "product_management": "Ideas and requests for new features",
+      "other": "None of these teams"
+    }
+  },
+  "priority": {
+    "type": "score",
+    "instructions": "How quickly should support act on this ticket",
+    "criteria": [
+      "Low: it can wait a week or more",
+      "Normal: within a few days",
+      "High: today, because money or account access is affected",
+      "Urgent: right now, because many users or safety are at risk"
+    ]
+  },
+  "time_pressure": {
+    "type": "noul",
+    "instructions": "The user mentions a deadline or says the matter is urgent"
+  },
+  "needs_staff_action": {
+    "type": "noul",
+    "instructions": "Resolving this ticket needs a staff member to take an action, not just send an answer"
+  },
+  "needs_more_info": {
+    "type": "noul",
+    "instructions": "Support needs more details from the user before it can resolve every problem raised"
+  },
+  "journey_stage": {
+    "type": "choice",
+    "instructions": "Determine where the user is in their relationship with the company",
+    "criteria": {
+      "browsing": "Has not bought anything yet",
+      "checkout": "Is in the middle of paying",
+      "post_purchase": "Has already bought something",
+      "unclear": "The message doesn't say"
+    }
+  },
+  "duplicate_charge": {
+    "type": "noul",
+    "instructions": "The user says they were charged more than once for the same purchase"
+  },
+  "refund_implied": {
+    "type": "noul",
+    "instructions": "The user wants money back",
+    "criteria": {
+      "true": "Asks for a refund outright, or describes a charge they should not have paid",
+      "false": "Describes no charge they want reversed"
+    }
+  },
+  "charge_amount_given": {
+    "type": "noul",
+    "instructions": "The user states the amount they were charged"
+  },
+  "payment_method_used": {
+    "type": "choice",
+    "instructions": "Which payment method did the user pay with",
+    "criteria": {
+      "card": "A credit or debit card",
+      "paypal": "PayPal",
+      "apple_pay": "Apple Pay",
+      "other": "Another payment method",
+      "not_stated": "The message doesn't say how they paid"
+    }
+  },
+  "order_date_given": {
+    "type": "noul",
+    "instructions": "The user says when they placed the order"
+  },
+  "chargeback_mentioned": {
+    "type": "noul",
+    "instructions": "The user says they will dispute the charge with their bank or card company"
+  },
+  "cannot_log_in": {
+    "type": "noul",
+    "instructions": "The user cannot log in to their account"
+  },
+  "problem_after_update": {
+    "type": "noul",
+    "instructions": "The user says a problem started after a site or app update"
+  },
+  "blames_update": {
+    "type": "noul",
+    "instructions": "The user thinks a site update caused their problem",
+    "criteria": {
+      "true": "Says or strongly suggests that the update caused it",
+      "false": "Mentions no update, or mentions one only to say when the problem started"
+    }
+  },
+  "error_message_given": {
+    "type": "noul",
+    "instructions": "The user quotes or describes a specific error message"
+  },
+  "device_or_browser_given": {
+    "type": "noul",
+    "instructions": "The user says which device, browser or app they use"
+  },
+  "tried_fix_themselves": {
+    "type": "noul",
+    "instructions": "The user says what they already tried to fix the problem"
+  },
+  "security_related": {
+    "type": "noul",
+    "instructions": "The ticket involves account security, such as access, passwords or suspicious activity"
+  },
+  "possible_widespread_issue": {
+    "type": "noul",
+    "instructions": "The problem the user describes could be affecting many users, not just this one"
+  },
+  "wants_new_payment_method": {
+    "type": "noul",
+    "instructions": "The user asks for or suggests a new way to pay"
+  },
+  "feature_request_strength": {
+    "type": "score",
+    "instructions": "How strongly does the user ask for a new feature",
+    "criteria": [
+      "Doesn't ask for any new feature",
+      "Mentions it in passing or as a nice-to-have",
+      "Asks for it clearly",
+      "Demands it or makes it a condition of staying"
+    ]
+  },
+  "sentiment": {
+    "type": "score",
+    "instructions": "How positive or negative is the message overall",
+    "criteria": [
+      "Very negative",
+      "Somewhat negative",
+      "Neutral",
+      "Somewhat positive",
+      "Very positive"
+    ]
+  },
+  "politeness": {
+    "type": "score",
+    "instructions": "How polite is the user",
+    "criteria": [
+      "Rude or hostile",
+      "Curt",
+      "Neutral",
+      "Polite"
+    ]
+  },
+  "frustration_rising": {
+    "type": "noul",
+    "instructions": "The user says their frustration is growing"
+  },
+  "threatens_to_leave": {
+    "type": "noul",
+    "instructions": "The user threatens to cancel, leave or shop elsewhere"
+  },
+  "churn_risk": {
+    "type": "score",
+    "instructions": "How likely is this user to stop being a customer",
+    "criteria": [
+      "Unlikely",
+      "Possible",
+      "Likely"
+    ]
+  },
+  "asks_for_human": {
+    "type": "noul",
+    "instructions": "The user asks to speak with a person, a manager or a supervisor"
+  },
+  "prior_contact": {
+    "type": "noul",
+    "instructions": "The user has contacted support about this before",
+    "criteria": {
+      "true": "Mentions an earlier attempt, ticket or message",
+      "false": "No sign of earlier contact"
+    }
+  },
+  "existing_customer": {
+    "type": "noul",
+    "instructions": "The user has already bought something from this company"
+  },
+  "has_account": {
+    "type": "noul",
+    "instructions": "The user has an account with this company"
+  },
+  "identity_details_given": {
+    "type": "noul",
+    "instructions": "The user gives their name, email address or account username"
+  },
+  "likely_apple_user": {
+    "type": "noul",
+    "instructions": "The user probably owns Apple devices"
+  },
+  "sensitive_data_present": {
+    "type": "noul",
+    "instructions": "The message contains sensitive data, such as a full card number, a password or a home address"
+  },
+  "issues_related": {
+    "type": "noul",
+    "instructions": "The problems the user raises probably share one cause"
+  }
+}
